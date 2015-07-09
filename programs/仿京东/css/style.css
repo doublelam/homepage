@@ -98,6 +98,14 @@ display: inline-block;
 }
 /*///////////////////////////////////////////////*/
 
+/*可隐藏div上部的div border左右都为1px*/
+.headctrl{
+	border-left: 1px solid #F1F1F1;
+	border-right: 1px solid #f1f1f1;
+
+
+}
+/*//////////////////////////////////////////////////*/
 
 /*#jsexpress{
 	background: white;
@@ -261,7 +269,7 @@ width: 70px;
 	position: relative;
 	display: inline-block;
 	width: 98px;
-
+   
 	height: 30px;
     line-height: 30px;
 }
@@ -282,7 +290,7 @@ margin-left: 3px;
 }
 /*/////////////////////////////////////////////////////*/
 
-
+/*手机京东下面可隐藏div定位样式*/
 .fonejingdonghiddendiv{
 	position: absolute;
 	margin-left: -100px;
@@ -291,3 +299,12 @@ margin-left: 3px;
 	height: 195px;
 	
 }
+/*///////////////////////////////////////////////*/
+
+
+.fonejingdongdivborerdashed{
+	border-bottom: 1px dashed #DFDFDF;
+	width: 250px;
+	height: 98px;
+}
+

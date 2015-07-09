@@ -11,8 +11,8 @@ var aLi=oUl.getElementsByTagName('li');
 var oExp=document.getElementById(overid);
 var oUpd=document.getElementById(rotateid);
 var oP=document.getElementById('addres');
-
-
+var fourthva=arguments[3];
+var oImgmyfone=document.getElementById("fonejingdongimg");
 
 
 //"送至：..."这个div鼠标滑进去的变化
@@ -22,8 +22,12 @@ function exactive(){
 	oExp.style.borderLeft="1px solid #DDDDDD";
 	oExp.style.zIndex=999;
 	oUpd.style.transform="rotate(-225deg)";
-	oUpd.style.transformOrigin="40% 80%";
+	oUpd.style.transformOrigin="50% 80%";
 	//oExp.style.background="blue";
+	if (fourthva==="fonejingdongfrontimg") {
+         oImgmyfone.src="image/phonejingdongred.png"
+	};
+
 };
 ///////////////////////////////////////////////
 
@@ -31,13 +35,16 @@ function exactive(){
 // "送至：..."这个div鼠标移出来的变化
 function unexactive(){
 
-	oExp.style.background="#F1F1F1";
+	oExp.style.background="";
 	oExp.style.borderRight="1px solid #F1F1F1";
 	oExp.style.borderLeft="1px solid #F1F1F1";
 	oExp.style.zIndex=998;
 	oUpd.style.transform="rotate(-45deg)";
-	oUpd.style.transformOrigin="40% 80%";
+	oUpd.style.transformOrigin="50% 50%";
 	//oExp.style.background="blue";	
+	if (fourthva==="fonejingdongfrontimg") {
+         oImgmyfone.src="image/phonejingdonggrey.png"
+	};
 }
 //////////////////////////////////////////////
 
@@ -122,6 +129,44 @@ onmouseover_hidden("express","upordown","address");
 
 onmouseover_hidden("myjingdong","myjingdongdiv","minejingdong","linotfollow","listofmyjingdong");
 
-onmouseover_hidden("phonejingdong","fonerotatediv","fonejingdongdiv");
+onmouseover_hidden("phonejingdong","fonerotatediv","fonejingdongdiv","fonejingdongfrontimg");
+
+//手机京东下面的二维码及链接、描述等的布局，两个完全一样
+//使用function进行方法使用
+function fonejingdong_layout(qrcode_id,text_link_id,p_id,icon_id){
+var oQrcode=document.getElementById(qrcode_id);
+var oTextlink=document.getElementById(text_link_id);
+var oP=document.getElementById(p_id);
+var oIcon=document.getElementById(icon_id);
+oTextlink.style.position="absolute";
+oTextlink.style.display="inline-block";
+oTextlink.style.marginTop="3px";
+oTextlink.style.marginLeft="10px";
+oTextlink.style.textDecoration="none";
+oTextlink.style.fontSize="12px";
+oTextlink.style.color="#666666";
 
 
+oP.style.position="absolute";
+oP.style.fontSize="12px";
+oP.style.display="inline-block";
+oP.style.marginTop="20px";
+oP.style.marginLeft="5px";
+oP.style.color="#C41A1D";
+
+
+oQrcode.style.marginLeft="10px";
+oQrcode.style.marginTop="10px";
+
+
+oIcon.style.marginLeft="5px";
+
+
+
+}
+/////////////////////////////////////////////////////////////
+
+
+//调用函数调整手机京东下面的两个div样式
+fonejingdong_layout("qrcode","alinkid","pid","iconid");
+fonejingdong_layout("qrcodevice","alinkidvice","pidvice","iconidvice");
