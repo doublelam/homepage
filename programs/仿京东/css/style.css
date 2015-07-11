@@ -15,7 +15,7 @@
 
 /*header头根据width自适应*/
 
-@media screen and (max-width: 1113px){
+@media screen and (max-width: 1246px){
       
      
 
@@ -24,14 +24,14 @@
 	}
 }
  
- @media screen and (max-width: 451px){
+ @media screen and (max-width: 512px){
 
 
 	.header{
 		height: 90px;
 	}
 }
- @media screen and (max-width: 313px){
+ @media screen and (max-width: 338px){
 
 
 	.header{
@@ -341,7 +341,7 @@ margin-left: 3px;
 /*手机京东下面可隐藏div定位样式*/
 .fonejingdonghiddendiv{
 	
-	margin-left: -100px;
+	margin-left: -105px;
 	margin-top: 29px;
 	width: 250px;
 	height: 195px;
@@ -363,7 +363,7 @@ margin-left: 3px;
      width: 82px;
      height: 108px;
      margin-top: 29px;
-     margin-left: -82px;
+     margin-left: -89px;
      text-align: center;
 
 }
@@ -391,7 +391,7 @@ color: #666;
 	width: 82px;
      height: 130px;
      margin-top: 29px;
-     margin-left: -82px;
+     margin-left: -89px;
      text-align: center;
 }
 /*/////////////////////////////////////////////////////*/
@@ -416,11 +416,70 @@ color: #666;
 }
 /*/////////////////////////////////////////////////////////////*/
 
-
+/*网址导航下隐藏div的大小位置样式*/
 .navigationhidden{
 	width: 1210px;
      height: 186px;
      margin-top: 29px;
-     margin-left: -1182px;
+     margin-left: -1212px;
     
 }
+/*////////////////////////////////////////////////////////////*/
+
+/*网站导航的隐藏div里面的ul通用样式*/
+.navul{
+	display: inline-block;
+	margin: 0px;
+	padding-left:20px;
+	margin-top: -5px;
+	text-align: left;
+
+	
+}
+/*/////////////////////////////////////*/
+
+/*网站导航的隐藏div里面的ul下面的li的通用样式*/
+.navili{
+width: 100px;
+text-align: left;
+}
+/*/////////////////////////////////////////////*/
+
+/*网站导航的隐藏div里面的第一个ul位置样式*/
+.themeul{
+
+	width: 348px;
+}
+/*/////////////////////////////////////////////*/
+
+/*网站导航的隐藏div里面的第一个ul位置样式*/
+.channelul{
+   width: 260px;
+}
+/*/////////////////////////////////////////////*/
+
+/*网站导航的隐藏div里面的第一个ul位置样式*/
+.serviceul{
+	width: 260px;
+}
+/*/////////////////////////////////////////////*/
+
+/*通用的h4颜色*/
+h4{
+	color: #666;
+}
+/*///////////////////////////////////////////////////*/
+
+
+/*给ul模块前面添加竖线*/
+.channelul::before,.serviceul::before,.moreselection::before{
+	margin-left: -20px;
+	margin-top: 25px;
+	position: absolute;
+	content: "";
+    width:1px;
+    height: 155px;
+    background: #ddd;
+   
+}
+/*//////////////////////////////////////////////////////////////////*/

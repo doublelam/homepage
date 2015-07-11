@@ -144,7 +144,7 @@ onmouseover_hidden("phonejingdong","fonerotatediv","fonejingdongdiv","fonejingdo
 onmouseover_hidden("customerservice","customerrotatediv","customerhiddenable","linotfollow");
 
 //网站导航  div和隐藏div的鼠标事件效果
-onmouseover_hidden("webnavigation","navrotatediv","navhiddenable");
+onmouseover_hidden("webnavigation","navrotatediv","navhiddenable","linotfollow");
 
 
 
@@ -193,3 +193,23 @@ fonejingdong_layout("qrcodevice","alinkidvice","pidvice","iconidvice");
 /////////////////////////////////////////////////////////////////////
 
 
+function navilayout(){
+   var oDivnav=document.getElementById('navhiddenable');
+   var aUlnav=oDivnav.getElementsByTagName('ul');
+  
+   for (var i=0; i<aUlnav.length; i++) {
+       var aLi=aUlnav[i].getElementsByTagName("li");   
+   
+    for (var j =0; j<aLi.length; j++) {
+    	 aLi[j].style.marginLeft=86*parseInt(j/5)+"px";
+    	 aLi[j].style.marginTop=25*(j%5)-15+"px";
+    };
+
+   	
+   };
+
+
+}
+
+
+navilayout();
