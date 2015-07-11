@@ -39,6 +39,7 @@ function unexactive(){
 	oExp.style.borderRight="1px solid #F1F1F1";
 	oExp.style.borderLeft="1px solid #F1F1F1";
 	oExp.style.zIndex=998;
+	oExp.style.zIndex=997;
 	oUpd.style.transform="rotate(-45deg)";
 	oUpd.style.transformOrigin="50% 50%";
 	//oExp.style.background="blue";	
@@ -123,21 +124,40 @@ for(var i=0;i<aLi.length;i++){
 }
 	
 }
+////////////////////////////////////////////////////////////////////////////
 
 
+
+//送至北京 div和隐藏div的鼠标事件效果
 onmouseover_hidden("express","upordown","address");
 
+//关注京东 div和隐藏div的鼠标事件效果
+onmouseover_hidden("focusonjingdong","focusonjingdongdivrotate","hiddenoffocus");
+
+//我的京东 div和隐藏div的鼠标事件效果
 onmouseover_hidden("myjingdong","myjingdongdiv","minejingdong","linotfollow","listofmyjingdong");
 
+//手机京东 div和隐藏div的鼠标事件效果
 onmouseover_hidden("phonejingdong","fonerotatediv","fonejingdongdiv","fonejingdongfrontimg");
 
-//手机京东下面的二维码及链接、描述等的布局，两个完全一样
-//使用function进行方法使用
+//客户服务 div和隐藏div的鼠标事件效果
+onmouseover_hidden("customerservice","customerrotatediv","customerhiddenable","linotfollow");
+
+//网站导航  div和隐藏div的鼠标事件效果
+onmouseover_hidden("webnavigation","navrotatediv","navhiddenable");
+
+
+
+
+// 手机京东下面的二维码及链接、描述等的布局，两个完全一样
+// 使用function进行方法使用
 function fonejingdong_layout(qrcode_id,text_link_id,p_id,icon_id){
 var oQrcode=document.getElementById(qrcode_id);
 var oTextlink=document.getElementById(text_link_id);
 var oP=document.getElementById(p_id);
 var oIcon=document.getElementById(icon_id);
+
+
 oTextlink.style.position="absolute";
 oTextlink.style.display="inline-block";
 oTextlink.style.marginTop="3px";
@@ -170,3 +190,6 @@ oIcon.style.marginLeft="5px";
 //调用函数调整手机京东下面的两个div样式
 fonejingdong_layout("qrcode","alinkid","pid","iconid");
 fonejingdong_layout("qrcodevice","alinkidvice","pidvice","iconidvice");
+/////////////////////////////////////////////////////////////////////
+
+

@@ -1,4 +1,5 @@
 /*头部样式,在导航栏上方*/
+
 .header{
 	position: absolute;
 	top: 0px;
@@ -9,6 +10,39 @@
 	line-height: 30px;
 }
 /*///////////////////////////////////////////////*/
+
+
+
+/*header头根据width自适应*/
+
+@media screen and (max-width: 1113px){
+      
+     
+
+	.header{
+		height: 60px;
+	}
+}
+ 
+ @media screen and (max-width: 451px){
+
+
+	.header{
+		height: 90px;
+	}
+}
+ @media screen and (max-width: 313px){
+
+
+	.header{
+		height:120px;
+	}
+}
+
+/*///////////////////////////////////////////////////////////*/
+
+
+
 
 /*送至。。+变化箭头div块的样式*/
 #express{
@@ -88,11 +122,20 @@ ul li{
 }
 /*///////////////////////////////////////////////*/
 
-/*地名ulhover样式//出现*/
+
+/*可隐藏部分的border样式*/
+.hiddenable{
+	border:1px solid #F1F1F1;
+	position: absolute;
+}
+/*////////////////////////////////*/
+
+
+/*隐藏块hover样式  通用//出现*/
 .hiddenable:hover{
 display: inline-block;
 }
-/*地名ul和上方div hover样式//出现*/
+/*上方div hover样式 通用//出现*/
 .headctrl:hover+.hiddenable{
 	display: inline-block;
 }
@@ -102,6 +145,7 @@ display: inline-block;
 .headctrl{
 	border-left: 1px solid #F1F1F1;
 	border-right: 1px solid #f1f1f1;
+
 
 
 }
@@ -151,7 +195,7 @@ color:#C81623;
 
 
 /*长红链接，静态*/
-.alwaysred{
+.alwaysred,.linkwithoutunderliner{
 	
 color:#C81623;
 font-size: 12px;
@@ -182,13 +226,17 @@ text-decoration: none;
 /*////////////////////////////////////////*/
 
 /*"我的京东"包含箭头整块div样式*/
-.myjingdong{
+.myjingdong,.focusonjingdong{
 	position: relative;
 	display: inline-block;
+	font-size: 12px;
 	text-align: center;
 	width: 82px;
 	height: 30px;
 	margin-left: -.2%;
+	line-height: 32px;
+	color: #666;
+
 }
 /*///////////////////////////////////////////////////////*/
 
@@ -292,7 +340,7 @@ margin-left: 3px;
 
 /*手机京东下面可隐藏div定位样式*/
 .fonejingdonghiddendiv{
-	position: absolute;
+	
 	margin-left: -100px;
 	margin-top: 29px;
 	width: 250px;
@@ -301,10 +349,78 @@ margin-left: 3px;
 }
 /*///////////////////////////////////////////////*/
 
-
+/*对手机京东下面的div下的第一个div进行样式设定，产生dashline*/
 .fonejingdongdivborerdashed{
 	border-bottom: 1px dashed #DFDFDF;
 	width: 250px;
 	height: 98px;
 }
+/*/////////////////////////////////////////////////////////*/
 
+
+/*关注京东下面的隐藏div的位置*/
+.hiddenoffocus{
+     width: 82px;
+     height: 108px;
+     margin-top: 29px;
+     margin-left: -82px;
+     text-align: center;
+
+}
+/*////////////////////////////////////////////////////////////*/
+
+
+
+/*关注京东下面的qrcode位置*/
+.imgunderfocus{
+	margin-top: 8px;
+}
+/*///////////////////////////////////////*/
+
+/*qrcode下面的文字说明*/
+.punderfocus{
+margin-top: -15px;
+font-size: 12px;
+color: #666;
+
+}
+/*////////////////////////////////////////*/
+
+/*客户服务下面的隐藏div样式*/
+.hiddenablecustomer{
+	width: 82px;
+     height: 130px;
+     margin-top: 29px;
+     margin-left: -82px;
+     text-align: center;
+}
+/*/////////////////////////////////////////////////////*/
+
+
+/*客户服务下面的链接总体位置*/
+.customerul{
+	margin-top: 0px;
+   text-align: center;
+  
+}
+/*////////////////////////////////////////////////////////////*/
+
+
+/*客户服务下面li的样式*/
+.customerli{
+	margin-left: -40px;
+	
+	width: 82px;
+	position: relative;
+	text-decoration: none;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+
+.navigationhidden{
+	width: 1210px;
+     height: 186px;
+     margin-top: 29px;
+     margin-left: -1182px;
+    
+}
