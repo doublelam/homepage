@@ -51,7 +51,7 @@
 	width: 100px;
    padding-left:15px; 
 	position:absolute;
-
+     margin-left: 70px;
 	color: #666666;
 	font-size: 12px;
 }
@@ -101,7 +101,7 @@
 	top: 13px;
 	width: 312px;
 	height: 245px;
-	
+	left: 70px;
 	padding-top: 10px;
 	
 }
@@ -483,3 +483,165 @@ h4{
    
 }
 /*//////////////////////////////////////////////////////////////////*/
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*以上为header导航部分
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*左上角京东图片 链接指向本身网址*/
+.imagejingdongtitle{
+	margin-top: 45px;
+	margin-left: 70px;
+
+}
+/*////////////////////////////////////////*/
+
+/*整个搜索框定位样式*/
+.search{
+	
+	position: absolute;
+	/*width: 535px;
+	height: 33px;*/
+	margin-top: -63px;
+	margin-left: 31%;
+	
+}
+/*/////////////////////////////////////////////////*/
+
+/*搜索框文本部分样式*/
+.searchtxt{
+	border: 2px solid #B61D1D;
+	
+	border-right: 0px;
+   color: #666;
+	height: 39px; 
+    padding-top: 0px;
+    padding-bottom: 0px;
+	width:455px; 
+	border-top-left-radius:19px;
+	border-bottom-left-radius:19px;
+	outline: none;
+	padding-left: 20px;
+    font-size: 12px;
+	font-family: 'ya hei';
+    
+}
+/*//////////////////////////////////*/
+/*default search seletion */
+.searchtxt::-webkit-input-placeholder,.searchtxt::-moz-input-placeholder { 
+	color:#888;
+
+
+	 }
+/*///////////////////////////////////*/
+
+/*搜索框submit部分样式*/
+.searchsubmit{
+    position: absolute;
+	border-top-right-radius:19px;
+	border-bottom-right-radius:19px;
+	padding: 0px;
+	border:0px;
+	background: #B61D1D;
+	width: 80px;
+	height: 39px;
+	color: white;
+	font-size: 18px;
+	font-family: 'ya hei';
+	outline: none;
+}
+/*//////////////////////////////////////////////*/
+
+/*我的购物车div*/
+.myshoppingcar,.shoppingcarhidden{
+	top: 55px;
+	right: 11%;
+	position: absolute;
+	line-height: 33px;
+	
+	height: 35px;
+	width: 140px;
+	background: #F9F9F9;
+	border:1px solid #DFDFDF;
+}
+/*////////////////////////////////*/
+
+/*我的购物车前面小图标*/
+.shoppingcaricon{
+	    position: absolute;
+        margin-left:18px;
+        margin-top: 6px;
+
+}
+/*///////////////////////////////////*/
+
+/*我的购物车文字部分*/
+.shoppingcarlink{
+	margin-left: 48px;
+}
+/*////////////////////////////////////////*/
+
+/*在我的购物车后面加上箭头文字*/
+.myshoppingcar::after{
+    content: '';
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 14px;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	transform:rotate(45deg);
+
+}
+/*/////////////////////////////////////*/
+
+/*我的购物车上方提示红点（静态下直接使用0，有待改进）*/
+.myshoppingcar::before{
+ position: absolute;
+ left: 110px;
+ top: -4px;
+ content: '0';
+ width: 17px;
+ height: 14px;
+ background: #C81623;
+ color: white;
+ font-size: 12px;
+ line-height: 15px;
+ text-align: center;
+ border-top-left-radius:8px;
+ border-top-right-radius: 8px;
+ border-bottom-right-radius: 8px;
+}
+/*///////////////////////////////////////////////////////////*/
+
+/*我的购物车下面隐藏div块的单独样式*/
+.shoppingcarhidden{
+	visibility: hidden;
+	top: 93px;
+	height: 70px;
+	width: 308px;
+   font-size: 12px;
+   right: 11%;
+   color: #888;
+   background: white;
+}
+/*//////////////////////////////////////////////////*/
+
+/*购物车图标*/
+.shoppingcarli{
+	
+	margin-left: 40px;
+	margin-top: 8px;
+}
+/*//////////////////////////////////////////////////////*/
+
+/*图标后面跟随的文字*/
+.shoppingcartxt{
+	display: inline-block;
+	position: absolute;
+	margin-top: 20px;
+}
+/*////////////////////////////////////////////////////*/

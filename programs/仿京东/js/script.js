@@ -192,7 +192,7 @@ fonejingdong_layout("qrcode","alinkid","pid","iconid");
 fonejingdong_layout("qrcodevice","alinkidvice","pidvice","iconidvice");
 /////////////////////////////////////////////////////////////////////
 
-
+//网站导航内的li排列
 function navilayout(){
    var oDivnav=document.getElementById('navhiddenable');
    var aUlnav=oDivnav.getElementsByTagName('ul');
@@ -213,3 +213,53 @@ function navilayout(){
 
 
 navilayout();
+/////////////////////////////////////////////////////////////////
+
+
+//我的购物车和下面隐藏div的滑动效果
+
+function myShoppingcar(){
+
+     var oDiv1=document.getElementById('mycar')
+     var oDiv2=document.getElementById('hiddenshoppinglist');
+     function hovered(){
+     	oDiv2.style.visibility="visible";
+     	oDiv1.style.background="white";
+     	oDiv1.style.borderBottom='0px';
+     	oDiv1.style.zIndex="999";
+     	oDiv1.style.height="38px";
+     	oDiv1.style.boxShadow="0px -1px 1px #eee,-1px -2px 1px #eee,1px -2px 1px #eee";
+        oDiv2.style.boxShadow="0px 0px 3px #ccc";
+     	
+     };
+    
+      function unhoverd(){
+           oDiv2.style.visibility="hidden";
+           oDiv1.style.background="#F9F9F9";
+           oDiv1.style.borderBottom='1px solid  #DFDFDF';
+           oDiv1.style.height="35px";
+           oDiv1.style.boxShadow="";
+           oDiv1.style.zIndex="997";
+
+      };
+      
+
+oDiv1.onmouseover=function(){
+  hovered();
+};
+oDiv2.onmouseover=function(){
+  hovered();	
+};
+
+oDiv1.onmouseout=function(){
+unhoverd();
+};
+
+oDiv2.onmouseout=function(){
+	unhoverd();
+};
+};
+
+myShoppingcar();
+
+///////////////////////////////////////////////////////
