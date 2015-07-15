@@ -645,3 +645,109 @@ h4{
 	margin-top: 20px;
 }
 /*////////////////////////////////////////////////////*/
+
+/*在搜索框下的链接词语样式*/
+.linkundersearch{
+	position: absolute;
+	left: 33%;
+    top: 100px;
+    z-index: 0;
+}
+/*//////////////////////////////////////////////////////////////*/
+
+
+/*全部商品分类整个ul样式*/
+.classifyul{
+	position: absolute;
+	padding: 0px;
+	left: 70px;
+	width: 209px;
+	height: 511px;
+	background: #C81623;
+	border-left: 1px solid #C81623;
+	border-bottom: 1px solid #C81623;
+
+}
+/*//////////////////////////////////////////////////////////////////*/
+
+/*'全部商品分类'标题样式*/
+.classifyh4{
+	margin: 0px;
+    line-height: 45px;
+	color: white;
+	padding-left: 10px;
+	height: 46px;
+	background: #B1191A;
+}
+/*/////////////////////////////////////////////////////////////////*/
+
+/*li链接样式*/
+.classifysdecora{
+	width:199px;
+   	height:31px;
+   color:white;
+   position:relative;
+   border-radius:0px;
+  font-size:13px;
+   margin-left:0px;
+   text-align:left;
+   padding-left:10px;
+}
+/*////////////////////////////////////////////////////*/
+
+/*后面箭头*/
+.classifysdecora::after{
+	margin-top: 10px;
+	content: '';
+ width: 6px;
+ height: 6px;
+ position: absolute;
+ transform:rotate(45deg);
+ border-top: 2px solid white;
+ border-right: 2px solid white;
+ right: 10px;
+}
+/*///////////////////////////////////////////////////////////*/
+
+
+/*商品分类后面隐藏div样式（宽高和border）*/
+.divnextclassify{
+	display: none;
+	position: absolute;
+	left: 279px;
+	top: 178px;
+   width: 1000px;
+   height: 465px;
+   border:1px solid #B1191A;
+}
+
+.divnextclassifydiff{
+	display: none;
+	position: absolute;
+	left: 279px;
+	top: 178px;
+   width: 1000px;
+   height: 532px;
+   border:1px solid #B1191A;
+}
+
+.divnextclassifydiff1{
+	display: none;
+    position: absolute;
+	left: 279px;
+	top: 178px;
+   width: 1000px;
+   height: 508px;
+   border:1px solid #B1191A; 
+
+}
+.divnextclassifydiff2{
+	display: none;
+	position: absolute;
+	left: 279px;
+	top: 178px;
+   width: 1000px;
+   height: 510px;
+   border:1px solid #B1191A; 
+}
+

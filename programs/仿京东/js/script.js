@@ -227,6 +227,7 @@ function myShoppingcar(){
      	oDiv1.style.background="white";
      	oDiv1.style.borderBottom='0px';
      	oDiv1.style.zIndex="999";
+     	oDiv2.style.zIndex="998"
      	oDiv1.style.height="38px";
      	oDiv1.style.boxShadow="0px -1px 1px #eee,-1px -2px 1px #eee,1px -2px 1px #eee";
         oDiv2.style.boxShadow="0px 0px 3px #ccc";
@@ -263,3 +264,82 @@ oDiv2.onmouseout=function(){
 myShoppingcar();
 
 ///////////////////////////////////////////////////////
+
+
+//'全部商品分类'整个div样式『特别是li样式』
+
+function lisclass(){
+   var oUl=document.getElementById('classifyul');
+   var aLi=oUl.getElementsByTagName('li');
+   for (var i = 0; i<aLi.length; i++) {
+   	var ls=aLi[i].style;
+   	
+   	aLi[i].className="classifysdecora";
+  
+   };
+
+}
+
+lisclass();
+// ///////////////////////////////////////////////////////////
+
+//全部商品分类div的js鼠标事件效果 
+function classifyseveent(){
+var oUl=document.getElementById('classifyul');
+var oDiv=document.getElementById('hidddivnextclassify');
+var aLi=oUl.getElementsByTagName('li');
+var aDiv=oDiv.getElementsByTagName('div');
+
+//鼠标滑入
+function moveover(){
+	if (this.tagName!=="DIV") {
+
+aDiv[this.index].style.display="block";
+this.style.background="white";
+this.style.color="#B61D1D";
+this.style.zIndex="999";
+}
+else{
+	this.style.display="block";
+    aLi[this.index].style.background="white";
+   aLi[this.index].style.color="#B61D1D";
+     aLi[this.index].style.zIndex="999";
+}
+}
+//////////////////////////////////////////////
+
+
+//鼠标划出
+function moveout(){
+	if(this.tagName!=="DIV"){
+this.style.background="#C81623";
+aDiv[this.index].style.display="none";
+this.style.color="white";
+this.style.zIndex="996";
+}
+else{
+	this.style.display="none";
+    aLi[this.index].style.background="#C81623";
+   aLi[this.index].style.color="white";
+     aLi[this.index].style.zIndex="996";
+}
+}
+/////////////////////////////////////////////
+
+
+
+//函数调用
+for (var i = 0; i<aLi.length; i++) {
+	aLi[i].onmouseover=moveover;
+	aLi[i].onmouseout=moveout;
+	aDiv[i].onmouseover=moveover;
+	aDiv[i].onmouseout=moveout;
+     aLi[i].index=i;
+     aDiv[i].index=i;
+}
+}
+/////////////////////
+
+//函数调用
+classifyseveent();
+///////////////////////////////////////////////////////////////
