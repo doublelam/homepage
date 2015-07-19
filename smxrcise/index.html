@@ -1,0 +1,175 @@
+
+<!DOCTYPE  html>
+<html>
+<head>
+<style type="text/css">
+#fthrDiv{
+	margin: 50px;
+	width: 300px;
+	height: 240px;
+	background: #ddd;
+	padding: 0px;
+	border-radius: 4px;
+             -webkit-transform-style:-webkit-presrve-3d;
+            -webkit-perspective:500;
+            -webkit-perspective-origin:50px 50px;
+
+}
+img{
+	width: 200px;
+	height: 160px;
+              position: absolute;
+              top: 20px;
+              left: 80px;
+              border-radius: 5px;
+             box-shadow: 1px 1px 15px #888;
+              -webkit-transform:rotateY(-60deg);
+              -webkit-transition:all 0.2s ;
+
+}
+img:hover{
+	-webkit-transform:rotateY(-20deg);
+	box-shadow: 1px 1px 16px #555;
+	
+
+}
+.active{
+	background: black;
+	color: lightgrey;
+}
+.active:hover{
+	background: darkorange;
+}
+.active2{
+	background: blue;
+}
+
+div div {
+              top: 70px;
+	margin: 10px;
+	width: 40px;
+	height: 40px;
+	background: green;
+	border-radius: 5px;
+	transition:0.3s;
+	padding: 0px;
+	font-family: ubuntu;
+	cursor: default;
+	font-size: 12px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+
+}
+div div:hover{
+	background: darkgreen;
+	box-shadow: 0px 0px 8px #333;
+}
+#fstdiv,#scddiv,#trddiv{
+	position: absolute;
+}
+p{
+	width: 10px;
+	height: 10px;
+	background: darkblue;
+	border-radius: 5px;
+	position: relative;
+	top:0px;
+	display: inline-block;
+	margin:5px; 
+	-webkit-transition:0.2s;
+}
+p:hover{
+	background: blue;
+
+}
+#divBott{
+	width: 100px;
+	height: 20px;
+	background: grey;
+	border-radius: 10px;
+	position:absolute;
+	left: 180px;
+	top: 250px;
+	line-height: 20px;
+	text-align: center;
+}
+</style>
+	<title></title>
+</head>
+<body>
+<div id="fthrDiv">
+	<div id="fstdiv">TEAM1</div>
+	<div id="scddiv"> TEAM2</div>
+	<div id="trddiv">TEAM3</div>
+              <img src="image/imag1.jpg"></img>
+
+                     
+</div>
+<div id="divBott"></div>
+<script type="text/javascript">
+              
+              var oDiv=document.getElementById('fthrDiv');
+	var aDiv=oDiv.getElementsByTagName('div');
+	var oDivbott=document.getElementById("divBott");
+	var aP=oDivbott.getElementsByTagName("p"); 
+	var aIma=oDiv.getElementsByTagName("img")[0];
+
+	for (var i = 0; i < aDiv.length; i++) {
+		aDiv[i].style.top=i*50+20+"px";
+	};
+          
+
+         var array1=["image/imag1.jpg","image/imag2.jpg"];
+         var array2=["image/imag3.jpg","image/imag4.jpg","image/imag5.jpg"];
+            var array3=["image/imag6.jpg","image/imag7.jpg"];
+       var aarr=[array1,array2,array3];
+       
+       var oldInner="";
+       oldInner=oDivbott.innerHTML;
+       function  dsplIma(a){
+     	oDivbott.innerHTML=oldInner;
+
+     	for (var i = 0; i <a.length; i++) {
+     		oDivbott.innerHTML+="<p></p>";             
+     	};
+     	for (var i = 0; i < a.length; i++) {
+     		aP[i].index=a[i];
+     	};
+     	aIma.src=aP[0].index;
+               aP[0].className="active2";
+               old=aP[0];
+     	for (var i = 0; i < a.length; i++) {
+     		aP[i].onmouseover=function(){
+     		old.className="";
+                              aIma.src=this.index;
+                              this.className="active2";
+                              old=this;
+     		};
+     	};
+     	};
+     	
+dsplIma(aarr[0]);
+that=aDiv[0];
+for (var j = 0; j< aDiv.length;j++) {	
+    
+   aDiv[j].cldName=aarr[j];
+   
+ 	
+             aDiv[j].onclick=function(){
+              that.className="";
+	dsplIma(this.cldName);
+	this.className="active";
+	that=this;	
+};
+
+};
+
+
+</script>
+
+
+
+<a href="https://doublelam.github.io/homepage/programs/仿京东">仿京东页面</a>
+</body>
+</html>
