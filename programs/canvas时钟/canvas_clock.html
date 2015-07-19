@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+
+	</head>
+<body>
+
+
+
+	<canvas id="clock" width="500" height="500" style="background:grey"> your browser not support canvas</canvas>
+	<script>
+
+	
+
+
+  
+	var oclock=document.getElementById('clock');
+	var odraw=oclock.getContext('2d');
+
+function cclok()
+  {
+
+	var ti=new Date();
+    var second=ti.getSeconds();
+    var hour=ti.getHours();
+    var minute=ti.getMinutes();
+    var millsec=ti.getMilliseconds();
+    hour=hour>12? hour-12:hour;
+	
+
+
+	odraw.beginPath();
+    odraw.lineWidth=1;
+    odraw.fillStyle="lightgrey";
+    odraw.arc(250,250,100,0,360,false);
+    odraw.fill();
+    odraw.closePath();//draw a circle 
+
+
+    for (var i = 0; i < 12; i++)
+        	{
+                    odraw.save(); 
+                    odraw.strokeStyle="grey";
+                    odraw.translate(250,250);
+                    odraw.rotate(i*30*Math.PI/180);
+
+                    odraw.beginPath();
+                    odraw.lineWidth=1;
+                    odraw.fillStyle="grey";
+                    odraw.arc(0,-92,2,0,360,false);
+                    odraw.fill();
+                    odraw.closePath();
+
+                    odraw.restore();//时刻度
+};
+
+
+
+
+
+
+for (var i = 0; i < 60; i++)
+        	{
+                    odraw.save(); 
+                    odraw.strokeStyle="grey";
+                    odraw.translate(250,250);
+                    odraw.rotate(i*6*Math.PI/180);
+                    odraw.beginPath();
+                    odraw.lineWidth=1;
+                    odraw.fillStyle="grey";
+                    odraw.arc(0,-92,1,0,360,false);
+                    odraw.fill();
+                    odraw.closePath();
+
+                    //分刻度
+                    //odraw.closePath();
+                    odraw.restore();
+                    };
+                    //odraw.closePath();
+
+                    odraw.save();
+                    odraw.translate(250,250);
+                    odraw.rotate((hour*30+minute*0.5+0.5*second/60+0.0005*millsec/60)*Math.PI/180);
+                    odraw.beginPath();
+                    odraw.lineWidth=2;
+                    odraw.strokeStyle="grey";
+                    odraw.moveTo(0,10);
+                    odraw.lineTo(0,-70);
+                    odraw.stroke();
+                    odraw.closePath();  //时针
+                    odraw.restore();
+
+
+
+                    odraw.save();
+                    odraw.translate(250,250);
+                    odraw.rotate((minute*6+second*0.1+millsec*0.0001)*Math.PI/180);
+                    odraw.beginPath();
+                    
+                    odraw.lineWidth=2;
+                    odraw.strokeStyle="grey";
+                    odraw.moveTo(0,10);
+                    odraw.lineTo(0,-75);
+                    odraw.stroke();
+                    odraw.closePath();
+                    odraw.restore();
+                     //分针
+
+
+              
+
+                   odraw.save();
+                   odraw.translate(250,250);
+                   odraw.rotate((second+millsec/1000)*6*Math.PI/180);
+                   odraw.beginPath();
+                   odraw.lineWidth=2;
+                   odraw.strokeStyle="grey";
+                   odraw.moveTo(0,10);
+                   odraw.lineTo(0,-80);
+                   odraw.stroke();
+                   odraw.closePath(); //秒针
+                   odraw.restore();
+  
+
+};
+                 setInterval(cclok,1);
+                 cclok();
+                    
+
+	</script>
+	</body>
+</html>
