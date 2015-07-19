@@ -71,6 +71,10 @@
     transition:.2s;
 
 }
+.describbtpe:hover,.describbtpe_js:hover{
+	color: #888;	
+
+}
 
 
 
