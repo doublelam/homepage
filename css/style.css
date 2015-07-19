@@ -1,143 +1,78 @@
-
-/*使div高度能使用100%*/
-html,body{
-	margin: 0px;
-	height: 100%;
-	-webkit-user-select:none;
-	overflow: hidden;
-
-}
-/*/////////////////////////*/
-
-
-.page{
-	transition:.2s;
-
+.miresume{
+	font-size: 20px;
 }
 
-/*第一个页面样式*/
-.page1{
-   
-	width: 100%;
-	height: 100%;
-	background: #037043;
+
+.icood{
+	display: inline-block;
+	margin-left: 4%;
 }
-/*//////////////////////////////*/
 
-/*第二个页面样式*/
-.page2{
-	width: 100%;
-	height: 100%;
-	background: #310967; 
+.idid{
+
+	margin-left: 5em;
+    display: inline-block;
 }
-/*///////////////////////////////*/
+ 
 
-/*第三个页面样式*/
-.page3{
-	width: 100%;
-	height: 100%;
-	background: #0D5C0B; 
-}
-/*//////////////////////////////*/
-
-
-/*第四个页面*/
-.page4{
-	width: 100%;
-	height: 100%;
-	background: #582516; 
-}
-/*////////////////////////*/
-
-/*moveup样式*/
-.moveup{
-    top: 60%;
-    right: 10%;
-	position: fixed;
-	height: 42px;
-	width: 42px;
-	background: white;
-	opacity: .5;
-	border-radius: 21px;
-	transition:all .3s ease;
-	box-shadow: 2px 2px 15px #222;
+.idid::before{
+     content: "";
+     position: absolute;
+     margin-left: -20px;
+     top: 110px;
+     width: 1px;
+     height: 150px;
+     background: #ccc;
 
 }
-/*/////////////////////////////*/
 
-/*hover样式*/
-.moveup:hover,.moveup:hover::after{
-  opacity: 1;
-  
+.descri{
+	width: 50%;
+	 margin-left: 4%;
+}
+
+.describe{
+   display: none;
+	text-indent: 2em;
+}
+
+.personinfo{
+	margin-left: 4%;
+}
+
+.linksty{
+	text-decoration: none;
+}
+
+.describbtpe::after{
+	position: absolute;
+	margin-left: 7px;
+	margin-top: 8px;
+   content: "";
+   width: 8px;
+   height: 8px;
+   border-left:2px solid #777;
+   border-top: 2px solid #777;
+   transform:rotate(45deg);
+   transition:.2s;
 
 }
-/*///////////////////////////////////////*/
 
-/*active样式*/
-.moveup:active{
-  background: #ccc;
-
-}
-/*//////////////////////////////////*/
-
-/*箭头样式*/
-.moveup::after{
-	left: 12px;
-	top: 15px;
-content: "";
-position: absolute;
-height: 16px;
-width: 16px;
-border-left:2px solid black;
-border-top:2px solid black;
-opacity: .3;
-transform:rotate(45deg);
-}
-/*///////////////////////////*/
-
-
-/*movedown样式*/
-.movedown{
-    top: 67%;
-    right: 10%;
-	position: fixed;
-	height: 42px;
-	width: 42px;
-	background: white;
-	opacity: .5;
-	border-radius: 21px;
-	transition:.2s;
-	box-shadow: 2px 2px 15px #222;
+.describbtpe_js::after{
+	position: absolute;
+	margin-left: 7px;
+	margin-top: 8px;
+   content: "";
+   width: 8px;
+   height: 8px;
+   border-left:2px solid #777;
+   border-top: 2px solid #777;
+   transform:rotate(225deg);
+    transition:.2s;
 
 }
-/*/////////////////////////////*/
 
-/*hover样式*/
-.movedown:hover,.movedown:hover::after{
-  opacity: 1;
-  
 
-}
-/*///////////////////////////////////////*/
 
-/*active样式*/
-.movedown:active{
-  background: #ccc;
 
-}
-/*//////////////////////////////////*/
 
-/*箭头样式*/
-.movedown::after{
-	left: 12px;
-	top: 12px;
-content: "";
-position: absolute;
-height: 16px;
-width: 16px;
-border-left:2px solid black;
-border-top:2px solid black;
-opacity: .3;
-transform:rotate(-135deg);
-}
-/*///////////////////////////*/

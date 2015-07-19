@@ -1,32 +1,26 @@
-// 上下滑动的指示div函数
-function move_down_up(){
-var oMoveup=document.getElementById('moveup');
-var oMovedown=document.getElementById('movedown');
-var oDiv1=document.getElementById('page1');
-oDiv1.style.marginTop='0px';
-var num=0;
-oMovedown.onclick=function(){
+function hidde_ddis(){
+
+var oUper=document.getElementById(arguments[0]);
+var oDowner=document.getElementById(arguments[1]);
+var odd=true;
+ 
+function disp(){
+if (odd) {
+oDowner.style.display="none";
+odd=false;
+oUper.className="describbtpe";
+}
+
+else {
 	
-	if (num<3) {
-		num++;
-	var heightpx=document.body.clientHeight;
-     oDiv1.style.marginTop=parseInt(oDiv1.style.marginTop)-heightpx+"px";
-     
-
-    };
+	oDowner.style.display="block";
+	odd=true;
+	oUper.className="describbtpe_js";
 }
-
-oMoveup.onclick=function(){
-	
-	if (num>0) {
-		num=num-1;
-	var heightpx=document.body.clientHeight; 
-     oDiv1.style.marginTop=parseInt(oDiv1.style.marginTop)+heightpx+"px";
-    
-    };
 }
+disp();
+oUper.onclick=disp;
 
 }
-
-
-move_down_up();
+ 
+hidde_ddis("decribeh4","describep");
