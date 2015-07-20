@@ -1,3 +1,12 @@
+
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
 /*头部样式,在导航栏上方*/
 
 .header{
@@ -254,7 +263,7 @@ text-decoration: none;
 /*"我的京东"下面隐藏的div位置，高度大小样式*/
 .minejingdong{
     margin-top: 29px;
-	margin-left:-89px;
+	margin-left:-87px;
 	width: 270px;
 	height: 191px;
 	 
@@ -341,7 +350,7 @@ margin-left: 3px;
 /*手机京东下面可隐藏div定位样式*/
 .fonejingdonghiddendiv{
 	
-	margin-left: -105px;
+	margin-left: -103px;
 	margin-top: 29px;
 	width: 250px;
 	height: 195px;
@@ -363,7 +372,7 @@ margin-left: 3px;
      width: 82px;
      height: 108px;
      margin-top: 29px;
-     margin-left: -89px;
+     margin-left: -87px;
      text-align: center;
 
 }
@@ -391,7 +400,7 @@ color: #666;
 	width: 82px;
      height: 130px;
      margin-top: 29px;
-     margin-left: -89px;
+     margin-left: -87px;
      text-align: center;
 }
 /*/////////////////////////////////////////////////////*/
@@ -421,7 +430,7 @@ color: #666;
 	width: 1210px;
      height: 186px;
      margin-top: 29px;
-     margin-left: -1212px;
+     margin-left: -1210px;
     
 }
 /*////////////////////////////////////////////////////////////*/
@@ -620,7 +629,7 @@ h4{
 /*我的购物车下面隐藏div块的单独样式*/
 .shoppingcarhidden{
 	visibility: hidden;
-	top: 93px;
+	top: 92px;
 	height: 70px;
 	width: 308px;
    font-size: 12px;
@@ -683,7 +692,7 @@ h4{
 
 /*li链接样式*/
 .classifysdecora{
-	width:199px;
+	width:208px;
    	height:31px;
    color:white;
    position:relative;
@@ -714,40 +723,48 @@ h4{
 .divnextclassify{
 	display: none;
 	position: absolute;
-	left: 279px;
+	left: 277px;
 	top: 178px;
    width: 1000px;
    height: 465px;
    border:1px solid #B1191A;
 }
+/*//////////////////////////////*/
 
+/*特殊隐藏div样式*/
 .divnextclassifydiff{
 	display: none;
 	position: absolute;
-	left: 279px;
+	left: 277px;
 	top: 178px;
    width: 1000px;
    height: 532px;
    border:1px solid #B1191A;
 }
+/*///////////////////////////////*/
 
+/*特殊隐藏div样式*/
 .divnextclassifydiff1{
 	display: none;
     position: absolute;
-	left: 279px;
+	left: 277px;
 	top: 178px;
    width: 1000px;
    height: 508px;
    border:1px solid #B1191A; 
 
 }
+/*//////////////////////////////*/
+
+
+/*特殊隐藏div样式*/
 .divnextclassifydiff2{
 	display: none;
 	position: absolute;
-	left: 279px;
+	left: 277px;
 	top: 178px;
    width: 1000px;
    height: 510px;
    border:1px solid #B1191A; 
 }
-
+/*//////////////////////////////////*/
