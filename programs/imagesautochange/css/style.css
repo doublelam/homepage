@@ -1,0 +1,59 @@
+
+
+
+.container{
+width: 320px;
+height: 140px;
+border: 1px solid #000;
+
+}
+
+
+.menu{
+	display: inline-block;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	background: #94FFC6;
+	width: 80px;
+	height:30px;
+}
+
+.menu1{
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+
+.imag{
+	margin-top: 1px;
+	width: 200px;
+	height: 90px;
+	margin-left: 10px;
+}
+.altedispaly{
+
+ position: absolute;
+ left: 220px;
+ top: 50px;
+ width: 100px;
+ height: 90px;
+ background: blue;
+
+
+}
+
+
+.altedispaly .divli{
+    position:relative;
+	width: 100px;
+	height: 29px;
+	line-height: 29px;
+    background: green;
+    text-align: center;
+    margin-bottom: 1px;
+}
