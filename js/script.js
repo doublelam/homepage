@@ -1,26 +1,85 @@
-function hidde_ddis(){
 
-var oUper=document.getElementById(arguments[0]);
-var oDowner=document.getElementById(arguments[1]);
-var odd=true;
- 
-function disp(){
-if (odd) {
-oDowner.style.display="none";
-odd=false;
-oUper.className="describbtpe";
+//划过头像显示联系方式
+function headdis(hiddenableid,clickdivid){
+var oHidden=document.getElementById(hiddenableid);
+var oClick=document.getElementById(clickdivid);
+var oDivDe=document.getElementById('detailinfo');
+var aInfo=oDivDe.getElementsByTagName('div');
+var aImg=oHidden.getElementsByTagName('img');
+oClick.onmouseover=function(){
+ oHidden.style.paddingLeft="18px";
+ oHidden.style.width="250px";
+
 }
+
+function disapp(){
+
+  oHidden.style.paddingLeft="0px";
+  oHidden.style.width="0px";
+  for (var i =0; i<aInfo.length ; i++) {
+  	
+  	aInfo[i].style.display="none";
+  	
+  };
+ };
+
+ 
+
+//点击空白区域隐藏，阻止事件冒泡
+
+//ie属性
+if ('addEventListener' in oHidden) {
+
+	oHidden.addEventListener('click',function (a){a.stopPropagation()},false);
+	oDivDe.addEventListener('click',function (a){a.stopPropagation()},false);
+
+}
+
 
 else {
-	
-	oDowner.style.display="block";
-	odd=true;
-	oUper.className="describbtpe_js";
-}
-}
-disp();
-oUper.onclick=disp;
-
+oHidden.onclick=function(ev){
+	ev.cancelBubble = false;}
+oDivDe.onclick=function(ev){
+	ev.cancelBubble = false;}
 }
  
-hidde_ddis("decribeh4","describep");
+//////////////////////////////////////////////////////////////////////////////
+
+document.onclick=disapp;
+
+
+
+///////////////////////////////////
+
+function  detaildis(){
+
+ for (var i = 0;i<aImg.length; i++) {
+ 	aImg[i].index=i;
+ 	aImg[i].onmouseover=function(){
+ 	
+     for (var j=0 ;j<aInfo.length; j++) {
+     	aInfo[j].style.display="none";	
+        
+     };
+    aInfo[this.index].style.display="block";
+   
+    
+
+
+
+ 	}
+ };
+  
+
+}
+detaildis(); 
+
+}
+//////////////////////////////////
+
+
+//调用函数
+headdis("contactme","selfi")
+////////////////////////////
+
+
