@@ -20,6 +20,10 @@
 } 
 
 /*img外边框为0px*/
+
+body{
+	overflow: hidden;
+}
 img{
 
 	border:0px;
@@ -51,6 +55,8 @@ img{
 	margin: auto;
 	background: #ECEEF2;
 	z-index: 0;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 	
 }
 /*/////////////////////////////*/
@@ -58,14 +64,16 @@ img{
 /*导航li样式*/
 .navinfo{
 	display: inline-block;
-	
+	background: #ECEEF2;
 	height: 100%;
     line-height: 50px;
 	padding-left: 30px;
 	padding-right: 30px;
 	left: 0px;
 	margin-right: 50px;
-
+	transition:.2s;
+	border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
 
 }
 /*/////////////////////////*/
@@ -85,14 +93,13 @@ img{
 
 /*main的样式*/
 .maindis{
-  position: relative;
-  background: red;
- top: 100px;
-  margin: auto;
-  width: 70.3%;
+  position: absolute;
+  
+  top: 150px;
+  width: 400%;
   height: 450px;
-
-
+  left: 0px;
+  transition:.3s;
 }
 /*////////////////////*/
 
@@ -173,41 +180,66 @@ img{
     text-align: center;
 
 }
+/*/////////////////////////*/
 
-
-
+/*联系我下面隐藏div的样式*/
 .info1{
 width:200px;
 height:60px;
-right: 17%;  
+right: 23.3%;  
+line-height: 60px;
 }
 
 .info2{
-	right: 17%;
-	width:280px;
-	height:80px; 
+	right: 16%;
+	width:300px;
+	height:60px; 
+	line-height: 60px;
 }
 .info3{
-	right:20%;
+	right:19.5%;
 	width: 100px;
 	height:  100px;
 
 }
 /*/////////////////////////*/
 
-
+/*联系我右边图标样式*/
 .conico:hover{
 	transform:rotate(360deg);
 }
+/*/////////////////*/
 
+/*二维码样式*/
 .qrcode{
 	margin:10px;
 	
 }
+/*/////////////////*/
+
+/*链接样式*/
 .alink{
 	text-decoration: none;
 	color: white;
 }
+/*/////////////////*/
+
+/*链接hover样式*/
 .alink:hover{
 	text-decoration:underline;
 }
+/*////////////////////////*/
+
+/*可移动内div的样式*/
+.mainbody{
+	display: inline-block;
+	position: relative;
+	margin-left: 3.725%;
+	margin-right: 3.725%;
+	width: 17.55%;
+	height: 100%;
+	background: #ECEEF2;
+}
+/*/////////////////////////////////*/
+
+

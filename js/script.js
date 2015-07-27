@@ -83,3 +83,45 @@ headdis("contactme","selfi")
 ////////////////////////////
 
 
+//点击tab切换页面
+function transform(){
+	var oNavi=document.getElementById("nav");
+	var aNavLi=oNavi.getElementsByTagName("li");
+    var oMain=document.getElementById("maindis");
+  for (var i = 0;i<aNavLi.length; i++) {
+  	aNavLi[i].index=i;
+  	aNavLi[i].onmouseover=function(){
+  	for (var j =0; j<aNavLi.length; j++) {
+  			aNavLi[j].style.boxShadow="";
+};	
+   if(!this.onoff){
+    this.style.boxShadow="0px 2px 8px #aaa";
+   }
+
+  	};
+  	aNavLi[i].onmouseout=function(){
+  	    this.style.boxShadow="";
+   	}
+
+
+
+  	aNavLi[i].onclick=function(){
+
+  		for (var j =0; j<aNavLi.length; j++) {
+  			aNavLi[j].style.background="#ECEEF2";
+  			aNavLi[j].style.color="#909EB4";
+  			aNavLi[j].onoff=false;
+  		};
+  		this.onoff=true;
+  		this.style.background="#707B91";
+  		this.style.color="white";
+        oMain.style.left=(-100*this.index)+"%";
+
+  	}
+  };
+
+}
+transform();
+///////////////////////////////////////////////////
+
+
