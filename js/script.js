@@ -125,3 +125,52 @@ transform();
 ///////////////////////////////////////////////////
 
 
+//对实例展示内的图片进行排列
+function imgdisplay(){
+  var oImg=document.getElementById("imgdiv");
+  var aImg=oImg.getElementsByTagName("img");
+  for (var i = 0 ; i <aImg.length; i++) {
+  	aImg[i].style.left=i%5*20+5+"%";
+  	aImg[i].style.top=parseInt(i/5)+5+"%";
+  };
+
+
+}
+
+imgdisplay();
+/////////////////////////
+
+
+//自我评价内的图片播放
+function imgdisplayinrecom(){
+	var oImg=document.getElementById('mypaintimg');
+	var oPre=document.getElementById('previous');
+	var oNext=document.getElementById('next');
+	var oHide=document.getElementById('hide');
+	var oDivPaint=document.getElementById('mypaintdis');
+    var array=["image/mypaint/mypaint1.jpg","image/mypaint/mypaint2.jpg","image/mypaint/mypaint3.jpg","image/mypaint/mypaint4.jpg","image/mypaint/mygif1.gif","image/mypaint/mygif2.gif"]
+	var num=0;
+	oNext.onclick=function(){
+		if(num>4){num=-1};
+      num++;
+      
+      oImg.src=array[num];
+
+	}
+oPre.onclick=function(){
+		if(num<1){num=6};
+      num--;
+      
+      oImg.src=array[num];
+
+	}
+
+	oHide.onclick=function(){
+     oDivPaint.style.display="none";
+	}
+
+}
+imgdisplayinrecom();
+////////////////////////////////////////////////////
+
+

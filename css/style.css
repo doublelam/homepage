@@ -4,26 +4,21 @@
 	box-sizing:border-box;
     -moz-box-sizing:border-box; /* Firefox */
     -webkit-box-sizing:border-box;/*webkit内核*/
-    color:#9097A4;
+    
 }
 /*////////////////////////////////////////*/
 
-/*字体定义*/
-@font-face {
- font-family: 'gongfang';
- src: url('fontName.eot');
- src: local('fontName Regular'),
-              local('fontName'),
-              url('fontName.woff') format('woff'),
-              url('fontName.ttf') format('truetype'),
-              url('fontName.svg#fontName') format('svg');
-} 
 
-/*img外边框为0px*/
+
+
 
 body{
 	overflow: hidden;
+	color:#9097A4;
+	font-family: sans-serif;
 }
+
+/*img外边框为0px*/
 img{
 
 	border:0px;
@@ -238,8 +233,119 @@ line-height: 60px;
 	margin-right: 3.725%;
 	width: 17.55%;
 	height: 100%;
-	background: #ECEEF2;
+	background: #F7F7FA;
+	border-radius: 3px;
 }
 /*/////////////////////////////////*/
 
 
+
+/*示例展示中的图片样式*/
+.imgdis{
+	position: absolute;
+	border-radius: 5px;
+	transition:.4s;
+
+}
+/*////////////////////////////////*/
+
+/*实例展示中的图片hover样式*/
+.imgdis:hover{
+    
+	box-shadow: 0px 3px 8px #999;
+	z-index: 999;
+}
+/*///////////////////////////*/
+
+/*个人简介文字部分样式*/
+.posision{
+	position: absolute;
+	font-size: 20px;
+	color: #666;
+	padding-left: 10%;
+	padding-right: 10%;
+	top: 10%;
+	line-height: 2;
+}
+/*/////////////////////////////*/
+
+/*shannon theory txt style*/
+.hometxt{
+	font-size: 30px;
+}
+/*//////////////////*/
+
+.namsty{
+	font-style: oblique;
+	
+	margin-left: 60%;
+	top: 60%;
+	
+}
+
+.ownsty{
+	padding-top: 5%;
+}
+
+/*文字部分属性*/
+.atrri{
+
+	font-weight: bolder;
+}
+/*///////////////////////////*/
+
+/*图片展示大div*/
+.mypaintdis{
+	position: absolute;
+	left: 60%;
+	top: 22%;
+	
+
+	
+}
+/*/////////////*/
+
+/*自我介绍图片样式*/
+.mypaimg{
+ border-radius: 5px;
+ transition:.3s;
+
+}
+/*////////////////*/
+
+/*图片hover样式*/
+.mypaimg:hover{
+	box-shadow: 0px 3px 6px #aaa;
+}
+/*/////////////////////*/
+
+/*按钮样式*/
+.previous{
+
+	top: 45px;
+
+}
+
+.hide{
+	
+	top: 90px;
+	}
+.butt:hover{
+	box-shadow: 0px 3px 6px #aaa;
+}
+.butt{
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+    margin-left: 5px;
+    transition:.3s;
+    outline: none;
+}
+.butt:active{
+	background: #707B91;
+	color: white;
+	box-shadow: none;
+}
+/*/////////////////////////////////////*/
