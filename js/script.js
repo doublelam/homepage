@@ -102,9 +102,10 @@ function transform(){
   	aNavLi[i].onmouseout=function(){
   	    this.style.boxShadow="";
    	}
-
-
-
+//一开始首页显示有颜色的背景
+    aNavLi[0].style.background="#707B91";
+  			aNavLi[0].style.color="white";
+///////////////////////////////////////////////////
   	aNavLi[i].onclick=function(){
 
   		for (var j =0; j<aNavLi.length; j++) {

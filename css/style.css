@@ -238,7 +238,17 @@ line-height: 60px;
 }
 /*/////////////////////////////////*/
 
+/*第三个div样式*/
+.diifback{
+	background: #E7A937;
+}
 
+/*第一个div的颜色样式*/
+.firstdiv{
+	background: #313B55;
+
+}
+/*////////////////////////////*/
 
 /*示例展示中的图片样式*/
 .imgdis{
@@ -252,7 +262,7 @@ line-height: 60px;
 /*实例展示中的图片hover样式*/
 .imgdis:hover{
     
-	box-shadow: 0px 3px 8px #999;
+	box-shadow: 0px 3px 6px #666;
 	z-index: 999;
 }
 /*///////////////////////////*/
@@ -271,15 +281,17 @@ line-height: 60px;
 
 /*shannon theory txt style*/
 .hometxt{
-	font-size: 30px;
+	font-size: 38px;
+	color: white;
 }
 /*//////////////////*/
 
 .namsty{
 	font-style: oblique;
-	
+	color: white;
 	margin-left: 60%;
-	top: 60%;
+	top: 64%;
+	font-size: 30px;
 	
 }
 
@@ -297,11 +309,9 @@ line-height: 60px;
 /*图片展示大div*/
 .mypaintdis{
 	position: absolute;
-	left: 60%;
+	left: 63%;
 	top: 22%;
-	
 
-	
 }
 /*/////////////*/
 
