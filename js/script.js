@@ -175,3 +175,16 @@ imgdisplayinrecom();
 ////////////////////////////////////////////////////
 
 
+//判断浏览器以及弹出提示
+function alertupgrade(){
+ var oImg=document.getElementById('mypaintimg');
+ if('boxShadow' in oImg.style==false){
+ 	alert("请使用IE9及以上版本或其他其他内核浏览器");
+ }
+};
+
+
+alertupgrade();
+///////////////////////////////////////////////////////////////////
+
+

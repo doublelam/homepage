@@ -16,6 +16,8 @@ body{
 	overflow: hidden;
 	color:#9097A4;
 	font-family: sans-serif;
+	
+
 }
 
 /*img外边框为0px*/
@@ -52,6 +54,8 @@ img{
 	z-index: 0;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
+	-user-select:none;
+	cursor: default;
 	
 }
 /*/////////////////////////////*/
