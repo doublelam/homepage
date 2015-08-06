@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="icon" href="image/kidding.ico"/>
+	<title>Google</title>
+
+
+<style type="text/css">
+
+@font-face{
+	font-family:newcatull;
+	src:url('fonts/newcatull.ttf');
+}
+   *,*:after,*:before{
+   	-webkit-box-sizing:border-box;
+   	
+   }
+   body{
+   	font-family: arial,sans-serif;
+   }
+
+	.rsltul{
+			
+		list-style: none;
+       
+        line-height: 1.5em;
+        padding:0em; 
+        font-size: 14px;
+
+		
+
+	}
+	
+	.linkli{
+padding-left: .8em;
+
+	}
+	.alink{
+		text-decoration: none;
+		color: #001F37;
+	}
+
+	.linkli:hover{
+ background: #ddd;
+	}
+	
+	.linkli:visited{
+		color: #888;
+	}
+
+     .searchtxt{
+     	border:1px solid #B9B9B9;
+     	display: block;
+        outline: none;
+     	width: 570px;
+     	height: 30px;
+     	margin:auto;
+     	margin-top: 315px;
+     	padding-left: .8em;
+     	font-size: 16px;
+     	
+     }
+     .searchtxt:hover{
+     	border:1px solid #999;
+     }
+	
+	.searchtxt:focus{
+		border: 1px solid blue;
+	} 
+
+    .btndiv{
+    	
+    	position: relative;
+    	width: 300px;
+    	margin: auto;
+    	text-align: center;
+    }
+
+
+
+    .button{
+    	height: 29px;
+    	font-weight: bold;
+    	color: #444;
+    	border: 1px solid #D9D9D9;
+    	background: #F4F4F4;
+    	font-size: 9px;
+    	border-radius: 2px;
+    	margin-top: 16px;
+    	margin-bottom: 4px;
+    	outline:none;
+    }
+
+    .button:hover{
+    border-color: #aaa;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+
+
+    }
+
+    .button:focus{
+    	border-color: blue;
+    }
+    .srchrslt{
+    	position: relative;
+		width: 570px;
+		
+		box-shadow: 0px 2px 8px #999;
+		margin: auto;
+		margin-top: -16px;
+		
+	}
+
+	.srchrslthideshadow{
+    	position: relative;
+		width: 570px;
+		
+		
+		margin: auto;
+		margin-top: -16px;
+    }
+    .searchbtn{
+    	margin-right: 8px;
+    }
+	.luckbtn{
+		margin-left: 8px;
+	}
+	.logotitle{
+		
+		-webkit-user-select:none;
+		cursor: default;
+		font-family:newcatull;
+		font-size: 100px;
+		
+		position: absolute;
+		top: 165px;
+		left: 50%;
+		transform:translateX(-50%);
+
+	}
+</style>	
+</head>
+<body>
+<div class="logotitle"><!-- 
+ --><span style="color:#1469EB">K</span><span style="color:#D23F2A">i</span><span style="color:#FFB901">d</span><span style="color:#1469EB">d</span><span style="color:#019857">i</span><span style="color:#D23F2A">n</span><span style="color:#FFB901">g</span>
+</div>
+<input type="text" class="searchtxt" id="searchtxt" />
+
+<div class="srchrslt" id="srchrslt">
+	<ul class="rsltul" id="rsltul"><!-- 
+		
+	< --></ul><!-- 
+
+	 --><div class="btndiv">
+<button class="button searchbtn" id="searchbtn">Kidding Search</button><!-- 
+ --><button class="button luckbtn">I'm Kidding Lucky</button>
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+        var oDivsrc=document.getElementById('srchrslt');
+		var oTxt=document.getElementById('searchtxt');
+	    var aHead=document.getElementsByTagName('head')[0];
+		var oSrcbtn=document.getElementById('searchbtn');
+		var oUl=document.getElementById('rsltul'); 
+	     
+        
+	    
+
+function hiddshadow(){
+	var aA=oUl.getElementsByTagName('a');
+  if(aA[0]===undefined){
+  	console.log("aa"+aA[0]);
+   oDivsrc.className='srchrslthideshadow';
+  }
+  else{
+  	console.log("ss"+aA[0]);
+  	oDivsrc.className='srchrslt';
+  }
+}
+
+
+
+	function eventkyup(){
+		
+		var node=document.createElement('script');
+		aHead.appendChild(node);
+		// var oScript=document.getElementsByTagName('script')[0];
+        node.setAttribute("type","text/javascript");
+
+		node.src="http://suggestion.baidu.com/su?p=3&cb=searching&wd="+oTxt.value; 
+		var oldNode=aHead.getElementsByTagName('script')[0];
+		oldNode.parentNode.replaceChild(node,oldNode);
+		console.log('eventuploaded');
+
+     // // for (var i = 0; i <; i--) {
+     // // 	Things[i]
+     // // };
+     //    oUl.innerHTML=''
+     // console.log(oScript.tagName);
+     //    console.log(aHead);
+     //    console.log(jsondata);
+        
+	};
+
+function searching(jsondata){
+          
+          console.log(aHead);
+        console.log(jsondata.s[1]);
+        console.log(jsondata);
+        oUl.innerHTML='';
+        for (var i = 0; i <jsondata.s.length ; i++) {
+
+        	oUl.innerHTML+='<a class="alink" href='+encodeURI("http://cn.bing.com/search?q="+jsondata.s[i])+' target="_blank">'+'<li class="linkli">'+jsondata.s[i]+'</li></a>';
+        };
+        
+hiddshadow();
+}
+
+
+
+
+document.onclick=function(){
+oUl.innerHTML='';
+hiddshadow();
+}
+
+
+oTxt.onkeyup=function()
+{     
+	eventkyup();
+	
+
+};
+hiddshadow();
+
+
+function srchbtnclk(){
+
+if (oTxt.value) {
+	var hrlink='http://cn.bing.com/search?q='+oTxt.value;
+   window.open(hrlink);
+
+};
+
+}
+oSrcbtn.onclick=srchbtnclk;
+
+</script>
+</body>
+</html>
