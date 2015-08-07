@@ -105,6 +105,7 @@ function transform(){
 //一开始首页显示有颜色的背景
     aNavLi[0].style.background="#707B91";
   			aNavLi[0].style.color="white";
+  			aNavLi[0].onoff=true;
 ///////////////////////////////////////////////////
   	aNavLi[i].onclick=function(){
 
@@ -188,3 +189,4 @@ alertupgrade();
 ///////////////////////////////////////////////////////////////////
 
 
+///////////////////////////////////////////
