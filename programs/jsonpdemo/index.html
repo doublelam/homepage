@@ -2,16 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="renderer" content="webkit">
 <link rel="icon" href="image/kidding.ico"/>
-	<title>Google</title>
+	<title>Kidding Search</title>
 
 
 <style type="text/css">
 
 @font-face{
 	font-family:newcatull;
-	src:url('fonts/newcatull.ttf');
+	src:url('fonts/newcatull.ttf') format('truetype');
+	src:url('fonts/newcatull.eot') format('eot'),
+	url('fonts/newcatull.svg') format('svg'),
+	url('fonts/newcatull.woff') format('woff');
 }
    *,*:after,*:before{
    	-webkit-box-sizing:border-box;
@@ -24,9 +28,10 @@
 	.rsltul{
 			
 		list-style: none;
-       
+      
         line-height: 1.5em;
         padding:0em; 
+        padding-top: .8em;
         font-size: 14px;
 
 		
@@ -51,6 +56,7 @@ padding-left: .8em;
 	}
 
      .searchtxt{
+
      	border:1px solid #B9B9B9;
      	display: block;
         outline: none;
@@ -58,6 +64,7 @@ padding-left: .8em;
      	height: 30px;
      	margin:auto;
      	margin-top: 315px;
+
      	padding-left: .8em;
      	font-size: 16px;
      	
@@ -75,12 +82,14 @@ padding-left: .8em;
     	position: relative;
     	width: 300px;
     	margin: auto;
+    	margin-top: -23px;
     	text-align: center;
     }
 
 
 
     .button{
+
     	height: 29px;
     	font-weight: bold;
     	color: #444;
@@ -148,15 +157,15 @@ padding-left: .8em;
 </div>
 <input type="text" class="searchtxt" id="searchtxt" />
 
-<div class="srchrslt" id="srchrslt">
-	<ul class="rsltul" id="rsltul"><!-- 
+<div class="srchrslt" id="srchrslt"><!-- 
+	 --><ul class="rsltul" id="rsltul"><!-- 
 		
 	< --></ul><!-- 
 
-	 --><div class="btndiv">
-<button class="button searchbtn" id="searchbtn">Kidding Search</button><!-- 
- --><button class="button luckbtn">I'm Kidding Lucky</button>
-</div>
+	 --><div class="btndiv"><!-- 
+ --><button class="button searchbtn" id="searchbtn">Kidding Search</button><!-- 
+ --><button class="button luckbtn">I'm Kidding Lucky</button><!-- 
+ --></div>
 </div>
 
 
@@ -225,8 +234,10 @@ hiddshadow();
 
 
 document.onclick=function(){
+
+	if(document.activeElement.id!=='searchtxt'){
 oUl.innerHTML='';
-hiddshadow();
+hiddshadow();}
 }
 
 
