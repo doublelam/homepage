@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/nav-justified.css">
+<style>
+	*,*::before,*::after{
+		box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-o-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+	}
+</style>
+	<title>bootstrap demo</title>
+</head>
+<body>
+<div class="container">
+
+<h3 class="text-muted">h3标签：项目名</h3>
+<nav>
+	<ul class="nav nav-justified">
+		<li><a href="#jumbotron">主页</a></li>
+        <li><a href="#colfirst">项目</a></li>
+		<li><a href="#">服务</a></li>
+		<li><a href="#">下载</a></li>
+		<li><a href="#">关于</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>	
+</nav>
+<div class="jumbotron">
+<h1 id="jumbotron">巨幕：能延伸至整个浏览器视口来展示网站上的关键内容</h1>
+<p>这是一个轻量、灵活的组件，它能延伸至整个浏览器视口来展示网站上的关键内容。如果需要让巨幕组件的宽度与浏览器宽度一致并且没有圆角，请把此组件放在所有 .container 元素的外面，并在组件内部添加一个 .container 元素。</p>
+<button class="btn btn-success">btn-success</button>
+</div>
+
+
+<div class="col-lg-4" id="colfirst">
+	<h2>这是第一个列的h2标签</h2>
+	<div class="alert alert-success" role="alert">Well done! You successfully read this important alert message.</div>
+	<p>这是第一个列的内容：Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <button class="btn btn-sm btn-success">more details>></button>
+</div>
+
+<div class="col-lg-4">
+	<h2>这是第二个列的h2标签</h2>
+	<div class="alert alert-info" role="alert">Heads up! This alert needs your attention, but it's not super important.</div>
+	<p>这是第二个列的内容：Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+	<button class="btn btn-sm btn-success">more details>></button>
+</div>
+
+<div class="col-lg-4">
+	<h2>这是第三个列的h2标签</h2>
+	<div class="alert alert-warning" role="alert">Warning! Better check yourself, you're not looking too good.</div>
+	<p>这是第三个列的内容：Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+	<button class="btn btn-sm btn-success">more details>></button>
+</div>
+</div>
+
+
+
+<footer class="text-center footer">All Rights Reserved<br>@Company 2015</footer>
+
+
+</body>
+</html>
