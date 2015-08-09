@@ -132,7 +132,7 @@ function imgdisplay(){
   var oImg=document.getElementById("imgdiv");
   var aImg=oImg.getElementsByTagName("img");
   for (var i = 0 ; i <aImg.length; i++) {
-  	aImg[i].style.left=i%5*20+5+"%";
+  	aImg[i].style.left=i%5*20+1.6+"%";
   	aImg[i].style.top=parseInt(i/5)+5+"%";
   };
 
