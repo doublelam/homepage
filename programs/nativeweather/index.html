@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta charset='utf-8'> 
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="css/material.css">
+    
+    <link rel="stylesheet" href="css/materialplusicons.css">
+    <link rel="stylesheet" href="css/nativeweather.css">
+    <title>native weather</title> 
+  </head>
+
+  <body>
+
+
+          <!-- Simple header with scrollable tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Native Weather</span>
+      </div> 
+      <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs-cities-container">
+        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">天台</a>
+        <a href="#scroll-tab-2" class="mdl-layout__tab">杭州</a>
+        <a href="#scroll-tab-3" class="mdl-layout__tab">北京</a>
+        <a href="#scroll-tab-4" class="mdl-layout__tab">田径</a>
+        <a href="#scroll-tab-5" class="mdl-layout__tab">很难</a>
+        <a href="#scroll-tab-6" class="mdl-layout__tab">怀州</a>
+      
+
+      </div>
+    </header>
+    <main class="mdl-layout__content slideable-container">
+      <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+        <div class="page-content"><!-- Your content goes here -->
+          <div class="this-day-stuff mdl-js-button mdl-button--raised mdl-js-ripple-effect"> 
+           <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+              <h3>北京</h3><h5>周三</h5><h5>2015-12-21</h5>
+              <div class="this-day-content-area">
+                <div class="weather-image-container"><img src="images/weatherimages/images/wetr-sunny.png" alt=""></div>
+                <div class="weather-infor-content">
+                  <p><span class="temp-display">8-18</span> 微风</p>  
+                  <p>晴转多云</p>
+                  
+                  <p>PM25:260</p>
+                </div>
+                <div class="clear-float"></div>
+              </div>
+
+          </div>
+          <div class="next-days">
+            <ul>
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect"> 
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class='weather-stuff'>晴转阴</span>
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect">
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class='weather-stuff'>晴转阴</span>
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect">
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class='weather-stuff'>晴转阴</span>
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-icon-position"> 
+      <i class="material-icons">add</i>
+    </button>
+    <div style="dispaly:none" class="get-innerHTML">
+      <section class="mdl-layout__tab-panel is-active">
+        <div class="page-content"><!-- Your content goes here -->
+          <div class="this-day-stuff mdl-js-button mdl-button--raised mdl-js-ripple-effect"> 
+           <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+              <h3 class="local-citiy-name">北京</h3><h5 class="this-week">周三</h5><h5 class="this-date">2015-12-21</h5>
+              <div class="this-day-content-area">
+                <div class="weather-image-container"><img src="images/weatherimages/images/wetr-sunny.png" alt=""></div>
+                <div class="weather-infor-content">
+                  <p><span class="temp-display">8-18</span><span class="wind-kind">微风</span></p>  
+                  <p class="weather-state">晴转多云</p>
+                  
+                  <p class="pm-state">PM25:260</p> 
+                </div>
+                <div class="clear-float"></div>
+              </div> 
+
+          </div>
+          <div class="next-days">
+            <ul class="content-area-container">
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect"> 
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class="weather-stuff">晴转阴</span> 
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect">
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class="weather-stuff">晴转阴</span>
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+              <li class="mdl-js-button mdl-button-raised mdl-js-ripple-effect">
+               <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+                <h3>周三</h3>
+                <img src="images/weatherimages/images/wetr-sunny.png" alt="">
+                <span class="weather-stuff">晴转阴</span>
+                <span class="temprature-stuff">8-18deg</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </body>
+   
+    <script src='js/jquery.min.js'></script> 
+    <script src='js/jquery.mobile-1.3.2.min.js'></script> 
+    <script src="js/adddomnode.js"></script> 
+    <script src="js/material.js"></script>
+ 
+    
+    <script src='js/nativeweather.js'></script> 
+</html>   
