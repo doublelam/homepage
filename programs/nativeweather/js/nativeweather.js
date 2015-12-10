@@ -65,38 +65,65 @@ function leftRightSlideMove(){
 
 }
 var thisday;
-var dayIndex=0;
+var dayIndex=0; 
+var scriptStringA='<script class="added-ajax-script" src="http://api.map.baidu.com/telematics/v3/weather?location=';
+var scriptStringB='&output=json&ak=c5LGschxMOERc7N5yrOt7Ajv&callback=getWeatherData"></script>';
+var scriptString=''; 
+var aListContainer=$('.next-days .content-area-container');
+var aListTips=null;
 function getWeatherData(data){
+	console.log(dayIndex);  
+	scriptString=scriptStringA+citiesData[dayIndex+1]+scriptStringB;  
+	
+
 	thisday=data.results[0].weather_data[0].weather;
-	console.log(dayIndex+thisday); 
-	dayIndex++;
- }  
-
-var aLocalCitiesNames=$('.local-citiy-name'); 
-function dataWriteIn(){
-	var scriptStringA='<script src="http://api.map.baidu.com/telematics/v3/weather?location=';
-	var scriptStringB='&output=json&ak=c5LGschxMOERc7N5yrOt7Ajv&callback=getWeatherData"></script>';
- 
-	for (var i = 0; i < cityNum; i++) {
-		scriptString=scriptStringA+citiesData[i]+scriptStringB; 
-		aLocalCitiesNames[i].innerHTML=citiesData[i]; 
-		$('body').append(scriptString); 
-		console.log(i); 
-
-		 
-		    
-	};  
-}
-
-  
+	
+	$('.this-day-stuff .local-citiy-name')[dayIndex].innerHTML=data.results[0].currentCity;  
+	$('.mdl-layout__tab-panel')[dayIndex].setAttribute('cityName',data.results[0].currentCity);  
+	$('.this-day-stuff .this-week')[dayIndex].innerHTML=data.results[0].weather_data[0].date.substr(0,2);   
+	$('.this-day-stuff .this-date')[dayIndex].innerHTML=data.date;
+	$('.weather-infor-content .temp-display')[dayIndex].innerHTML=data.results[0].weather_data[0].temperature;  
+	$('.weather-infor-content .wind-kind')[dayIndex].innerHTML=data.results[0].weather_data[0].wind;
+	$('.weather-infor-content .weather-state')[dayIndex].innerHTML=data.results[0].weather_data[0].weather; 
+	if(data.results[0].pm25==''){data.results[0].pm25='暂无该城市监测数据'}
+	$('.weather-infor-content .pm-state')[dayIndex].innerHTML='PM2.5:&nbsp'+data.results[0].pm25; 
+	aListTips=aListContainer[dayIndex].getElementsByTagName('li');
+	for (var i = 0;i < aListTips.length;i++) {
+		aListTips[i].getElementsByClassName('week-stuff')[0].innerHTML=data.results[0].weather_data[i+1].date;
+		aListTips[i].getElementsByClassName('weather-stuff')[0].innerHTML=data.results[0].weather_data[i+1].weather;
+		aListTips[i].getElementsByClassName('temprature-stuff')[0].innerHTML=data.results[0].weather_data[i+1].temperature; 
 
 
 
+	};
+	   
+
+	console.log(dayIndex);
+	
+	 
+		dayIndex++;
+		$('body').append(scriptString);  
+	
+	if (dayIndex>=cityNum){scriptStringA='';scriptStringB='';}    
+	console.log(dayIndex+thisday);
+ }   
+
+function firstAjaxScriptAdded(){
+	scriptString=scriptStringA+citiesData[0]+scriptStringB;  
+	$('body').append(scriptString); 
+} 
 
 
-dataWriteIn();
+
+
+
+
+
+// dataWriteIn();
 
 // leftRightSlideMove(); 
 tabClickPageSlade();
+firstAjaxScriptAdded();
+ 
 
 

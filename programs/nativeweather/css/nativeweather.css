@@ -117,5 +117,9 @@ ul,li{
 .next-days .temprature-stuff{
 	 font-size: 20px;
 }
+.weather-state{
+	font-size: 1.2rem;
+	margin-right: 1rem; 
+}
 
 

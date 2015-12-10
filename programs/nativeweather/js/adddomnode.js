@@ -1,5 +1,5 @@
 
-var citiesData=['杭州','天台','上海','北京','宁波'];  
+var citiesData=['绍兴','苏州','杭州','天台','上海','北京','宁波'];  
 var citiesNum=citiesData.length;
 console.log(citiesData.length); 
 var tabText=''; 
