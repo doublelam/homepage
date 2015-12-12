@@ -21,7 +21,9 @@ $('.mdl-layout__content').css({
 }); 
  
 $('.mdl-layout__tab-bar').css({
-	'padding': '0 0 0 30px',
+	'padding': '0',
+	'width':'80%',
+	'margin-left':'10%',
 	  
 });
 
@@ -33,9 +35,12 @@ function tabClickPageSlade(){
 	for(i=0;i<aTabCities.length;i++){
 		aTabCities[i].index=i;
 		aTabCities[i].onclick=function(){
-			$('.slideable-container')[0].style.transform='translateX(-'+this.index*deviceScreenWidth+'px'
+			$('.slideable-container').css({
+				transform: 'translateX(-'+this.index*deviceScreenWidth+'px)',
+				 
+			});
 		}  
-	} 
+	}   
 }
 
 var clientX=null;
@@ -110,11 +115,61 @@ function getWeatherData(data){
 
 function firstAjaxScriptAdded(){
 	scriptString=scriptStringA+citiesData[0]+scriptStringB;  
-	$('body').append(scriptString); 
+	$('body').append(scriptString);
 } 
 
 
+function citiesAddBtn(){
+	var addedCityCardHeight=$('.cities-add-card').outerHeight();
+	$('.cities-add-card').css({
+		height: '0',
+		display: 'none'
+	});; 
+	console.log(addedCityCardHeight); 
+	$('.plus-city').click(function() {
+		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.2);z-index:998"></div>');
+		$('.cities-add-card').css('display', 'block'); 
+		$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
+		
 
+	});
+	$('body').on('click','.mask-div',function(){
+
+		$(this).css('display', 'none');
+		$('.cities-add-card').animate({height: 0}, 200); 
+		function addCityDiv(){
+			$('.cities-add-card').css('display', 'none');
+		}
+		setTimeout(addCityDiv,200);
+}) 
+ 
+}
+
+function citiesAddvarify(){
+		
+	$('.varify-add-cities').click(function(event) {
+		$('.mask-div').css('display', 'none');
+		$('.cities-add-card').animate({height: 0}, 200); 
+		function addCityDiv(){
+			$('.cities-add-card').css('display', 'none');
+		}
+		setTimeout(addCityDiv,200); 
+		var newCity=$('.input-city-name').val();
+		
+		if(newCity!=''){
+			citiesData.push(newCity)
+			console.log(citiesData);  
+			storage.setItem('citiesName',citiesData.join(','));
+			window.location.reload();
+
+		}
+		
+		// $('body').append('
+		// 	<script src="js/adddomnode.js"></script> 
+		//     <script src="js/material.js"></script>
+		//     <script src="js/nativeweather.js"></script>')
+	});
+}
 
 
 
@@ -124,6 +179,7 @@ function firstAjaxScriptAdded(){
 // leftRightSlideMove(); 
 tabClickPageSlade();
 firstAjaxScriptAdded();
- 
+citiesAddBtn(); 
+citiesAddvarify();
 
 

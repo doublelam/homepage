@@ -1,7 +1,19 @@
 
-var citiesData=['绍兴','苏州','杭州','天台','上海','北京','宁波'];  
+
+var storage=window.localStorage;
+// for (var i = 0; i < storage.length; i++) {
+
+
+
+// console.log(storage.getItem('citiesName'));   
+
+
+ 
+var citiesData=storage.getItem('citiesName').split(','); 
+
+
 var citiesNum=citiesData.length;
-console.log(citiesData.length); 
+console.log(citiesData.length);
 var tabText=''; 
 var samleContentHtml=$('.get-innerHTML').html(); 
 var contentSectionText='';
@@ -13,3 +25,4 @@ for (var i = 0; i < citiesData.length; i++) {
 	contentSectionText=contentSectionText+samleContentHtml; 
 	contentContainer.html(contentSectionText); 
 };
+$('.tabs-cities-container .mdl-layout__tab:first-child').addClass('is-active') 

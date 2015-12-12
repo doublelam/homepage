@@ -11,7 +11,18 @@
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
     <meta charset='utf-8'> 
-    
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+<!--     <meta name="full-screen" content="yes">
+    QQ浏览器强制全屏
+    <meta name="x5-fullscreen" content="true"> -->
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -25,46 +36,78 @@
   <body>
 
 
-          <!-- Simple header with scrollable tabs. -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Native Weather</span>
-      </div> 
-      <!-- Tabs -->
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs-cities-container">
-<!--         <a href="#scroll-tab-1" class="mdl-layout__tab is-active">天台</a>
-        <a href="#scroll-tab-2" class="mdl-layout__tab">杭州</a>
-        <a href="#scroll-tab-3" class="mdl-layout__tab">北京</a>
-        <a href="#scroll-tab-4" class="mdl-layout__tab">田径</a>
-        <a href="#scroll-tab-5" class="mdl-layout__tab">很难</a>
-        <a href="#scroll-tab-6" class="mdl-layout__tab">怀州</a>
-      
- -->
+            <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Native Weather</span>
+                <!-- Right aligned menu below button -->
+            <div class="wrapper">
+              <button id="demo-menu-lower-right"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="demo-menu-lower-right">
+              <li class="mdl-menu__item plus-city">添加城市</li>
+            
+             
+            </ul>
+            </div>
+          
+          </div> 
+
+
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs-cities-container">
+  <!--         <a href="#scroll-tab-1" class="mdl-layout__tab is-active">天台</a>
+          <a href="#scroll-tab-2" class="mdl-layout__tab">杭州</a>
+          <a href="#scroll-tab-3" class="mdl-layout__tab">北京</a>
+          <a href="#scroll-tab-4" class="mdl-layout__tab">田径</a>
+          <a href="#scroll-tab-5" class="mdl-layout__tab">很难</a>
+          <a href="#scroll-tab-6" class="mdl-layout__tab">怀州</a>
+        
+   -->
+        </div>
+      </header>
+      <main class="mdl-layout__content slideable-container"> 
+      </main>
+    </div>
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp cities-add-card">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">添加城市</h2>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input input-city-name" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">输入城市名</label>
+        </div>
       </div>
-    </header>
-    <main class="mdl-layout__content slideable-container"> 
-    </main>
-  </div>
+      
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect varify-add-cities">
+          确认添加
+        </a>
+      </div>
+
+    </div>
 
 
 
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-icon-position"> 
-      <i class="material-icons">add</i>
-    </button>
+
     <div style="dispaly:none" class="get-innerHTML">
       <section class="mdl-layout__tab-panel is-active">
         <div class="page-content"><!-- Your content goes here -->
           <div class="this-day-stuff mdl-js-button mdl-button--raised">   
-              <h3 class="local-citiy-name">北京</h3><h5 class="this-week">周三</h5><h5 class="this-date">2015-12-21</h5>
+              <h3 class="local-citiy-name">错误的城市名</h3><h5 class="this-week"></h5><h5 class="this-date">2015-12-21</h5>
               <div class="this-day-content-area">
                 <div class="weather-image-container"><img src="images/weatherimages/images/wetr-sunny.png" alt=""></div>
                 <div class="weather-infor-content">
-                  <p><span class="temp-display">8-18</span></p>  
-                  <p><span class="weather-state">晴转多云</span><span class="wind-kind">微风</span></p> 
+                  <p><span class="temp-display"></span></p>  
+                  <p><span class="weather-state"></span><span class="wind-kind"></span></p> 
                   
-                  <p class="pm-state">PM25:260</p> 
+                  <p class="pm-state"></p> 
                 </div>
                 <div class="clear-float"></div>
               </div> 
@@ -73,22 +116,22 @@
           <div class="next-days">
             <ul class="content-area-container">
               <li class="mdl-js-button mdl-button--raised"> 
-                <h3 class="week-stuff">周三</h3>
+                <h3 class="week-stuff"></h3>
                 <img src="images/weatherimages/images/wetr-sunny.png" alt="">
-                <span class="weather-stuff">晴转阴</span> 
-                <span class="temprature-stuff">8-18deg</span>
+                <span class="weather-stuff"></span> 
+                <span class="temprature-stuff"></span>
               </li>
               <li class="mdl-js-button mdl-button--raised">
-                <h3 class="week-stuff">周三</h3>
+                <h3 class="week-stuff"></h3>
                 <img src="images/weatherimages/images/wetr-sunny.png" alt="">
-                <span class="weather-stuff">晴转阴</span>
-                <span class="temprature-stuff">8-18deg</span> 
+                <span class="weather-stuff"></span>
+                <span class="temprature-stuff"></span> 
               </li>
               <li class="mdl-js-button mdl-button--raised"> 
-                <h3 class="week-stuff">周三</h3>
+                <h3 class="week-stuff"></h3>
                 <img src="images/weatherimages/images/wetr-sunny.png" alt="">
-                <span class="weather-stuff">晴转阴</span>
-                <span class="temprature-stuff">8-18deg</span> 
+                <span class="weather-stuff"></span>
+                <span class="temprature-stuff"></span> 
               </li>
             </ul>
           </div>
@@ -104,5 +147,7 @@
     <script src="js/material.js"></script>
  
     
-    <script src='js/nativeweather.js'></script> 
+    <script id="nativejs" src='js/nativeweather.js'></script> 
+    <script src='js/extra.js'></script>
+    
 </html>     

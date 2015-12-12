@@ -30,12 +30,7 @@ ul,li{
 	padding-left: 16px;  
 }
 
-.add-icon-position{
-	position: fixed;  
-	top: 80%;
-	left: 80%; 
-	z-index: 999;
-}
+
 
 .this-day-stuff{
 	position: relative;  
@@ -52,13 +47,15 @@ ul,li{
 	display: inline-block;
 	width:33.33%;
 	text-align: left;
+	font-weight: 600;  
 }
 
 .this-day-stuff h3{     
 	font-size: 20px;            
 }
 .this-day-stuff h5{
-	font-size: 16px;        
+	font-size: 16px; 
+	color: #aaa;         
 }
 .weather-image-container{
 	width: 80px;
@@ -74,7 +71,8 @@ ul,li{
 }
 .temp-display{
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: 700;
+	text-shadow: 1px 1px 3px rgba(0,0,0,.3);
 }
 .weather-infor-content{
 
@@ -88,7 +86,9 @@ ul,li{
 .next-days h3{
 	font-size: 16px;
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 15px;
+	font-weight: 600;
+	color: #aaa;
 
 } 
 
@@ -96,7 +96,8 @@ ul,li{
 	width: 50px;
 	height: 50px;  
 	border-radius: 50%;
-	margin-right: 20px;
+	margin-right: 15px; 
+
 	
 }
 
@@ -107,19 +108,76 @@ ul,li{
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
 	0 3px 1px -2px rgba(0, 0, 0, 0.2), 
 	0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	margin-top: 10px;
+	margin: 10px 0px;  
 
 }
 .next-days span{
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .next-days .temprature-stuff{
-	 font-size: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.2); 
 }
 .weather-state{
 	font-size: 1.2rem;
 	margin-right: 1rem; 
+
+
 }
 
+.get-innerHTML{
+	display: none; 
+}
+ 
+.mdl-layout__header-row .wrapper{
+	
+    position: absolute;
+    right: 16px; 
+    top: 12px;
+}
 
+.demo-card-wide.mdl-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  width: 80%;
+  z-index: 999; 
+
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+ 
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+  background: #2FAFC1; 
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+} 
+
+.mdl-card{
+	min-height: 0; 
+}
+.mdl-card__title{
+	display: block;
+}
+.mdl-card__title-text{
+	line-height: 1; 
+}
+.mdl-textfield{
+	margin-top: 10px; 
+}
+.mdl-textfield__label{
+	color: rgba(255,255,255,.7);
+}
+.mdl-textfield__label:after{
+	background-color: rgba(255,255,255,1); 
+}
+.mdl-textfield__input{
+	border-bottom: 1px solid rgba(255,255,255,.7); 
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label{
+	color: rgba(255,255,255,1); 
+}
