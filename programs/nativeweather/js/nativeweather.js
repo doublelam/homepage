@@ -79,34 +79,39 @@ var aListTips=null;
 function getWeatherData(data){
 	console.log(dayIndex);  
 	scriptString=scriptStringA+citiesData[dayIndex+1]+scriptStringB;  
-	
+		
+		if(data.status=='success'){  
+			thisday=data.results[0].weather_data[0].weather;
+		
+		$('.this-day-stuff .local-citiy-name')[dayIndex].innerHTML=data.results[0].currentCity;  
+		$('.mdl-layout__tab-panel')[dayIndex].setAttribute('cityName',data.results[0].currentCity);  
+		$('.this-day-stuff .this-week')[dayIndex].innerHTML=data.results[0].weather_data[0].date.substr(0,2);   
+		$('.this-day-stuff .this-date')[dayIndex].innerHTML=data.date;
+		$('.weather-infor-content .temp-display')[dayIndex].innerHTML=data.results[0].weather_data[0].temperature;  
+		$('.weather-infor-content .wind-kind')[dayIndex].innerHTML=data.results[0].weather_data[0].wind;
+		$('.weather-infor-content .weather-state')[dayIndex].innerHTML=data.results[0].weather_data[0].weather; 
+		if(data.results[0].pm25==''){data.results[0].pm25='暂无该城市监测数据'}
+		$('.weather-infor-content .pm-state')[dayIndex].innerHTML='PM2.5:&nbsp'+data.results[0].pm25; 
+		aListTips=aListContainer[dayIndex].getElementsByTagName('li');
+		for (var i = 0;i < aListTips.length;i++) {
+			aListTips[i].getElementsByClassName('week-stuff')[0].innerHTML=data.results[0].weather_data[i+1].date;
+			aListTips[i].getElementsByClassName('weather-stuff')[0].innerHTML=data.results[0].weather_data[i+1].weather;
+			aListTips[i].getElementsByClassName('temprature-stuff')[0].innerHTML=data.results[0].weather_data[i+1].temperature; 
 
-	thisday=data.results[0].weather_data[0].weather;
-	
-	$('.this-day-stuff .local-citiy-name')[dayIndex].innerHTML=data.results[0].currentCity;  
-	$('.mdl-layout__tab-panel')[dayIndex].setAttribute('cityName',data.results[0].currentCity);  
-	$('.this-day-stuff .this-week')[dayIndex].innerHTML=data.results[0].weather_data[0].date.substr(0,2);   
-	$('.this-day-stuff .this-date')[dayIndex].innerHTML=data.date;
-	$('.weather-infor-content .temp-display')[dayIndex].innerHTML=data.results[0].weather_data[0].temperature;  
-	$('.weather-infor-content .wind-kind')[dayIndex].innerHTML=data.results[0].weather_data[0].wind;
-	$('.weather-infor-content .weather-state')[dayIndex].innerHTML=data.results[0].weather_data[0].weather; 
-	if(data.results[0].pm25==''){data.results[0].pm25='暂无该城市监测数据'}
-	$('.weather-infor-content .pm-state')[dayIndex].innerHTML='PM2.5:&nbsp'+data.results[0].pm25; 
-	aListTips=aListContainer[dayIndex].getElementsByTagName('li');
-	for (var i = 0;i < aListTips.length;i++) {
-		aListTips[i].getElementsByClassName('week-stuff')[0].innerHTML=data.results[0].weather_data[i+1].date;
-		aListTips[i].getElementsByClassName('weather-stuff')[0].innerHTML=data.results[0].weather_data[i+1].weather;
-		aListTips[i].getElementsByClassName('temprature-stuff')[0].innerHTML=data.results[0].weather_data[i+1].temperature; 
 
 
-
-	};
+		};
+		}
+		else{$('.mdl-layout__tab-panel')[dayIndex].innerHTML='<div class="error-page-info">该页面无法显示的原因可能是你输入的城市名错误或者无法查询到该城市,尝试先删除该城市名，重新添加</div>'}
 	   
 
 	console.log(dayIndex);
 	
 	 
 		dayIndex++;
+		
+
+
 		$('body').append(scriptString);  
 	
 	if (dayIndex>=cityNum){scriptStringA='';scriptStringB='';}    
@@ -127,10 +132,10 @@ function citiesAddBtn(){
 	});; 
 	console.log(addedCityCardHeight); 
 	$('.plus-city').click(function() {
-		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.2);z-index:998"></div>');
-		$('.cities-add-card').css('display', 'block'); 
+		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,.8);z-index:998"></div>');
+		$('.cities-add-card').css('display', 'block');  
 		$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
-		
+		  
 
 	});
 	$('body').on('click','.mask-div',function(){
@@ -146,7 +151,7 @@ function citiesAddBtn(){
 }
 
 function citiesAddvarify(){
-		
+
 	$('.varify-add-cities').click(function(event) {
 		$('.mask-div').css('display', 'none');
 		$('.cities-add-card').animate({height: 0}, 200); 
@@ -171,6 +176,29 @@ function citiesAddvarify(){
 	});
 }
 
+function citiesDeleteOperate(){
+	$('.delete-city').click(function(event) {
+		var deletableCity=$('.mdl-layout__tab-bar .is-active').text(); 
+		console.log(deletableCity);
+		for (var i = 0; i < citiesData.length; i++) {
+		 	if (citiesData[i]==deletableCity) {
+		 		console.log(citiesData);
+		 		console.log(citiesData[0]);
+
+		 		citiesData.splice(i,1);
+		 		
+		 		if (citiesData[0]==null) {  
+		 			storage.removeItem('citiesName'); 
+		 		}
+		 		else{storage.setItem('citiesName',citiesData.join(','));}
+		 		console.log(storage.getItem('citiesName'));
+				 window.location.reload();
+		 	};
+		 }; 
+
+	});
+}
+
 
 
 
@@ -181,5 +209,7 @@ tabClickPageSlade();
 firstAjaxScriptAdded();
 citiesAddBtn(); 
 citiesAddvarify();
+citiesDeleteOperate();
+   
 
 

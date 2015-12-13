@@ -7,7 +7,7 @@ var storage=window.localStorage;
 
 // console.log(storage.getItem('citiesName'));   
 
-
+// storage.clear(); 
  
 var citiesData=storage.getItem('citiesName').split(','); 
 

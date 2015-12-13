@@ -1,7 +1,7 @@
 if(storage.getItem('citiesName')==null){
 	var addedCityCardHeight=$('.cities-add-card').outerHeight();
 	var citiesData=[]; 
- 	$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.2);z-index:998"></div>');
+ 	$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,.5);z-index:998"></div>');
 	$('.cities-add-card').css('display', 'block'); 
 	$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200);
 	$('.varify-add-cities').click(function(event) {
@@ -28,5 +28,25 @@ if(storage.getItem('citiesName')==null){
 		//     <script src="js/nativeweather.js"></script>')
 	});
 
+	$('.loading-before-launch').css('display', 'none'); 
+
 
 }
+
+function loadingDisappear(){
+	
+		$('.page-before-app-laungch').css({
+		top: '-400px',});
+		function displayDisappear(){
+			$('.page-before-app-laungch').css({
+		display: '-none',}); 
+		}
+	
+		setTimeout(displayDisappear, 500);
+	
+}
+function timeoutDisappear(){
+	setTimeout(loadingDisappear, 500);
+}
+
+window.onload=timeoutDisappear; 

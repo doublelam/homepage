@@ -36,9 +36,9 @@ ul,li{
 	position: relative;  
 	padding: 10px; 
 	background: #fff;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-	0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-	0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
+	0 2px 1px -2px rgba(0, 0, 0, 0.2), 
+	0 1px 2px 0 rgba(0, 0, 0, 0.12); 
 	transition: box-shadow .2s cubic-bezier(.4,0,1,1),
 	background-color .2s cubic-bezier(.4,0,.2,1),
 	color .2s cubic-bezier(.4,0,.2,1);
@@ -105,10 +105,10 @@ ul,li{
 	position: relative;
 	background: #fff;  
 	padding: 10px;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-	0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-	0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	margin: 10px 0px;  
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
+	0 2px 1px -2px rgba(0, 0, 0, 0.2), 
+	0 1px 2px 0 rgba(0, 0, 0, 0.12); 
+	margin: 10px 0px; 
 
 }
 .next-days span{
@@ -181,3 +181,55 @@ ul,li{
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label{
 	color: rgba(255,255,255,1); 
 }
+
+.page-before-app-laungch{
+	position: fixed;
+	width: 100%;
+	height: 280px; 
+	background: rgba(255,255,255,0); 
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: all .3s ease-in-out; 
+}
+
+.loading-before-launch{
+	padding: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 35px;
+	height: 35px;   
+	border-radius: 50%; 
+	transform: translate(-50%,-50%);
+	background: rgba(255,255,255,1);
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14), 
+	0 2px 4px -2px rgba(0, 0, 0, 0.4), 
+	0 1px 6px 0 rgba(0, 0, 0, 0.32);  
+	
+}
+
+.loading-icon-container{
+	font-size: 24px;  
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	animation: colorchange 1.6s infinite; 
+
+}
+
+@keyframes colorchange{
+	0% {color: #b0120a;}
+	33% {color: #0d5302;}
+	67% {color: #f57f17;}
+	100% {color: #b0120a;} 
+}
+
+.error-page-info{
+	padding: 1rem;
+	font-size: 16px;
+	color: #888;
+	font-weight: 700; 
+}
+
