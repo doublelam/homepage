@@ -77,11 +77,14 @@ var scriptString='';
 var aListContainer=$('.next-days .content-area-container');
 var aListTips=null;
 function getWeatherData(data){
-	console.log(dayIndex);  
+	 
 	scriptString=scriptStringA+citiesData[dayIndex+1]+scriptStringB;  
-		
+		console.log(dayIndex+'start');
+		console.log(data.status); 
 		if(data.status=='success'){  
-			thisday=data.results[0].weather_data[0].weather;
+			console.log(data.results[0].currentCity); 
+
+			
 		
 		$('.this-day-stuff .local-citiy-name')[dayIndex].innerHTML=data.results[0].currentCity;  
 		$('.mdl-layout__tab-panel')[dayIndex].setAttribute('cityName',data.results[0].currentCity);  
@@ -102,7 +105,10 @@ function getWeatherData(data){
 
 		};
 		}
-		else{$('.mdl-layout__tab-panel')[dayIndex].innerHTML='<div class="error-page-info">该页面无法显示的原因可能是你输入的城市名错误或者无法查询到该城市,尝试先删除该城市名，重新添加</div>'}
+		else{$('.mdl-layout__tab-panel')[dayIndex].innerHTML+='<div class="error-page-info">该页面无法显示，原因可能是你输入的城市名错误或者无法查询到该城市<ol class="error-more-detail"><li>尝试先删除该城市名，重新添加</li><li>发送反馈到<br><a href="mailto:whatisurname7@gmai.com">whatisurname7@gmail.com</a><br>或者<br><a href="mailto:">1422015387@QQ.com</a></li></ol></div>';
+		$('.page-content')[dayIndex].style.display='none';
+
+	};
 	   
 
 	console.log(dayIndex);
@@ -114,8 +120,8 @@ function getWeatherData(data){
 
 		$('body').append(scriptString);  
 	
-	if (dayIndex>=cityNum){scriptStringA='';scriptStringB='';}    
-	console.log(dayIndex+thisday);
+	if (dayIndex>=cityNum-1){scriptStringA='';scriptStringB='';}    
+	console.log(dayIndex+'end');
  }   
 
 function firstAjaxScriptAdded(){
@@ -206,10 +212,12 @@ function citiesDeleteOperate(){
 
 // leftRightSlideMove(); 
 tabClickPageSlade();
-firstAjaxScriptAdded();
+
 citiesAddBtn(); 
 citiesAddvarify();
 citiesDeleteOperate();
+
+
    
 
 

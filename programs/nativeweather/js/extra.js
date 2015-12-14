@@ -49,4 +49,34 @@ function timeoutDisappear(){
 	setTimeout(loadingDisappear, 500);
 }
 
-window.onload=timeoutDisappear; 
+window.onload=function(){
+	
+ 	firstAjaxScriptAdded();
+	timeoutDisappear(); 
+}
+
+
+function themecolorChangeWithTime(){
+	var currentTime=new Date().getHours();
+	var themeColr=null;
+	if(currentTime>=0&&currentTime<6){themeColr='#4CAF50';color="#424242"} 
+	else if(currentTime>=6&&currentTime<9){themeColr='#FF9800';color="#424242"}
+	else if(currentTime>=9&&currentTime<12){themeColr='#FF5722';color='default';}
+	else if(currentTime>=12&&currentTime<15){themeColr='#E91E63';color='default';}
+	else if(currentTime>=15&&currentTime<18){themeColr='#009688';color='default';}
+	else if(currentTime>=18&&currentTime<24){themeColr='#673AB7';color='default';}
+		
+
+	
+	$('.mdl-layout__header').css('background', themeColr);
+	$('.mdl-layout__tab-bar').css('background',themeColr); 
+	if(color!='default'){
+		$('.mdl-layout__tab').css('color','rgba(66,66,66,.6)'); 
+		$('.mdl-layout__header').css('color', color);
+		$('.mdl-layout.is-upgraded .mdl-layout__tab.is-active::after').css('background',color) 
+	}
+
+
+
+}
+themecolorChangeWithTime(); 

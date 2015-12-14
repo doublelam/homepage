@@ -233,3 +233,18 @@ ul,li{
 	font-weight: 700; 
 }
 
+.error-more-detail{
+	padding: 20px; 
+	font-weight: 600;
+	
+}
+.error-more-detail li{
+	list-style: decimal;
+}
+.mdl-layout.is-upgraded .mdl-layout__tab.is-active::after{
+	background: #fff; 
+} 
+
+body{
+	background: #eee; 
+}
