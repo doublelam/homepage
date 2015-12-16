@@ -129,16 +129,16 @@ function firstAjaxScriptAdded(){
 	$('body').append(scriptString);
 } 
 
-
+var addedCityCardHeight=$('.cities-add-card').outerHeight();
 function citiesAddBtn(){
-	var addedCityCardHeight=$('.cities-add-card').outerHeight();
+	
 	$('.cities-add-card').css({
-		height: '0',
+		height: '0px',
 		display: 'none'
 	});; 
 	console.log(addedCityCardHeight); 
 	$('.plus-city').click(function() {
-		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,.8);z-index:998"></div>');
+		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0);z-index:998"></div>'); 
 		$('.cities-add-card').css('display', 'block');  
 		$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
 		  
@@ -159,15 +159,16 @@ function citiesAddBtn(){
 function citiesAddvarify(){
 
 	$('.varify-add-cities').click(function(event) {
-		$('.mask-div').css('display', 'none');
-		$('.cities-add-card').animate({height: 0}, 200); 
-		function addCityDiv(){
-			$('.cities-add-card').css('display', 'none');
-		}
-		setTimeout(addCityDiv,200); 
+		
 		var newCity=$('.input-city-name').val();
 		
 		if(newCity!=''){
+			$('.mask-div').css('display', 'none');
+			$('.cities-add-card').animate({height: 0}, 200); 
+			function addCityDiv(){
+				$('.cities-add-card').css('display', 'none');
+			}
+			setTimeout(addCityDiv,200);  
 			citiesData.push(newCity)
 			console.log(citiesData);  
 			storage.setItem('citiesName',citiesData.join(','));

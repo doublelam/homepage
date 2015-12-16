@@ -1,32 +1,34 @@
 if(storage.getItem('citiesName')==null){
-	var addedCityCardHeight=$('.cities-add-card').outerHeight();
+	
 	var citiesData=[]; 
- 	$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,.5);z-index:998"></div>');
+ 	$('body').prepend('<div class="launch-page-div"><img class="launch-page-pic" src="images/launch-page-image1.jpg"></div>');
 	$('.cities-add-card').css('display', 'block'); 
-	$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200);
-	$('.varify-add-cities').click(function(event) {
+	$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
+			console.log( addedCityCardHeight+'no city add carf height');
+	// $('.varify-add-cities').click(function(event) {
  
-		var newCity=$('.input-city-name').val();
+	// 	var newCity=$('.input-city-name').val();
 		
-		if(newCity!=''){
-		$('.mask-div').css('display', 'none');
-		$('.cities-add-card').animate({height: 0}, 200); 
-		function addCityDiv(){
-			$('.cities-add-card').css('display', 'none');
-		}
-		setTimeout(addCityDiv,200);
-			citiesData.push(newCity)
-			console.log(citiesData);  
-			storage.setItem('citiesName',citiesData.join(','));
-			window.location.reload();
+	// 	if(newCity!=''){
+	// 	$('.mask-div').css('display', 'none');
 
-		}
+	// 	$('.cities-add-card').animate({height: 0}, 200); 
+	// 	function addCityDiv(){
+	// 		$('.cities-add-card').css('display', 'none');
+	// 	}
+	// 	setTimeout(addCityDiv,200);
+	// 		citiesData.push(newCity)
+	// 		console.log(citiesData);  
+	// 		storage.setItem('citiesName',citiesData.join(','));
+	// 		window.location.reload();
+
+	// 	}
 		
-		// $('body').append('
-		// 	<script src="js/adddomnode.js"></script> 
-		//     <script src="js/material.js"></script>
-		//     <script src="js/nativeweather.js"></script>')
-	});
+	// 	// $('body').append('
+	// 	// 	<script src="js/adddomnode.js"></script> 
+	// 	//     <script src="js/material.js"></script>
+	// 	//     <script src="js/nativeweather.js"></script>')
+	// });
 
 	$('.loading-before-launch').css('display', 'none'); 
 
@@ -70,11 +72,7 @@ function themecolorChangeWithTime(){
 	
 	$('.mdl-layout__header').css('background', themeColr);
 	$('.mdl-layout__tab-bar').css('background',themeColr); 
-	if(color!='default'){
-		$('.mdl-layout__tab').css('color','rgba(66,66,66,.6)'); 
-		$('.mdl-layout__header').css('color', color);
-		$('.mdl-layout.is-upgraded .mdl-layout__tab.is-active::after').css('background',color) 
-	}
+	$('.cities-add-card .mdl-card__title').css('background',themeColr);  
 
 
 
