@@ -59,8 +59,8 @@ window.onload=function(){
 
 
 function themecolorChangeWithTime(){
-	var currentTime=new Date().getHours();
-	var themeColr=null;
+
+	var themeColr=null; 
 	if(currentTime>=0&&currentTime<6){themeColr='#4CAF50';color="#424242"} 
 	else if(currentTime>=6&&currentTime<9){themeColr='#FF9800';color="#424242"}
 	else if(currentTime>=9&&currentTime<12){themeColr='#FF5722';color='default';}
@@ -72,7 +72,8 @@ function themecolorChangeWithTime(){
 	
 	$('.mdl-layout__header').css('background', themeColr);
 	$('.mdl-layout__tab-bar').css('background',themeColr); 
-	$('.cities-add-card .mdl-card__title').css('background',themeColr);  
+	$('.cities-add-card .mdl-card__title').css('background',themeColr); 
+	$('.iconfont').css('color', themeColr); 
 
 
 

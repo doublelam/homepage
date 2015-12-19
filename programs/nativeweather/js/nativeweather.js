@@ -2,6 +2,7 @@
 
 
 //reset the layout css  of the main body
+var currentTime=new Date().getHours();
 var deviceScreenWidth=$(window).width();
 var deviceScreenHeight=$(window).height();
 var cityNum=citiesNum; 
@@ -76,6 +77,8 @@ var scriptStringB='&output=json&ak=c5LGschxMOERc7N5yrOt7Ajv&callback=getWeatherD
 var scriptString=''; 
 var aListContainer=$('.next-days .content-area-container');
 var aListTips=null;
+var weatherStuff=null;
+var subWeatherStuff=null;
 function getWeatherData(data){
 	 
 	scriptString=scriptStringA+citiesData[dayIndex+1]+scriptStringB;  
@@ -88,17 +91,96 @@ function getWeatherData(data){
 		
 		$('.this-day-stuff .local-citiy-name')[dayIndex].innerHTML=data.results[0].currentCity;  
 		$('.mdl-layout__tab-panel')[dayIndex].setAttribute('cityName',data.results[0].currentCity);  
-		$('.this-day-stuff .this-week')[dayIndex].innerHTML=data.results[0].weather_data[0].date.substr(0,2);   
+		$('.this-day-stuff .this-week')[dayIndex].innerHTML=data.results[0].weather_data[0].date.substr(0,2);	   
 		$('.this-day-stuff .this-date')[dayIndex].innerHTML=data.date;
 		$('.weather-infor-content .temp-display')[dayIndex].innerHTML=data.results[0].weather_data[0].temperature;  
 		$('.weather-infor-content .wind-kind')[dayIndex].innerHTML=data.results[0].weather_data[0].wind;
 		$('.weather-infor-content .weather-state')[dayIndex].innerHTML=data.results[0].weather_data[0].weather; 
+
+// weather icons dispaly with different weather
+		weatherStuff=data.results[0].weather_data[0].weather;
+		var mainWeatherIcon=$('.this-day-stuff .this-day-content-area .iconfont')[dayIndex];
+		var subWeatherIcon=null;
+		function weatherIconChanged(weatherStuffArgument,iconStuffArgument){
+			for(k=0;k<weatherStuffArgument.length;k++){
+			if(weatherStuffArgument[k]=='转'){weatherStuffArgument=weatherStuffArgument.substr(k+1);} 
+				
+		}  
+		
+// day icons principle
+		if(currentTime>=6&&currentTime<18){
+			if(weatherStuffArgument=='晴'){
+				iconStuffArgument.className='iconfont icon-sun1';
+			}
+			else if (weatherStuffArgument=='多云') {
+				iconStuffArgument.className='iconfont icon-mostlycloudy1';
+			}
+			else if (weatherStuffArgument=='阴') {
+				iconStuffArgument.className='iconfont icon-mostlycloudy2';
+			}
+			else if (weatherStuffArgument=='小雨') {
+				iconStuffArgument.className='iconfont icon-rain1';
+			}
+			else if (weatherStuffArgument=='中雨'||weatherStuffArgument=='阵雨') {
+				iconStuffArgument.className='iconfont icon-heavyrain2';
+			}
+			else if (weatherStuffArgument=='大雨') {
+				iconStuffArgument.className='iconfont icon-heavyrain1';
+			}
+			else if (weatherStuffArgument=='雾') {
+				iconStuffArgument.className='iconfont icon-fog3';
+			}
+			else if (weatherStuffArgument=='霾') {
+				iconStuffArgument.className='iconfont icon-mist';
+			}
+		}
+// night icons principle
+		else{
+			if(weatherStuffArgument=='晴'){
+				iconStuffArgument.className='iconfont icon-moon2';
+			}
+			else if (weatherStuffArgument=='多云') {
+				iconStuffArgument.className='iconfont icon-partlycloudy3';
+			}
+			else if (weatherStuffArgument=='阴') {
+				iconStuffArgument.className='iconfont icon-mostlycloudy2';
+			}
+			else if (weatherStuffArgument=='小雨') {
+				iconStuffArgument.className='iconfont icon-hailnight1';
+			}
+			else if (weatherStuffArgument=='中雨'||weatherStuffArgument=='阵雨') { 
+				iconStuffArgument.className='iconfont icon-heavyhailnight';
+			}
+			else if (weatherStuffArgument=='大雨') {
+				iconStuffArgument.className='iconfont icon-hailnight2';
+			} 
+			else if (weatherStuffArgument=='雾') {
+				iconStuffArgument.className='iconfont icon-fog4';
+			}
+			else if (weatherStuffArgument=='霾') {
+				iconStuffArgument.className='iconfont icon-mist';
+			}
+		}
+		};
+		weatherIconChanged(weatherStuff,mainWeatherIcon);
+		
+		
+		
+
+
+
+
 		if(data.results[0].pm25==''){data.results[0].pm25='暂无该城市监测数据'}
 		$('.weather-infor-content .pm-state')[dayIndex].innerHTML='PM2.5:&nbsp'+data.results[0].pm25; 
 		aListTips=aListContainer[dayIndex].getElementsByTagName('li');
 		for (var i = 0;i < aListTips.length;i++) {
 			aListTips[i].getElementsByClassName('week-stuff')[0].innerHTML=data.results[0].weather_data[i+1].date;
 			aListTips[i].getElementsByClassName('weather-stuff')[0].innerHTML=data.results[0].weather_data[i+1].weather;
+			subWeatherStuff=data.results[0].weather_data[i+1].weather;
+			subWeatherIcon=aListTips[i].getElementsByClassName('iconfont')[0];
+			// weather change function
+			weatherIconChanged(subWeatherStuff,subWeatherIcon);
+			// weather change function
 			aListTips[i].getElementsByClassName('temprature-stuff')[0].innerHTML=data.results[0].weather_data[i+1].temperature; 
 
 
