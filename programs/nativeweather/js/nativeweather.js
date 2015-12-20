@@ -215,25 +215,27 @@ var addedCityCardHeight=$('.cities-add-card').outerHeight();
 function citiesAddBtn(){
 	
 	$('.cities-add-card').css({
-		height: '0px',
-		display: 'none'
-	});; 
+		left: '150%'
+
+	});
 	console.log(addedCityCardHeight); 
 	$('.plus-city').click(function() {
 		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0);z-index:998"></div>'); 
-		$('.cities-add-card').css('display', 'block');  
-		$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
-		  
+		$('.cities-add-card').css({
+		display: 'block'
+	});  
+		$('.cities-add-card').animate({left:'50%'}, 200);  
+		   
 
 	});
 	$('body').on('click','.mask-div',function(){
 
 		$(this).css('display', 'none');
-		$('.cities-add-card').animate({height: 0}, 200); 
+		$('.cities-add-card').animate({left:'-50%'},200);  
 		function addCityDiv(){
-			$('.cities-add-card').css('display', 'none');
+			$('.cities-add-card').css({'display':'none', left:'150%'});
 		}
-		setTimeout(addCityDiv,200);
+		setTimeout(addCityDiv,210);  
 }) 
  
 }
