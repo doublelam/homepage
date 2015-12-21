@@ -74,8 +74,33 @@ function themecolorChangeWithTime(){
 	$('.mdl-layout__tab-bar').css('background',themeColr); 
 	$('.cities-add-card .mdl-card__title').css('background',themeColr); 
 	$('.iconfont').css('color', themeColr); 
+}
 
+
+function BackgroundImageChangeWithTime(){
+	if(currentTime>=4&&currentTime<10){bacImgUrl='url(images/weatherimages/spring.jpg)';} 
+	else if(currentTime>=10&&currentTime<16){bacImgUrl='url(images/weatherimages/summer.jpg)';}
+	else if(currentTime>=16&&currentTime<22){bacImgUrl='url(images/weatherimages/autum.jpg)';}
+	else if(currentTime>=22&&currentTime<=23||currentTime>=0&&currentTime<4){bacImgUrl='url(images/weatherimages/winter.jpg)';}
+console.log('bacimage'+bacImgUrl); 
+$('.mdl-layout').css({
+	
+	  'background-image': bacImgUrl
+	 
+});
 
 
 }
+
+function longShadow(){
+	$('.mdl-layout-title').flatshadow({
+  color: "#4CAF50",
+  angle: "SE",
+  fade: true,
+  boxShadow: false // Accept full 6 digit hex color (#000000)
+});
+}
+
 themecolorChangeWithTime(); 
+BackgroundImageChangeWithTime();
+longShadow();

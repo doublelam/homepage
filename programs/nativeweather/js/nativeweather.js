@@ -133,6 +133,15 @@ function getWeatherData(data){
 			else if (weatherStuffArgument=='霾') {
 				iconStuffArgument.className='iconfont icon-mist';
 			}
+			else if (weatherStuffArgument=='暴雨') {
+				iconStuffArgument.className='iconfont icon-hail2';
+			}
+			else if (weatherStuffArgument=='小雪') {
+				iconStuffArgument.className='iconfont icon-snowday1';
+			}
+			else if (weatherStuffArgument=='中雪'||weatherStuffArgument=='大雪') {
+				iconStuffArgument.className='iconfont icon-snowflake';
+			}
 		}
 // night icons principle
 		else{
@@ -152,13 +161,22 @@ function getWeatherData(data){
 				iconStuffArgument.className='iconfont icon-heavyhailnight';
 			}
 			else if (weatherStuffArgument=='大雨') {
-				iconStuffArgument.className='iconfont icon-hailnight2';
+				iconStuffArgument.className='iconfont icon-heavyrainnight';
 			} 
 			else if (weatherStuffArgument=='雾') {
 				iconStuffArgument.className='iconfont icon-fog4';
 			}
 			else if (weatherStuffArgument=='霾') {
 				iconStuffArgument.className='iconfont icon-mist';
+			}
+			else if (weatherStuffArgument=='暴雨') {
+				iconStuffArgument.className='iconfont icon-hailnight2';
+			}
+			else if (weatherStuffArgument=='小雪') {
+				iconStuffArgument.className='iconfont icon-snownight1';
+			}
+			else if (weatherStuffArgument=='中雪'||weatherStuffArgument=='大雪') {
+				iconStuffArgument.className='iconfont icon-snowflake'; 
 			}
 		}
 		};
@@ -170,8 +188,9 @@ function getWeatherData(data){
 
 
 
-		if(data.results[0].pm25==''){data.results[0].pm25='暂无该城市监测数据'}
+		if(data.results[0].pm25==''){data.results[0].pm25='无数据'}
 		$('.weather-infor-content .pm-state')[dayIndex].innerHTML='PM2.5:&nbsp'+data.results[0].pm25; 
+	
 		aListTips=aListContainer[dayIndex].getElementsByTagName('li');
 		for (var i = 0;i < aListTips.length;i++) {
 			aListTips[i].getElementsByClassName('week-stuff')[0].innerHTML=data.results[0].weather_data[i+1].date;
