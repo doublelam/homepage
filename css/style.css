@@ -32,13 +32,13 @@ img{
 
 /*header样式*/
 .header{
-	position: fixed;
-    top: 0px;
-   left: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 70px;
   background: #fff;
-  box-shadow:0px 1px 12px #ddd; 
+  box-shadow:0px 1px 12px rgba(0,0,0,.3); 
   z-index: 1;
  
 
@@ -251,7 +251,7 @@ line-height: 60px;
 	display: block;
 	float: left;
 	width: 20%;
-	max-width: 160px;
+	max-width: 200px;
 	padding: 5px;
 }
 
@@ -286,8 +286,7 @@ line-height: 60px;
 	
 
 	color: #666;
-	padding-left: 10%;
-	padding-right: 10%;
+
 	top: 10%;
 	line-height: 2;
 }
@@ -310,7 +309,7 @@ line-height: 60px;
 }
 
 .ownsty{
-	padding-top: 5%;
+	
 }
 
 /*文字部分属性*/
@@ -322,7 +321,8 @@ line-height: 60px;
 
 /*图片展示大div*/
 .mypaintdis{
-	float: right;
+	width: 80%;
+	max-width: 260px;
 	left: 63%;
 	top: 22%;
 
@@ -331,6 +331,9 @@ line-height: 60px;
 
 /*自我介绍图片样式*/
 .mypaimg{
+ display: block;
+ width: 70%;
+ float: left;
  border-radius: 5px;
  transition:.3s;
 
@@ -359,11 +362,12 @@ line-height: 60px;
 }
 .butt{
 	
-	width: 80px;
-	height: 40px;
+	width: 30%;
+	display: block;
+	padding: 10px;
 	border: 0px;
 	border-radius: 5px;
-    margin-left: 5px;
+    margin: 5px 0;
     transition:.3s;
     outline: none;
 }
@@ -373,6 +377,12 @@ line-height: 60px;
 	box-shadow: none;
 }
 /*/////////////////////////////////////*/
+
+.content-container{
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+}
 
 
 /*media */
