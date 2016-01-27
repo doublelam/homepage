@@ -32,14 +32,15 @@ function disapp(){
 //ie属性
 if ('addEventListener' in oHidden) {
 
-	
+	oHidden.addEventListener('click',function (a){a.stopPropagation()},false);
 	oDivDe.addEventListener('click',function (a){a.stopPropagation()},false);
   oClick.addEventListener('click',function (a){a.stopPropagation()},false);
 }
 
 
 else {
-
+oHidden.onclick=function(ev){
+	ev.cancelBubble = false;}
 oDivDe.onclick=function(ev){
 	ev.cancelBubble = false;}
 oClick.onclick=function(ev){ 
