@@ -44,9 +44,8 @@ ul,li{
 	position: relative;  
 	background: #fff;
 	padding: 10px; 
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
-	0 2px 1px -2px rgba(0, 0, 0, 0.2), 
-	0 1px 2px 0 rgba(0, 0, 0, 0.12); 
+	box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, 
+	rgba(0, 0, 0, 0.239216) 0px 1px 4px; 
 	transition: box-shadow .2s cubic-bezier(.4,0,1,1),
 	background-color .2s cubic-bezier(.4,0,.2,1),
 	color .2s cubic-bezier(.4,0,.2,1);
@@ -91,6 +90,10 @@ ul,li{
 	justify-content: space-around; 
 
 }
+.mdl-layout__header{
+	box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px,
+    rgba(0, 0, 0, 0.227451) 0px 3px 10px; 
+}
 
 
 .next-days h3{
@@ -117,9 +120,8 @@ ul,li{
 	justify-content: space-around; 
 	position: relative;
 	padding: 15px; 
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
-	0 2px 1px -2px rgba(0, 0, 0, 0.2), 
-	0 1px 2px 0 rgba(0, 0, 0, 0.12); 
+	box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, 
+	rgba(0, 0, 0, 0.239216) 0px 1px 4px;
 	margin: 10px 0px; 
 }
 
@@ -148,16 +150,19 @@ ul,li{
 	
     position: absolute;
     right: 16px; 
-    top: 12px;
+    top: 32px; 
 }
 
 .demo-card-wide.mdl-card {
   position: fixed;
-  top: 50%;
-  left: 150%; 
-  transform: translate(-50%,-50%); 
+  display: none;
+  top: 25%; 
+  left: 50%; 
+  transform: translateX(-50%); 
   width: 80%;
+  height: auto; 
   z-index: 999; 
+  
   
 }
 
@@ -230,8 +235,8 @@ ul,li{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	animation: colorchange 1.6s infinite; 
-
 }
+
 
 @keyframes colorchange{
 	0% {color: #b0120a;}
@@ -277,16 +282,19 @@ body{
 	0 8px 17px 0 rgba(0, 0, 0, 0.2); 
 }
 @keyframes imageScale{
-	0% {transform: scale(1,1);}
-	10%{transform: scale(1,1);}
-	50% {transform: scale(1.1,1.1);}
-	100% {transform: scale(1,1);}  
+	0% {transform: scale(1,1) translate(-50%,-50%);}
+	10%{transform: scale(1,1) translate(-50%,-50%);}
+	50% {transform: scale(1.1,1.1) translate(-50%,-50%);}
+	100% {transform: scale(1,1) translate(-50%,-50%);}  
 }
 
 
 .launch-page-pic{
 	position: absolute;
-	width:120%;   
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
 	display: block;
 	animation: imageScale 8s;   
 }
@@ -296,8 +304,38 @@ body{
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #019AAA;  
+	background: #FAD2C5;   
 	z-index: 999;
 
 }
+
+/*reposition of menu*/
+.mdl-menu__outline,.mdl-menu{
+	top: -28px; 
+}
+
+.varify-add-cities,.cancle-btn{
+	float: right;
+}
+.mdl-card__actions,.mdl-card--border{
+	overflow: auto;
+}
+
+.mdl-button.mdl-button--colored.cancle-btn{
+	color: #9e9e9e;
+}
+
+.mdl-button.mdl-button--colored.varify-add-cities{
+	color: #009688;
+}
+
+.before-div-for-android-taskbar{
+	width: 100%;
+	height: 20px;
+	
+}
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label{
+	color: #eee; 
+}
+
 

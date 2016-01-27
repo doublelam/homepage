@@ -1,8 +1,8 @@
 if(storage.getItem('citiesName')==null){
 	
-	var citiesData=[]; 
+	var citiesData=[];
  	$('body').prepend('<div class="launch-page-div"><img class="launch-page-pic" src="images/launch-page-image1.jpg"></div>');
-	$('.cities-add-card').css('display', 'block'); 
+	$('.cities-add-card').show();  
 	$('.cities-add-card').animate({height: addedCityCardHeight+'px'}, 200); 
 			console.log( addedCityCardHeight+'no city add carf height');
 	// $('.varify-add-cities').click(function(event) {
@@ -31,6 +31,7 @@ if(storage.getItem('citiesName')==null){
 	// });
 
 	$('.loading-before-launch').css('display', 'none'); 
+	$('.cancle-btn').css('display', 'none');
 
 
 }
@@ -61,12 +62,11 @@ window.onload=function(){
 function themecolorChangeWithTime(){
 
 	var themeColr=null; 
-	if(currentTime>=0&&currentTime<6){themeColr='#4CAF50';color="#424242"} 
-	else if(currentTime>=6&&currentTime<9){themeColr='#FF9800';color="#424242"}
-	else if(currentTime>=9&&currentTime<12){themeColr='#FF5722';color='default';}
-	else if(currentTime>=12&&currentTime<15){themeColr='#E91E63';color='default';}
-	else if(currentTime>=15&&currentTime<18){themeColr='#009688';color='default';}
-	else if(currentTime>=18&&currentTime<24){themeColr='#673AB7';color='default';}
+	if(currentTime>=4&&currentTime<10){themeColr='#4CAF50';} 
+	else if(currentTime>=10&&currentTime<16){themeColr='#3F51B5';}
+	else if(currentTime>=16&&currentTime<22){themeColr='#FF5722';}
+	else if(currentTime>=22&&currentTime<=23||currentTime>=0&&currentTime<4){themeColr='#00BCD4';} 
+	
 		
 
 	
@@ -92,15 +92,6 @@ $('.mdl-layout').css({
 
 }
 
-function longShadow(){
-	$('.mdl-layout-title').flatshadow({
-  color: "#4CAF50",
-  angle: "SE",
-  fade: true,
-  boxShadow: false // Accept full 6 digit hex color (#000000)
-});
-}
 
 themecolorChangeWithTime(); 
 BackgroundImageChangeWithTime();
-longShadow();

@@ -48,28 +48,28 @@ var clientX=null;
 var startX=null;
 var xGap=null;
 var mainContainerTranslate=$('.slideable-container')
-function leftRightSlideMove(){
-	$('.slideable-container').touchstart(function(){
-		startX=event.changedTouches[0].clientX; 
-		console.log('开始时的X：'+startX);
-	});  
+// function leftRightSlideMove(){
+// 	$('.slideable-container').touchstart(function(){
+// 		startX=event.changedTouches[0].clientX; 
+// 		console.log('开始时的X：'+startX);
+// 	});  
 
-	$('.slideable-container').touchmove(function() {		 
-	    clientX=event.changedTouches[0].clientX;
-	    xGap=clientX-startX;
-		console.log('x坐标：'+clientX); 
-		console.log('x坐标厨具：'+xGap); 
-		$('.slideable-container').css('transform','translateX('+xGap+'px)');    
+// 	$('.slideable-container').touchmove(function() {		 
+// 	    clientX=event.changedTouches[0].clientX;
+// 	    xGap=clientX-startX;
+// 		console.log('x坐标：'+clientX); 
+// 		console.log('x坐标厨具：'+xGap); 
+// 		$('.slideable-container').css('transform','translateX('+xGap+'px)');    
 
 
-	});
+// 	});
 
-    $('.slideable-container').swipe(function(){
-		console.log('swipe后x坐标：'+clientX); 
+//     $('.slideable-container').swipe(function(){
+// 		console.log('swipe后x坐标：'+clientX); 
 		 
-    }) 
+//     }) 
 
-}
+// }
 var thisday;
 var dayIndex=0; 
 var scriptStringA='<script class="added-ajax-script" src="http://api.map.baidu.com/telematics/v3/weather?location=';
@@ -233,29 +233,25 @@ function firstAjaxScriptAdded(){
 var addedCityCardHeight=$('.cities-add-card').outerHeight();
 function citiesAddBtn(){
 	
-	$('.cities-add-card').css({
-		left: '150%'
-
-	});
+	
 	console.log(addedCityCardHeight); 
 	$('.plus-city').click(function() {
-		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0);z-index:998"></div>'); 
-		$('.cities-add-card').css({
-		display: 'block'
-	});  
-		$('.cities-add-card').animate({left:'50%'}, 200);  
-		   
+		$('body').prepend('<div class="mask-div" style="position:fixed;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0);z-index:998"></div>');
+
+	$('.cities-add-card').show(100);  
 
 	});
 	$('body').on('click','.mask-div',function(){
 
 		$(this).css('display', 'none');
-		$('.cities-add-card').animate({left:'-50%'},200);  
-		function addCityDiv(){
-			$('.cities-add-card').css({'display':'none', left:'150%'});
-		}
-		setTimeout(addCityDiv,210);  
-}) 
+		$('.cities-add-card').hide(100);
+
+})
+	
+	$('.cancle-btn').click(function(event) {
+		$('.mask-div').css('display', 'none');
+		$('.cities-add-card').hide(100); 
+	}); 
  
 }
 
@@ -267,11 +263,8 @@ function citiesAddvarify(){
 		
 		if(newCity!=''){
 			$('.mask-div').css('display', 'none');
-			$('.cities-add-card').animate({height: 0}, 200); 
-			function addCityDiv(){
-				$('.cities-add-card').css('display', 'none');
-			}
-			setTimeout(addCityDiv,200);  
+			 
+ 
 			citiesData.push(newCity)
 			console.log(citiesData);  
 			storage.setItem('citiesName',citiesData.join(','));
