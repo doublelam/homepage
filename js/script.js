@@ -6,13 +6,15 @@ var oClick=document.getElementById(clickdivid);
 var oDivDe=document.getElementById('detailinfo');
 var aInfo=oDivDe.getElementsByTagName('div');
 var aImg=oHidden.getElementsByTagName('img');
-oClick.onmouseover=function(){
+oClick.onmouseover=showOperate;
+oClick.ontouchstart=showOperate;
+function showOperate(){
  oHidden.style.paddingLeft="18px";
- oHidden.style.width="250px";
+ oHidden.style.width="250px"; 
 
 }
 
-function disapp(){
+function disapp(){ 
 
   oHidden.style.paddingLeft="0px";
   oHidden.style.width="0px";
@@ -128,18 +130,18 @@ transform();
 
 
 //对实例展示内的图片进行排列
-function imgdisplay(){
-  var oImg=document.getElementById("imgdiv");
-  var aImg=oImg.getElementsByTagName("img");
-  for (var i = 0 ; i <aImg.length; i++) {
-  	aImg[i].style.left=i%5*20+1.6+"%";
-  	aImg[i].style.top=parseInt(i/5)+5+"%";
-  };
+// function imgdisplay(){
+//   var oImg=document.getElementById("imgdiv");
+//   var aImg=oImg.getElementsByTagName("img");
+//   for (var i = 0 ; i <aImg.length; i++) {
+//   	aImg[i].style.left=i%5*20+1.6+"%";
+//   	aImg[i].style.top=parseInt(i/5)+5+"%";
+//   };
 
 
-}
+// }
 
-imgdisplay();
+// imgdisplay();
 /////////////////////////
 
 
@@ -180,7 +182,7 @@ imgdisplayinrecom();
 function alertupgrade(){
  var oImg=document.getElementById('mypaintimg');
  if('boxShadow' in oImg.style==false){
- 	alert("请使用IE9及以上版本或其他其他内核浏览器");
+ 	alert("请使用IE9及以上版本或其他内核浏览器");
  }
 };
 

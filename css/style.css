@@ -13,11 +13,14 @@
 
 
 body{
-	overflow: hidden;
+	overflow-x:hidden; 
 	color:#9097A4;
 	font-family: sans-serif;
 	
 
+}
+p{
+	margin: 0;
 }
 
 /*img外边框为0px*/
@@ -45,13 +48,15 @@ img{
 
 /*nav导航头部样式*/
 .nav{
+	margin: auto;
 	position: relative;
 	top: 62px;
-	width: 70.3%;
+	width: 100%;
+	max-width: 960px;
 	height: 50px;
 	margin: auto;
-	background: #ECEEF2;
-	z-index: 0;
+	
+
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	-user-select:none;
@@ -65,11 +70,10 @@ img{
 	display: inline-block;
 	background: #ECEEF2;
 	height: 100%;
-    line-height: 50px;
-	padding-left: 30px;
-	padding-right: 30px;
+   
+	padding: 5px 10px;
 	left: 0px;
-	margin-right: 50px;
+	font-size: 14px; 
 	transition:.2s;
 	border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
@@ -83,7 +87,7 @@ img{
 	padding: 0px;
 	width: 100%;
 	position: relative;
-	height: 100%;
+	
 	
 	margin: auto;
 
@@ -231,20 +235,24 @@ line-height: 60px;
 
 /*可移动内div的样式*/
 .mainbody{
-	display: inline-block;
+	float: left;
 	position: relative;
-	margin-left: 3.725%;
-	margin-right: 3.725%;
-	width: 17.55%;
-	height: 100%;
-	background: #F7F7FA;
+ 
+	width: 25%;
+	
+	background: #fff; 
 	border-radius: 3px;
 }
 /*/////////////////////////////////*/
 
 /*第三个div样式*/
-.diifback{
-	background: #E7A937;
+
+.diifback a{
+	display: block;
+	float: left;
+	width: 20%;
+	max-width: 160px;
+	padding: 5px;
 }
 
 /*第一个div的颜色样式*/
@@ -256,7 +264,7 @@ line-height: 60px;
 
 /*示例展示中的图片样式*/
 .imgdis{
-	position: absolute;
+	width: 100%;
 	border-radius: 5px;
 	transition:.4s;
 
@@ -272,9 +280,11 @@ line-height: 60px;
 /*///////////////////////////*/
 
 /*个人简介文字部分样式*/
+
+
 .posision{
-	position: absolute;
-	font-size: 20px;
+	
+
 	color: #666;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -285,17 +295,17 @@ line-height: 60px;
 
 /*shannon theory txt style*/
 .hometxt{
-	font-size: 38px;
-	color: white;
+	
+	
 }
 /*//////////////////*/
 
 .namsty{
-	font-style: oblique;
-	color: white;
-	margin-left: 60%;
-	top: 64%;
-	font-size: 30px;
+	
+
+	
+	text-align: right;
+	
 	
 }
 
@@ -312,7 +322,7 @@ line-height: 60px;
 
 /*图片展示大div*/
 .mypaintdis{
-	position: absolute;
+	float: right;
 	left: 63%;
 	top: 22%;
 
@@ -348,7 +358,7 @@ line-height: 60px;
 	box-shadow: 0px 3px 6px #aaa;
 }
 .butt{
-	position: absolute;
+	
 	width: 80px;
 	height: 40px;
 	border: 0px;
@@ -363,3 +373,11 @@ line-height: 60px;
 	box-shadow: none;
 }
 /*/////////////////////////////////////*/
+
+
+/*media */
+@media screen and (max-width:500px) {
+	.diifback a {
+		width: 50%;
+	}
+}
