@@ -237,7 +237,7 @@ line-height: 60px;
 .mainbody{
 	float: left;
 	position: relative;
- 
+ 	padding: 10px;
 	width: 25%;
 	
 	background: #fff; 
