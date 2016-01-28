@@ -1,0 +1,56 @@
+.designer-home {
+    color: @white;
+    background: @black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .designer-avatar {
+        width: 50%;
+        img {
+            display: block;
+        }
+    }
+    .designer-info {
+        width: 50%;
+        text-align: center;
+        .title {
+            font-size: 2rem;
+            margin: 10px 0 5px 0;
+            .text-hide-ellipsis();
+        }
+        .level {
+            font-size: 1.4rem;
+            color: lighten(@black,50%);
+            margin: 5px 0;
+        }
+        .follow {
+            margin: 10px 0;
+            .@{ns}btn {
+                font-size: 1.4rem;
+                padding: 6px 1.5rem;
+                &.followed {
+                    background: @grey;
+                    border-color: @grey;
+                }
+            }
+        }
+    }
+}
+
+.designer-head {
+    padding: 12px;
+    border-bottom: 1px solid @lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > .title {
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin: 0;
+        flex: 1;
+    }
+    .total {
+        font-size: 1.4rem;
+        color: #888;
+    }
+}

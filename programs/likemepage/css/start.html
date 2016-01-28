@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <!--<meta name="mobile-web-app-capable" content="yes">-->
+    <!--<meta name="application-name" content="App Name">-->
+    <!--<link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">-->
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--&lt;!&ndash; 设置苹果工具栏颜色 &ndash;&gt;-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <!--&lt;!&ndash; 设置苹果工具栏标题 &ndash;&gt;-->
+    <!--<meta name="apple-mobile-web-app-title" content="App Name">-->
+    <!--&lt;!&ndash; 忽略页面中的数字识别为电话，忽略Email识别 &ndash;&gt;-->
+    <!--<meta name="format-detection" content="telphone=no, email=no">-->
+    <!--&lt;!&ndash; 设置苹果桌面图标 &ndash;&gt;-->
+    <!--<link rel="apple-touch-icon" href="images/touch/touch-icon.png">-->
+
+    <!--&lt;!&ndash; UC浏览器强制竖屏 &ndash;&gt;-->
+    <!--<meta name="screen-orientation" content="portrait">-->
+    <!--&lt;!&ndash; QQ浏览器强制竖屏 &ndash;&gt;-->
+    <!--<meta name="x5-orientation" content="portrait">-->
+    <!--&lt;!&ndash; UC浏览器强制全屏 &ndash;&gt;-->
+    <!--<meta name="full-screen" content="yes">-->
+    <!--&lt;!&ndash; QQ浏览器强制全屏 &ndash;&gt;-->
+    <!--<meta name="x5-fullscreen" content="true">-->
+    <!--&lt;!&ndash; UC浏览器应用模式 &ndash;&gt;-->
+    <!--<meta name="browsermode" content="application">-->
+    <!--&lt;!&ndash; QQ浏览器应用模式 &ndash;&gt;-->
+    <!--<meta name="x5-page-mode" content="app">-->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/medialayout.min.css">
+    <script type="text/javascript" src="js/respond.js"></script>
+
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, p, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+
+</head>
+<body>
+    <nav class="navigation-head">
+        <div class="navigation-area">
+            <img src="images/likeme-logo.png" alt="logo" class="navi-logo"/>
+            <section class="navigation-content">
+                <ul class="navagation-unorderedlist">
+                    <li>关注微信&nbsp<i class="fa fa-caret-down"></i></li>
+                    <li>关注微信&nbsp<i class="fa fa-caret-down"></i></li>
+                    <li>关注微信&nbsp<i class="fa fa-caret-down"></i></li>
+                    <li>新用户注册&nbsp<i class="fa fa-caret-down"></i></li>
+                </ul>
+            </section>
+        </div>
+    </nav>
+    <section class="main-body">
+        <div class="main-content">
+            <img src="images/main-image.jpg" alt="image missed">
+            <div class="main-box sign-in-box">
+                <h1 class="login-box-title">欢迎来到LIKE-ME</h1>
+                <form action="" method="get">
+                    <input type="text" name="account" placeholder="会员名/邮箱" class="sign-input account-box"/>
+                    <input type="password" name="password" placeholder="密码" class="sign-input password-box"/>
+                    <div class="auto-login-box">
+                        <div class="checked-click" id="auto-login-clickable">
+                        <input type="checkbox" class="auto-login-checkbox" name="autologin" id="autologin"  /><label for="autologin"><b class="faked-checkbox" id="auto-login-fake"></b>两周内自动登陆</label>
+                        </div>
+                        <a class="forget-password">忘记密码？</a>
+                    </div>
+                    <input type="submit" value="登&nbsp&nbsp&nbsp录" class="login-submit"/>
+
+                </form>
+                <div class="straight-login"><p>快捷登录</p></div>
+                <ul class="straight-login-content">
+                    <li class="icon-signup-1"><a><i class="fa fa-qq"></i></a></li>
+                    <li class="icon-signup-2"><a><i class="fa fa-weibo"></i></a></li>
+                    <li class="icon-signup-3"><a><i class="fa fa-wechat"></i></a></li>
+                </ul>
+                <p class="sign-up">还没帐号?&nbsp<a id="right-now-sign-up">马上注册</a></p>
+
+            </div>
+            <div class="main-box sign-up-box">
+                <h1 class="login-box-title">欢迎加入LIKE-ME</h1>
+                <form>
+                <!-- <p class="regist-describe">邮箱/手机号</p> --><input type="text" name="account" placeholder="账号" class="sign-input regist-info"> 
+                <!-- <p class="regist-describe">密码</p> --><input type="password" name="password" placeholder="密码" class="sign-input regist-info">
+                <input type="text" name="cellphone-number" placeholder="手机号" class="sign-input regist-info">
+                <div class="cellphone-verify"><input type="text" placeholder="短信验证码" class="sign-input regist-info verify-txt"><button type="button" class="verify-button login-submit" id="send-to-phone">发送验证码到手机</button></div>
+                <div class="checked-click auto-login-box contract-new-margin" id="contract-readed">
+                        <input type="checkbox" class="auto-login-checkbox" name="agreed" id="agreed"  /><label for="agreed"><b class="faked-checkbox" id="readed-agreed"></b>我已阅读并同意</label><a class="regist-contract">《用户注册协议》</a>
+                </div>
+               <!--  <p class="regist-describe">确认密码</p> --><!-- <input type="password" name="commit-password" class="sign-input regist-info"> -->
+                <input type="submit" value="注册" class="login-submit">
+
+                </form>
+                 <p class="sign-up right-now-login">已有帐号?&nbsp<a id="right-now-sign-in">立即登录</a></p> 
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content-area">
+            <section class="footer-article-area">
+                <article class="footer-article">
+                    <h1  class="footer-article-title">新手帮助</h1>
+                    
+                        <ul class="footer-paragraph">
+                            <li>如何购买</li>
+                            <li>如何购买</li>
+                            <li>如何购买</li>
+                            <li>如何购买</li>
+                        </ul>
+                  
+                </article>
+                <article class="footer-article">
+                    <h1 class="footer-article-title">新手帮助</h1>
+                  
+                    <ul  class="footer-paragraph">
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                    </ul>
+                    
+                </article>
+                <article class="footer-article">
+                    <h1  class="footer-article-title">新手帮助</h1>
+                   
+                    <ul  class="footer-paragraph">
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                        <li>如何购买</li>
+                    </ul>
+                   
+                </article>
+            </section>
+            <section class="qrcode-block">
+                <article class="native-app-scan">
+                    <h1  class="footer-article-title">LIKE-ME移动客户端</h1>
+                    
+                        <ul class="qrcode-area">
+                            <li><img src="images/qrcode.jpg" alt=""></li><!-- 
+                             --><li class="qrcode-second-icon"><img src="images/qrcode.jpg" alt=""></li>
+                        </ul>
+                   
+                </article>
+            </section>
+            <div  class="copyright-info"><p>©版权所有:LIKEME·技术支持：微爱科技</p></div>
+
+       </div>
+       
+    </footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>

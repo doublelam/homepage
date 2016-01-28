@@ -1,0 +1,29 @@
+{
+    "name": "likeme",
+    "version": "0.1.0",
+    "description": "LIKEME SHOP MOBILE",
+    "author": {
+        "name": "Hoofei",
+        "email": "hoofei@gmail.com",
+        "url": "http://hoofei.com"
+    },
+    "license": "MIT",
+    "homepage": "http://m.like-me.cn/",
+    "dependencies": {
+        "jquery": ">=2.1.4"
+    },
+    "devDependencies": {
+        "fontawesome": "~4.4.0"
+    },
+    "main": [
+        "dist/**/*"
+    ],
+    "ignore": [
+        "/.*",
+        "_config.yml",
+        "CNAME",
+        "*.md",
+        "gulpfile.js",
+        "package.json"
+    ]
+}

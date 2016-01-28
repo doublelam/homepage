@@ -1,0 +1,1 @@
+{"version":3,"sources":["medialayout.less"],"names":[],"mappings":"AAQC,kCAPA,iBACC,YAAA,CAGD,QACC,YAAA,CAAA,CAAA","file":"medialayout.min.css","sourcesContent":["@media all and (max-width:1100px){\r\n\t.navigation-head{\r\n\t\twidth: 1100px;\r\n\t\t\r\n\t}\r\n\t.footer{\r\n\t\twidth: 1100px;\r\n\t}\r\n}"],"sourceRoot":"/source/"}

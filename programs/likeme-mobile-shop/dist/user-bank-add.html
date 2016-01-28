@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="LIKEME, LIKEME商城, 设计师平台, B2C商城, 印象股份">
+    <meta name="description" content="LIKEME —— 中国首家展示设计师生活方式的B2C平台，设计师本人即模特来传达展现个人独特的生活方式。平台坚持原创，亲民价格定位，产品追求极致，物超所值。">
+    <title>银行账号添加</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="LIKEME商城">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="LIKEME商城">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/likeme.min.css">
+</head>
+<body class="user">
+    <header class="lm-bar nav user">
+        <a class="lm-btn lm-icon icon-chevron-left x2 J_goBack" href="user-credits-manage.html"></a>
+        <h1 class="title">帐号添加</h1> 
+    </header>
+    <section class="recharge">
+        <div class="lm-form">
+            <div class="form-item">
+                <label>姓名：</label> 
+                <input type="text" placeholder="与账户绑定姓名一致">
+            </div>
+
+            <div class="form-item relative"> 
+                <label>账户类型：</label>
+                <input type="text" placeholder="请选择账号类型" id="account-type">
+                <select class="select-bank-updown"  id="up-down-icon"> 
+
+                    <option value="支付宝">支付宝</option>
+                    <option value="工商银行">工商银行</option>
+                    <option value="建设银行">建设银行</option>  
+                    <option value="农业银行">农业银行</option>
+             
+                    <option value="交通银行">交通银行</option> 
+                    <option value="中国银行">中国银行</option>
+                    <option value="招商银行">招商银行</option>
+                    <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
+                    <option value="交通银行">交通银行</option>
+                    <option value="浦发银行">浦发银行</option>
+                    <option value="中国光大银行">中国光大银行</option>
+                    <option value="广发银行">广发银行</option>
+                    <option value="中信银行">中信银行</option>
+                    <option value="兴业银行">兴业银行</option>
+                    <option value="中国民生银行">中国民生银行</option>
+                    <option value="杭州银行">杭州银行</option> 
+                    <option value="平安银行">平安银行</option>
+                    <option value="浙商银行">浙商银行</option>
+                    <option value="渤海银行">渤海银行</option>
+                    <option value="徽商银行">徽商银行</option>
+                    <option value="上海农商银行">上海农商银行</option>
+                    <option value="广东南粤银行">广东南粤银行</option>
+                    <option value="友利银行">友利银行</option>
+                    <option value="珠海华润银行">珠海华润银行</option>
+                  
+                
+                </select>
+            </div>
+            <div class="form-item relative location-bank-regist"> 
+                <label>开户地址：</label>
+                <select id="province" runat="server" onchange="selectprovince(this);"></select>
+                <select id="city" runat="server"></select>  
+                <div style="clear:both"></div> 
+            </div>
+            
+            <div class="form-item">
+                <label>账号：</label>
+                <input type="text" placeholder="输入账号">
+            </div>
+        </div>
+    </section>
+    <section class="actions top-border"> 
+         <a href="" class="lm-btn btn-primary large block">确认添加</a>
+    </section>
+
+
+    
+<script src="js/jquery.min.js"></script>
+<script src="js/likeme.min.js"></script> 
+<script src="js/rechangecash.js"></script>
+<script src="js/selectprovince.js"></script>  
+
+
+</body>
+</html>

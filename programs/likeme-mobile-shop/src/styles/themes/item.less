@@ -1,0 +1,370 @@
+body.item {
+    padding-bottom: 46px;
+    background: @lightgrey;
+}
+
+body.comments {
+    background: @lightgrey;
+}
+
+.lm-bar.item {
+    background: @white;
+    border-bottom: 1px solid @lightgrey;
+}
+
+.item-info {
+    padding: 10px 0;
+    background: @white;
+    border-bottom: 1px solid darken(@lightgrey,3%);
+    .item-title {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            flex: 1;
+            font-size: 1.6rem;
+            margin: 0;
+            padding: 0 12px;
+        }
+        .share {
+            font-size: 1.2rem;
+            color: #666;
+            width: 60px;
+            text-align: center;
+            border-left: 1px solid @lightgrey;
+            .@{ns}icon {
+                color: @red;
+                display: block;
+                &:hover {
+                    color: @black;
+                }
+            }
+        }
+    }
+    .item-price {
+        padding: 0 12px;
+        .meta {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .price {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: @red;
+            em {
+                font-size: 1.8rem;
+                margin-right: 2px;
+            }
+            .o-price {
+                font-weight: 400;
+                font-size: 1.6rem;
+                color: #888;
+                margin-left: 2px;
+            }
+        }
+        .sales {
+            font-size: 1.2rem;
+            color: #999;
+            text-align: right;
+            flex: 1;
+            position: relative;
+            top: 2px;
+        }
+        .tips {
+            font-size: 1.2rem;
+            color: #999;
+        }
+    }
+}
+
+.item-box {
+    background: @white;
+    border-top: 1px solid darken(@lightgrey,3%);
+    border-bottom: 1px solid darken(@lightgrey,3%);
+    a {
+        display: block;
+        &:hover {
+            background: #f8f8f8;
+        }
+    }
+    .title-box {
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .more {
+        font-size: 1.4rem;
+        color: #bbb;
+        .@{ns}icon {
+            color: #aaa;
+            text-align: right;
+            margin-left: 5px;
+        }
+    }
+    .con-box {
+        border-top: 1px solid @lightgrey;
+    }
+}
+
+.item-choose, .item-designer {
+    margin: 10px 0;
+}
+
+.item-designer {
+    .designer-info {
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &.con-box {
+            border: 0;
+        }
+        .designer-avatar {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            border-radius: @border-radius-circle;
+        }
+        .designer-title {
+            font-size: 1.6rem;
+            flex: 1;
+        }
+        .designer-level {
+            font-size: 1.4rem;
+            text-align: right;
+            display: inline-block;
+        }
+    }
+}
+
+.item-comments {
+    .comment-item {
+        font-size: 1.4rem;
+        padding: 10px 12px;
+        border-bottom: 1px solid @lightgrey;
+        &:last-child {
+            border: 0;
+        }
+        .user {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .user-avatar {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                border-radius: @border-radius-circle;
+            }
+            .user-name {
+                flex: 1;
+            }
+            .rating-box {
+                color: #888;
+            }
+        }
+        .comment {
+            color: #777;
+            margin: 5px 0;
+        }
+        .meta {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+    }
+    &.all {
+        .comment-item {
+            margin: 10px 0;
+            background: @white;
+            border-bottom: 1px solid darken(@lightgrey,3%);
+        }
+        .pages {
+            padding: 0 12px 12px 12px;
+        }
+    }
+}
+
+.item-detail {
+    text-align: center;
+    margin: 10px 0;
+    .title-box {
+        border-bottom: 1px solid @lightgrey;
+    }
+}
+
+.item-buy {
+    .@{ns}btn {
+        padding: 15px;
+        border: 0;
+    }
+    .btn-fav, .btn-primary {
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 7px;
+        .@{ns}icon {
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+            display: block;
+        }
+    }
+}
+
+.detail-content {
+    padding: 0 15px;
+    background: @white;
+    p {
+        margin: 15px 0;
+    }
+}
+
+.modal-share {
+    width: 100%;
+    background: @lightgrey;
+    .content {
+        padding: 10px 10px 70px 10px;
+        .title {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .share-list {
+            a {
+                font-size: 1.4rem;
+                text-align: center;
+            }
+            .@{ns}icon {
+                color: @white;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                margin: 5px auto;
+                border-radius: @border-radius-circle;
+                display: block;
+                &.icon-weixin, &.icon-qrcode {
+                    background: @green;
+                }
+                &.icon-qq {
+                    background: @lightblue;
+                }
+                &.icon-weibo {
+                    background: @red;
+                }
+            }
+        }
+    }
+    .close-btn {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: @white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: auto;
+        border-radius: 0;
+    }
+}
+
+.weixin-share {
+    text-align: center;
+    background: none;
+    .cancel-btn {
+        font-size: 1.5rem;
+        color: #fff;
+        width: 100px;
+        margin-left: -50px;
+        padding: 8px 0;
+        background: none;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        position: relative;
+        left: 50%;
+        bottom: -40px;
+    }
+}
+
+.modal-choose {
+    width: 100%;
+    .item-preview {
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 0 12px;
+        position: relative;
+        top: -20px;
+        display: flex;
+        align-items: flex-end;
+        .item-pic {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+            img {
+                width: 100px;
+                height: 100px;
+                border: 3px solid @white;
+                border-radius: 3px;
+                box-shadow: 0 1px 2px rgba(0,0,0,.125);
+            }
+        }
+        .item-data {
+            line-height: 1.5;
+            padding-bottom: 5px;
+            flex: 1;
+            .price {
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: @red;
+            }
+        }
+    }
+    .prop-box {
+        padding: 15px 12px;
+        border-top: 1px solid @lightgrey;
+        &.flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title {
+                margin: 0;
+            }
+        }
+        .title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .prop-choose {
+            .btn-prop {
+                font-size: 1.4rem;
+                margin-right: 5px;
+                padding: 8px 1.5rem;
+                border-radius: 3px;
+                &.sel {
+                    color: @white;
+                    background: @red;
+                    border-color: @red;
+                }
+            }
+        }
+    }
+    .modal-actions {
+        margin-top: 15px;
+        .@{ns}btn {
+            padding: 15px;
+            border: 0;
+        }
+    }
+    .close-btn {
+        font-size: 2.5rem;
+        color: #555;
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background: none;
+    }
+}

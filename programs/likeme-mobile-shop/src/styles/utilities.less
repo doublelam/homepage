@@ -1,0 +1,28 @@
+//
+// Utilities
+// 通用功能样式
+// ---------------------------------------------------------------------------
+
+.@{ns}fl{ float:left;}
+.@{ns}fr{ float:right;}
+
+// 显示
+.@{ns}hide{ display:none;}
+.@{ns}unvisible{ visibility:hidden;}
+.@{ns}clearfix{ .clearfix();}
+
+// 文字排版
+.@{ns}a-line{ .text-hide();}
+.@{ns}a-line-ellipsis{ .text-hide-ellipsis();}
+
+// 固定在底部
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    &.top-border {
+        border-top: 1px solid @lightgrey;
+    }
+}

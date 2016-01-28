@@ -1,0 +1,113 @@
+//
+// App UI
+// ---------------------------------------------------------------------------
+
+@import "../variables";
+@import "../mixins";
+
+@ns:                ~"lm-";
+
+hr {
+    display: block;
+    height: 1px;
+    background: @lightgrey;
+    margin: 8px 0;
+    border: none;
+    clear: both;
+}
+
+.homebar {
+    color: @black;
+    background: @white;
+    border-bottom: 1px solid @lightgrey;
+    .@{ns}btn {
+        color: @black;
+        border-left: 1px solid @lightgrey;
+        border-radius: 0;
+        &:first-child {
+            border-left: 0;
+        }
+        &:hover {
+            background: @lightgrey;
+        }
+    }
+}
+
+.hd {
+    font-size: 1.4rem;
+    padding: @list-padding;
+    background: lighten(@lightgrey, 3%);
+    border-bottom: 1px solid @lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+}
+
+.actions {
+    text-align: center;
+    padding: @list-padding;
+    background: @white;
+}
+
+.pages {
+    padding: 12px;
+    .pager {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > li {
+            a, span {
+                padding: 6px 1.2rem;
+                border: 1px solid @black;
+                display: block;
+                .@{ns}icon {
+                    font-size: 1.4rem;
+                }
+            }
+            a:hover {
+                color: @white;
+                background: @black;
+            }
+            &.previous {
+                .@{ns}icon {
+                    text-align: left;
+                }
+            }
+            &.next {
+                .@{ns}icon {
+                    text-align: right;
+                }
+            }
+            &.disabled {
+                opacity: .3;
+            }
+        }
+    }
+}
+
+.footer {
+    font-size: 1.4rem;
+    color: #888;
+    text-align: center;
+    padding: 5px 12px;
+    background: @black;
+    overflow: hidden;
+    clear: both;
+    p {
+        margin: 10px 0;
+        a {
+            color: @white;
+        }
+        em {
+            color: #444;
+            margin: 0 10px;
+        }
+        &.copyright {
+            text-transform: uppercase;
+        }
+    }
+}

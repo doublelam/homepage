@@ -1,0 +1,135 @@
+//
+// Mixin
+// @desc: LESS 混合模块
+// ---------------------------------------------------------------------------
+
+// 清除浮动
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    *zoom: 1; /* IE6-7 触发 hasLayout */
+}
+
+// 透明度
+.opacity(@opacity) {
+    opacity: @opacity;
+    // IE8 filter
+    @opacity-ie: (@opacity * 100);
+    filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+// WebKit-style focus
+.tab-focus() {
+    // Default
+    outline: thin dotted;
+    // WebKit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+// 按钮变样
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+    &.focus {
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+    }
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 8%);
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 8%);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 8%);
+            border-color: darken(@border, 10%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: @background;
+            border-color: @border;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}
+
+// 按钮大小
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    border-radius: @border-radius;
+}
+
+// 折行字体隐藏
+.text-hide() {
+    display: block;
+    max-height: 1.4em;
+    line-height: 1.4em;
+    overflow: hidden;
+}
+
+// 折行字体显示省略号
+.text-hide-ellipsis() {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+// 元素平铺
+.overlay (@top: 0, @right: 0, @bottom: 0, @left: 0) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+}
+
+// 三角箭头
+.sq-arr-up (@size, @color) {
+    width: 0; height: 0; border: @size solid transparent; border-bottom-color: @color;
+}
+.sq-arr-right (@size, @color) {
+    width: 0; height: 0; border: @size solid transparent; border-right-color: @color;
+}
+.sq-arr-down (@size, @color) {
+    width: 0; height: 0; border: @size solid transparent; border-down-color: @color;
+}
+.sq-arr-left (@size, @color) {
+    width: 0; height: 0; border: @size solid transparent; border-left-color: @color;
+}

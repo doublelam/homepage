@@ -1,0 +1,470 @@
+
+.inline-block{
+	display: inline-block;
+	margin-right: 20%;      
+}
+.cash-rechangable{
+	color: #DB792D;
+}
+
+.rechangable-detail{
+	padding-left: 12px;
+	color: #666;
+	font-size: .8rem;    
+}
+.cash-input{
+	border: none; 
+	height: 3rem;  
+	width: 60%;
+	outline: none; 
+	font-size: 1.5rem;     
+	margin: 0;
+	padding: 0;
+
+} 
+
+.button-container{
+	width: 100%;
+	display: block;
+	text-align: center;  
+	
+}
+.rechange-commit{
+	width: 90%;  
+	height: 3rem;   
+	 
+
+	  
+	border: none;
+	background: #aaa; 
+	color: white;     
+	margin-top: 1rem; 
+	outline: none;
+} 
+
+.buble-commen{
+	 
+	display: none; 
+	position: fixed;
+	width: 80%; 
+	 
+	left: 50%;
+	transform:translateX(-50%);
+	top: 20%; 
+	z-index: 9999;
+	background: white; 
+	border-radius: 3px; 
+	box-shadow: 0 1px 13px rgba(0,0,0,.8);      
+
+
+}
+
+
+
+
+.buble-lable-commen{
+ display: flex;
+ justify-content:space-between;  
+ align-items:center;   
+ padding: 1rem; 
+ width: 100%;    
+ height: 100%;
+
+}
+
+.banks-select-container{
+	overflow: auto; 
+	max-height: 20rem;          
+
+}
+
+.select-container-commen{
+	 
+	display: flex; 
+	align-items:center;
+	justify-content:space-between;  
+	   
+	border-top: 2px solid rgba(0, 0, 0, 0.2);
+	font-size: 1.7rem;              
+ 
+
+}
+.select-container-commen:active{
+	background: #ccc; 
+}
+.bank-card-manage{
+	padding: 1.5rem; 
+	box-shadow: 0 1px 3px rgba(0,0,0,.6); 
+	border: none;    
+}
+
+
+.buble-title-commen{
+	
+	padding: 1rem;  
+	font-size: 2.2rem;     
+	color: #222;   
+	box-shadow: 0 1px 3px rgba(0,0,0,.6);      
+	line-height: 3rem;   
+
+}
+
+
+.plus-bank-info{
+	color: #222; 
+	font-size:2rem; 
+	line-height: 2rem;     
+}
+
+.add-bank-detail{
+	margin-left: 1rem;
+	height: 2rem; 
+	display: inline-block; 
+	 line-height: 2rem;   
+	 
+	 
+	  
+}
+
+.add-bank-detail-container{
+	 
+	display: flex;
+	justify-content:center; 
+}
+
+.added-arrow{
+	color: #222;  
+}
+
+.bank-kinds-select{
+	position: fixed;
+	overflow: auto;
+	top: 210px;      
+	left:50%;
+	width: 90%;   
+	height:40%;
+	background: white;
+	border-radius: 2px;  
+	transform:translateX(-50%);
+	box-shadow: 0 1px 8px rgba(0,0,0,.8);  
+	z-index: 9999; 
+	display: none;    
+
+
+}
+
+.bank-series-kinds{
+	color: #666; 
+	     
+
+
+}
+.bank-series-kinds li{
+	padding: 1rem;  
+  transition:all .2s;  
+
+}
+ 
+.bank-series-kinds li:active{ 
+	background: #eee; 
+	box-shadow: 0px 2px 5px #ccc;   
+} 
+
+#up-down-icon{  
+	display: block; 
+	  
+	position: absolute; 
+	line-height: 40px;       
+	height: 36px;   
+	right: 0px;    
+	top: 24px;           
+	width: 36px;  
+	border: none;    
+	background:url(../images/updown.png) no-repeat;
+	background-size: 100% 100%;         
+	text-align: center;
+	text-indent: 9999rem; 
+
+	   
+
+}
+.relative{
+	position: relative;
+
+}
+
+.bankcards-list{
+	position: relative;  
+	background: white; 
+	box-shadow: 0px 1px 5px #888;  
+	padding: 2rem; 
+	border-radius: 4px; 
+	margin-bottom: 1rem;  
+
+
+}
+
+.cards-list-container{
+	 
+	margin:1rem; 
+} 
+
+.menu-icon{
+	position: absolute;
+	right: 2rem;
+	top: 2rem; 
+}
+
+.bank-manage-menu{
+	display: none;  
+	position: absolute;
+	background: white; 
+	height:10rem;    
+	width: 12rem;    
+	right: 0;
+	top: 3.5rem;   
+	box-shadow: 0px 1px 16px #888;    
+	border-radius: 4px;   
+	padding: 1rem;
+	z-index: 999;    
+	  
+}  
+
+ 
+.bankmap-icon{
+	width: 30px;  
+	height: 30px;      
+	margin-right: 1rem;  
+}
+.banks-pots{
+	display: flex; 
+	 
+
+
+}
+.bank-pots-txt{
+	 height: 3rem;  
+	 margin-bottom: 3rem; 
+	 
+	flex-align:right; 
+}
+.bank-pots-txt h4{
+	font-weight: bolder; 
+	font-size: 1rem; 
+	margin-bottom: .5rem;   
+}
+.bank-pots-txt p{
+	font-size: 1rem;   
+	 
+}
+
+.delete-btn{
+	position: relative;  
+	width: 100%;
+	margin-bottom: 0;     
+	background: #222; 
+	border: none; 
+	color: white;
+	box-shadow: 0px 1px 3px #666; 
+	border-radius: 2px;    
+	outline: none;
+	transition:all .1s;     
+} 
+.delete-btn::after{
+	content: "";
+	display:block;
+	width: 100%;
+	height: 1px; 
+	top: -15px;     
+	position: absolute;
+	background: #eee;         
+}
+
+.deleted-commit{
+	position: fixed; 
+	display: none;  
+	padding: 1rem;   
+	background: white; 
+	left: 1rem;
+	right: 1rem; 
+	bottom: 5rem;    
+	height: 110px;     
+	box-shadow: 0px 1px 6px #333;    
+	border-radius: 2px; 
+	z-index: 9999;     
+}
+.deleted-commit button{
+	width: 100%;    
+	display: block;   
+	height:40px;           
+	outline: none;
+	border: none;
+
+	border-radius: 2px; 
+	box-shadow: 0px 1px 3px #666;
+	transition:all .1s;           
+
+}
+.deleted-commit button:active,.delete-btn:active,.pay-code-btn:active{
+	box-shadow: none;   
+}
+
+.delete-warn{
+	background: #C43826; 
+	color: white; 
+	margin-bottom: 6px;   
+}
+.delete-cancel{
+	background: #eee;  
+}
+
+
+.password-verify{
+	position: fixed;
+	width: 90%;
+	left: 50%;
+	transform:translateX(-50%); 
+	display: none;     
+	background: white;
+	box-shadow: 0px 1px 10px #333;     
+	border-radius: 2px;   
+	top: 5rem;      
+	text-align: center; 
+	padding: 1rem; 
+	z-index: 9999;           
+
+}
+.input-password-title{
+	color: #888;   
+	font-size: 1.5rem; 
+	height: 3rem; 
+	border-bottom: 1px solid #aaa;    
+}
+
+.cash-rechangeout{
+	color:#222;
+	font-size: 1.5rem;   
+	margin: 1rem;  
+}
+
+.verify-code-input{
+	width: 80%;  
+	height: 3.5rem; 
+	border: none; 
+	border-bottom:1px solid #ccc;   
+	 
+	outline: none; 
+	padding: 0;  
+	padding-left: 1rem; 
+	margin-bottom: 1rem; 
+	transition:all .2s;      
+ 
+}
+.verify-code-input:focus{
+	width: 90%; 
+	border-bottom:1.5px solid #222;    
+
+}
+
+.pay-code-btn{
+	border-radius: 4px; 
+	border-radius: 2px; 
+	box-shadow: 0px 1px 3px #666;
+	transition:all .1s;  
+	height: 3.5rem;   
+	width: 48%;  
+	border: none;
+	outline: none; 
+	background: #ddd;
+	color: #222;   
+
+
+
+}
+
+.pay-btn-container{
+	 
+}  
+
+.commit-paycode-btn{
+	background: #222;
+	color:white;   
+}
+
+.success-cashout{
+	width: 100%;
+	background: white; 
+	padding: 1rem;  
+}
+
+.circle-back{
+	text-align: center; 
+	background:#222;
+	line-height: 3rem; 
+	width: 3rem;
+	height: 3rem; 
+	font-size: 2rem;  
+	color: white;  
+	border-radius: 999rem; 
+	margin-right: 2rem;    
+} 
+
+.flex-container{
+	display: flex; 
+	  
+} 
+
+.cashout-status{
+	color:#222;
+	font-weight: bolder;
+	font-size: 1.8rem;     
+}
+
+.lighter{
+	color:#888;   
+}
+#without-padding{
+	padding: 5px; 
+	display: block;  
+
+}   
+#without-padding:hover{
+	background: white;  
+}
+
+.bank-name p:nth-child(1){
+	font-weight: bolder;
+	font-size: 1.5rem; 
+ 
+}
+.bank-name p:nth-child(2){ 
+	color: #888;   
+}
+
+.done{
+	padding-left: 1rem;  
+	font-weight: bolder;
+	position: relative;
+	z-index: 999; 
+}
+
+#province,#city{ 
+	width:40%;
+	color:#333;  
+	float:left;
+	background: #eee;  
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.05);
+	border: 1px solid #e6e6e6;
+	margin-right: 1rem;  
+}
+
+.plus-credit-card{
+	position: relative;
+	z-index: 999; 
+	margin-right: 2.5rem;  
+}
+
+.success-txt-gap{
+	margin-bottom:1rem; 
+}
+

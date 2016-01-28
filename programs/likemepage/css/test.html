@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="mask-div" class="mask-div"></div>
+	<button id="test-button">
+		click
+	</button>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+	
+var maskBubble={
+			attribute:function eed(extradivid){
+				
+                $.post("login.html",function(data){
+                $(extradivid).html(data);
+                $('.remove-icon').click(function(){
+		 		$(extradivid).html(null)
+		 	});
+                })
+ 
+			
+		    }
+	    };
+		
+
+		
+		
+		 $('#test-button').click(function(){
+		 	maskBubble.attribute('#mask-div')
+
+		 });
+		 	  
+		 	
+	
+		 // console.log(maskBubble.attribute('#mask-div')); 
+		  console.log($('#test-button')); 
+		 
+	</script>
+</body>
+</html>

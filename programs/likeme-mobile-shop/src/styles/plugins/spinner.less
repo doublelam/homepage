@@ -1,0 +1,37 @@
+.spinner.input-group {
+    display: flex;
+    .spin-up, .spin-down {
+        height: @form-input-height;
+        overflow: hidden;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        color: #888;
+        background: @lightgrey;
+        &:hover {
+            color: @black;
+            background: @lightgrey;
+        }
+    }
+    label {
+        margin: 0;
+    }
+    input {
+        flex: 1;
+        font-weight: 700;
+        width: 40px;
+        height: @form-input-height;
+        line-height: 1;
+        text-align: center;
+        padding: @form-input-padding;
+        background: @white;
+        border: 1px solid @lightgrey;
+        border-left: 0;
+        border-right: 0;
+        border-radius: @form-input-border-radius;
+        outline: none;
+        -webkit-appearance: none;
+        &::-webkit-input-placeholder { color: @form-input-placeholder; }
+    }
+}

@@ -1,0 +1,119 @@
+//
+// Button
+// @desc: 通用按钮，包括单体按钮、组合按钮。
+// ---------------------------------------------------------------------------
+
+.@{ns}btn{
+    display: inline-block;
+    zoom: 1;
+    margin-bottom: 0; // For input.btn
+    background-image: none;
+    border: 1px solid transparent;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    user-select: none;
+    cursor: pointer;
+    .button-size(@btn-padding-base-v; @btn-padding-base-h; @default-font-size; @border-radius-base);
+
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            .tab-focus();
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+        color: @black;
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        box-shadow: inset 0 2px 3px rgba(0,0,0,.125);
+    }
+
+    // disabled
+    // @desc: 禁用样式
+    // --------------------------------------------
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        pointer-events: none;
+        cursor: not-allowed;
+        box-shadow: none;
+        .opacity(.2);
+    }
+
+
+    // Size
+    // @desc: 按钮尺寸
+    // --------------------------------------------
+	&.large {
+        font-weight: 700;
+        .button-size(@btn-padding-large-v; @btn-padding-large-h; @btn-font-size-large; @border-radius-base);
+    }
+	&.small {
+        .button-size(@btn-padding-small-v; @btn-padding-small-h; @btn-font-size-small; @border-radius-base);
+    }
+    &.mini {
+        .button-size(@btn-padding-mini-v; @btn-padding-mini-h; @btn-font-size-mini; @border-radius-base);
+    }
+    &.block {
+        display:block;
+        width:100%;
+        clear:both;
+    }
+
+
+    // Buttons
+    //
+    &.btn-default{
+        .button-variant(@black; @lightgrey; @grey);
+    }
+    &.btn-primary{
+        .button-variant(@white; @blue; darken(@blue,5%));
+    }
+    &.btn-warning{
+        .button-variant(@white; @orange; darken(@orange,5%));
+    }
+    &.btn-error{
+        .button-variant(@white; @red; darken(@red,5%));
+    }
+    &.btn-betting{
+        .button-variant(@black; @yellow; @black);
+        .button-size(@btn-padding-mini-v; 12px; @btn-font-size-mini; @border-radius-base);
+    }
+}
+
+
+// Button Group
+// @desc: 组合按钮
+// --------------------------------------------
+.@{ns}btn-group{
+    overflow:hidden;
+    .active{
+        z-index:1;  // 保证激活项目在最上层显示
+    }
+	& > .@{ns}btn{
+        float:left; margin:0; border-radius:0; .text-hide-ellipsis(); border-width: 1px 0;
+        &:first-child{ border-radius:@btn-border-radius 0 0 @btn-border-radius; border-left-width:1px;}
+        &:last-child{ border-radius:0 @btn-border-radius @btn-border-radius 0; border-right-width:1px;}
+	}
+    // 垂直布局
+	&.vertical{
+        & > .@{ns}btn{
+            clear:both; border-width: 0 1px;
+            &:first-child{ border-radius:@btn-border-radius @btn-border-radius 0 0; border-top-width:1px;}
+            &:last-child{ border-radius:0 0 @btn-border-radius @btn-border-radius; border-bottom-width:1px;}
+        }
+	}
+}

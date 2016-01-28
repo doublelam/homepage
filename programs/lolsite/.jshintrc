@@ -1,0 +1,22 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "expr": true,
+    "forin": true,
+    "immed": true,
+    "indent": 4,
+    "noarg": true,
+    "noempty": true,
+    "newcap": false,
+    "quotmark": "single",
+    "strict": true,
+    "trailing": true,
+    "eqnull": true,
+    "browser": true,
+    "devel": true,
+    "jquery": true,
+    "node": true,
+    "predef": ["SQ", "seajs", "define"],
+    "white": false
+}

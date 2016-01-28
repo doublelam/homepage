@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="LIKEME, LIKEME商城, 设计师平台, B2C商城, 印象股份">
+    <meta name="description" content="LIKEME —— 中国首家展示设计师生活方式的B2C平台，设计师本人即模特来传达展现个人独特的生活方式。平台坚持原创，亲民价格定位，产品追求极致，物超所值。">
+    <title>余额转出/提现</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="LIKEME商城">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="LIKEME商城">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/likeme.min.css">
+</head>
+<body class="user">
+<header class="lm-bar nav user">
+    <a class="lm-btn lm-icon icon-chevron-left x2 J_goBack" href="user-balance.html"></a>
+    <h1 class="title">余额转出/提现</h1>
+</header>
+<section class="balance"> 
+     <div class="divider" id="banks-select">
+        <div class="balance-box">
+            <a>
+                <div  class="bank-name">
+                
+                <p>中国邮政储蓄银行</p>
+                <p>尾号8888储蓄卡</p>
+                </div> 
+                <div class="more">
+                <i class="lm-icon icon-chevron-right"></i>
+                </div>
+               
+
+            </a>
+        </div>
+    </div> 
+   <!-- <div class="divider" id="add-bank">
+        <div class="balance-box">
+            <a href="user-bank-add.html">
+                <div class="add-bank-detail-container"> 
+                <i class="lm-icon icon-plus plus-bank-info"></i>
+                <span class="add-bank-detail">添加银行卡或支付宝账号</span>  
+                </div> 
+                <div class="more">
+                <i class="lm-icon icon-chevron-right"></i>
+                </div>
+               
+
+            </a>
+        </div>
+    </div>    -->
+      
+    
+    <div class="rechangable-detail">可转出金额：<span class="cash-rechangable">0.00</span>元
+    </div> 
+    <div class="divider">
+        <div class="balance-box">
+            <a id="without-padding"> 
+                <h3 class="title inline-block">金额</h3>
+                <input type="text" placeholder="转出金额" class="cash-input" autofocus="true"> 
+
+            </a> 
+        </div>
+    </div> 
+    <div class="rechangable-detail">每笔限额<span>50000000.00</span>元，本日还可转出<span>3</span>次。
+    </div>  
+    <div class="button-container"><button class="rechange-commit" disabled="true">确认转出</button></div> 
+
+
+
+   
+</section>
+
+
+<div class="buble-commen mask-bank-series">
+    <h3 class="title buble-title-commen bank-area-title">选择银行卡</h3>
+    <ul class="banks-select-container"> 
+        <li class="select-container-commen bank-select-container">
+            
+                <label for="agriculture-bank" class="bank-label buble-lable-commen">
+                    <div>
+                        <p>中国农业银行</p> 
+                        <p>尾号0000储蓄卡</p>
+                    </div>
+                
+                    <input class="bank-select-radios" name="bank-select" id="agriculture-bank" type="radio">
+                </label> 
+
+        </li>
+        <li class="select-container-commen bank-select-container">  
+             
+                <label for="construct-bank" class="bank-label buble-lable-commen">
+                    <div>
+                       
+                        <p>建设银行</p>
+                        <p>尾号8888储蓄卡</p>
+                    </div>
+                
+                 <input class="bank-select-radios" name="bank-select" id="construct-bank" type="radio">
+                </label> 
+          
+        </li>
+         <li class="select-container-commen bank-select-container">  
+             
+                <label for="china-bank" class="bank-label buble-lable-commen">
+                    <div>
+                       
+                        <p>中国银行</p>
+                        <p>尾号8888储蓄卡</p>
+                    </div>
+                
+                 <input class="bank-select-radios" name="bank-select" id="china-bank" type="radio">
+                </label> 
+          
+        </li> 
+        <li class="select-container-commen bank-select-container">  
+             
+                <label for="injustry-bank" class="bank-label buble-lable-commen">
+                    <div>
+                       
+                        <p>工商银行</p>
+                        <p>尾号8888储蓄卡</p>
+                    </div>
+                
+                 <input class="bank-select-radios" name="bank-select" id="injustry-bank" type="radio">
+                </label> 
+          
+        </li> 
+    </ul>
+    <a href="user-credits-manage.html">
+        <div class="select-container-commen  bank-card-manage">  
+           <div class="add-bank-detail-container"> 
+                <i class="lm-icon icon-credit-card plus-bank-info"></i>  
+                <span class="add-bank-detail">银行卡管理</span>    
+            </div> 
+            <div class="more added-arrow">
+                <i class="lm-icon icon-chevron-right"></i> 
+            </div>
+        </div>  
+    </a>
+     
+    
+</div>
+
+
+<div class="password-verify">
+    <h3 class="input-password-title">请输入支付密码</h3>
+    <p class="cash-rechangeout">100元</p>
+    <input type="password" class="verify-code-input"></input>
+    <div class="pay-btn-container"> 
+        <button class="pay-code-btn cancel-paycode-btn">取消</button>
+        <button class="pay-code-btn commit-paycode-btn">确定</button>
+    </div>
+</div> 
+
+
+<script src="js/jquery.min.js"></script>
+<!-- <script src="js/likeme.min.js"></script>  -->   
+<script src="js/rechangecash.js"></script>       
+  
+</body>
+</html>

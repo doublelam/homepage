@@ -1,0 +1,133 @@
+//
+// Button
+// @desc: 通用按钮，包括单体按钮、组合按钮。
+// ---------------------------------------------------------------------------
+
+.@{ns}btn{
+    display: inline-block;
+    position: relative;
+    background-image: none;
+    border-radius: @btn-border-radius;
+    border: 1px solid transparent;
+    margin-bottom: 0; // For input
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    .button-size(@btn-padding-base-v; @btn-padding-base-h; @default-font-size; @border-radius-base);
+
+
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            .tab-focus();
+        }
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+
+    // disabled
+    // @desc: 禁用样式
+    // --------------------------------------------
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        pointer-events: none;
+        cursor: not-allowed;
+        box-shadow: none;
+        .opacity(.4);
+    }
+
+
+    // Size
+    // @desc: 按钮尺寸
+    // --------------------------------------------
+    &.large {
+        font-weight: 700;
+        .button-size(@btn-padding-large-v; @btn-padding-large-h; @btn-font-size-large; @border-radius-base);
+    }
+    &.small {
+        .button-size(@btn-padding-small-v; @btn-padding-small-h; @btn-font-size-small; @border-radius-base);
+    }
+    &.mini {
+        .button-size(@btn-padding-mini-v; @btn-padding-mini-h; @btn-font-size-mini; @border-radius-base);
+    }
+    &.block {
+        display:block;
+        width:100%;
+        clear:both;
+    }
+
+
+    // Buttons
+    //
+    &.btn-default{
+        .button-variant(@black; @white; @lightgrey);
+    }
+    &.btn-primary{
+        .button-variant(@white; @black; darken(@black,5%));
+    }
+    &.btn-warning{
+        .button-variant(@white; @orange; darken(@orange,5%));
+    }
+    &.btn-error{
+        .button-variant(@white; @red; darken(@red,5%));
+    }
+    &.btn-cart{
+        .button-variant(@white; @black; @black);
+    }
+    &.btn-fav{
+        .button-variant(@white; @black; @black);
+    }
+    &.btn-buy{
+        .button-variant(@white; darken(@red,5%); darken(@red,5%));
+    }
+    &.btn-prop{
+        .button-variant(@black; @white; @lightgrey);
+    }
+    &.btn-weibo{
+        .button-variant(@white; @red; @red);
+    }
+    &.btn-qq{
+        .button-variant(@white; @blue; @blue);
+    }
+    &.btn-follow{
+        .button-variant(@black; @white; @white);
+    }
+}
+
+
+// Button Group
+// @desc: 组合按钮
+// --------------------------------------------
+.@{ns}btn-group{
+    display:flex; flex-direction:row;
+    .active{
+        z-index:1;  // 保证激活项目在最上层显示
+    }
+    & > .@{ns}btn{
+        display:block; flex:1; margin-left:-1px; border-radius:0; .text-hide-ellipsis();
+        &:first-child{ margin-left:0; border-radius:@btn-border-radius 0 0 @btn-border-radius;}
+        &:last-child{ border-radius:0 @btn-border-radius @btn-border-radius 0;}
+    }
+    // 垂直布局
+    &.vertical{
+        flex-direction:column;
+        & > .@{ns}btn{
+            margin:-1px 0 0 0;
+            &:first-child{ margin-top:0; border-radius:@btn-border-radius @btn-border-radius 0 0;}
+            &:last-child{ border-radius:0 0 @btn-border-radius @btn-border-radius;}
+        }
+    }
+}

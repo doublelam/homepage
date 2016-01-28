@@ -1,0 +1,157 @@
+body.order {
+    padding-bottom: 67px;
+    background: @lightgrey;
+}
+
+.lm-bar.order {
+    background: @white;
+    border-bottom: 1px solid @lightgrey;
+}
+
+.firm-order {
+    .order-address {
+        margin-bottom: 10px;
+        background: @white;
+        border-bottom: 1px solid darken(@lightgrey,3%);
+        a {
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .recipient {
+                font-size: 1.4rem;
+                padding: 0 10px;
+                flex: 1;
+                .addressee {
+                    margin-bottom: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .address {
+                    font-size: 1.4rem;
+                    color: #666;
+                }
+            }
+            .@{ns}icon {
+                color: #666;
+                text-align: center;
+            }
+        }
+    }
+    .order-info {
+        margin-bottom: 10px;
+        padding: 10px 0;
+        background: @white;
+        border-bottom: 1px solid darken(@lightgrey,3%);
+        > .title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            padding: 0 12px;
+        }
+        .order-detail {
+            font-size: 1.2rem;
+            a {
+                margin: 10px 0;
+                padding: 5px 12px;
+                background: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover {
+                    background: @lightgrey;
+                }
+            }
+            .pic {
+                width: 80px;
+                height: 80px;
+                display: block;
+            }
+            .detail {
+                padding: 10px;
+                flex: 1;
+                .title {
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .choose {
+                    color: #888;
+                    margin-top: 10px;
+                }
+            }
+            .price {
+                text-align: right;
+                .n {
+                    color: #888;
+                }
+            }
+        }
+        .total {
+            font-size: 1.4rem;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .postage {
+                text-align: left;
+            }
+            .pay-price {
+                text-align: right;
+                flex: 1;
+            }
+            .price {
+                color: @red;
+            }
+        }
+    }
+    .order-remark {
+        margin-bottom: 10px;
+        padding: 10px 12px;
+        background: @white;
+        border-bottom: 1px solid darken(@lightgrey,3%);
+        > .title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .remarks {
+            font-size: 1.4rem;
+            width: 100%;
+            border: 0;
+        }
+    }
+    .order-payment {
+        margin-bottom: 10px;
+        padding: 10px 12px;
+        background: @white;
+        border-bottom: 1px solid darken(@lightgrey,3%);
+        > .title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .payment-list {
+            li {
+                margin-bottom: 10px;
+                padding: 10px 15px;
+                background: @white;
+                border: 2px solid @lightgrey;
+                display: block;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .inline {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                }
+                &.active {
+                    border-color: @green;
+                }
+            }
+        }
+    }
+}

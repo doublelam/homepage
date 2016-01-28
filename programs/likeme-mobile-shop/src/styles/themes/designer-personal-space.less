@@ -1,0 +1,272 @@
+
+.float-clear{
+	clear: both; 
+}
+.space-users-face{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%; 
+	display: block; 
+	float: left; 
+	margin-right: 1rem; 
+ 
+
+} 
+.user-space-tips-head{
+	position: relative; 
+	padding: 10px 12px;
+ 	
+}  
+.user-tips-more{
+	position: absolute;
+	top: 10px; 
+	right: 12px;
+	font-size: 2.5rem;   
+	color: #888;  
+	transition: all .2s; 
+}
+
+.users-tips-info h6{
+
+	color: #888;
+	font-weight: normal;
+}
+
+.user-input-area{
+	padding: 0px 12px;  
+}
+.user-input-area p{
+	line-height: 1.4;
+	color: #444;
+
+}
+.users-article-operate{
+	margin: 15px 0px;
+	padding: 5px 12px; 
+	font-size: .5rem;
+	overflow: hidden;
+	
+}
+.right-float{  
+	float: right; 
+}
+.comment-block{
+	
+	position: relative;
+	font-size: 1.5rem; 
+	transition:all .1s; 
+	overflow: hidden;
+}
+.comment-block button{
+	position: relative;
+	background: #222;
+	width: 6rem;
+    height: 3rem;
+    float: right;
+    margin-top: -3rem;
+    border: 1px solid rgba(255, 255, 255, 0);
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
+	outline: none;
+
+}
+.comment-block input{  
+	height: 3rem;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 1px;
+	outline: none;
+	padding: 0rem 6rem 0rem 1rem;
+
+}
+.comment-block .press{
+	background: #666; 
+}  
+
+.comment-block input:focus{
+	border-color: #888;  
+}
+.commen-article-foot-perate{
+	font-size: 2rem;
+	
+	color: #666;
+}
+.comment-block .icon-send{
+	color: white;
+	font-size: 2rem;
+}
+.users-article-operate .commen-icon-container{
+	display: inline-block; 
+	 
+	padding: .2rem 1rem; 
+ 	 
+ 	
+	border: 1px solid #ccc;
+	margin-left: 1rem; 
+	border-radius:1rem;   
+	text-align: center;
+
+
+}
+.users-article-operate .commen-icon-container span{
+	font-size: 1.5rem; 
+	 
+	color: #4C8CF5; 
+	transition: all .1s;  
+}
+
+.articles-devided-area{
+	background: white; 
+	margin-bottom: 10px; 
+	box-shadow: 0px 1px 2px #aaa;  
+	border: 1px solid rgba(100, 100, 100, 0); 
+}
+.articles-devided-area:last-child{
+	margin-bottom: 0px;
+}
+.article-content-area{ 
+	background: #eee;
+}
+.users-picture-block li{
+	position: relative;
+    height: 100px;
+	float: left; 
+	display: inline-block;
+	overflow: hidden;
+	margin:3px 0px;  
+
+} 
+.users-picture-block li img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+
+}
+
+.users-pictures-display-container{
+	overflow: auto; 
+	position: relative;
+}
+.comment-display-block{
+	margin-top: 15px;   
+	
+}
+.comment-display-content{
+	font-size: 1.3rem; 
+	color: #666;
+
+}
+.identity-comment{
+	color: #4C8CF5;
+
+}
+.like-it-display-area{
+	.comment-display-content; 
+	margin-top: 20px;  
+
+}
+.article-more-operate{
+	position: absolute;
+	overflow: hidden;
+	z-index: 999;
+	opacity: 0;
+	right: 12px;
+	background: #eee; 
+	top: 30px; 
+	font-size: 2rem;
+	border-radius: 3px;
+	transition: all .2s;  
+	box-shadow: 0px 1px 3px #888,inset 0px 1px 1px white;    
+
+}
+.article-more-operate li{ 
+	padding: 1rem 2rem; 
+	
+	transition:all .1s;
+}
+.article-more-operate li:hover,.article-more-operate li:active,.article-more-operate li:focus{
+	background: rgba(0, 0, 0, 0.1);  
+}
+
+
+.article-more-operate li:first-child{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px; 
+
+}
+
+.article-more-operate li:last-child{
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.masker-block-transparenty{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: .3;
+	z-index: 998;
+}
+.comment-display-content{
+	margin-bottom: .5rem; 
+	line-height: 1.5;
+} 
+.comment-display-content:hover,.comment-display-content:active{
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+.type-in-content-area{
+	width: 100%;
+	height: 6rem;
+	padding: .5rem 1rem; 
+	outline: none;
+	border: 1px solid #ddd;
+	max-width: 100%;
+}
+
+.type-in-content-area:focus{
+	border-color: #222;
+}
+
+.pictures-uploader-btn{
+	display: inline-block;
+	padding: .5rem 1rem;
+	background: #222;
+	color: #fff;
+	border: none;  
+	outline: none; 
+}
+
+.content-uploader-confirm-btn{
+	.pictures-uploader-btn;
+	float: right;
+}
+
+.commen-images-preview{
+	width: 25%;
+	height: 80px; 
+
+}
+.pub-content-area .select-file-pic{
+	display: none;   
+}
+
+.pub-content-area{
+	padding: 10px 12px;
+	margin-top: 10px;
+}
+
+.preview-image-close{
+	width: 20px;
+	height:20px;
+	line-height: 20px;
+	text-align: center;
+	background: white; 
+	margin-left: -20px; 
+	transform: translate3d(0,-64px,0);
+}

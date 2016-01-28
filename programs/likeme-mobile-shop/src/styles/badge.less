@@ -1,0 +1,16 @@
+//
+// Badge
+// @desc:   徽章
+// ---------------------------------------------------------------------------
+
+.@{ns}badge{
+    border-radius:@badge-border-radius; padding:@badge-padding; font-weight:normal; font-size:@badge-font-size; overflow:hidden;
+    &:empty{ display:none;}
+    &.black{ background:@badge-black; color:@white;}
+    &.blue{ background:@badge-blue; color:@white;}
+    &.green{ background:@badge-green; color:@white;}
+    &.grey{ background:@badge-grey; color:@white;}
+    &.red{ background:@badge-red; color:@white;}
+    &.orange{ background:@badge-orange; color:@white;}
+    &.level{ border-radius:2px; padding:1px 3px; font-weight:700; text-shadow:0 1px 0 rgba(0,0,0,.2);}
+}

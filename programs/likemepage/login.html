@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/reset.min.css">
+        <link rel="stylesheet" href="css/app.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+         <meta charset="utf-8">
+        <style type="text/css">
+        .sign-in-box,.sign-up-box{
+            position: fixed;
+            display: block;
+            margin: auto;
+            float: none;
+            left:0; 
+            right:0; 
+            top:0; 
+            bottom:0;
+            z-index: 999;
+            overflow:hidden;
+          
+
+        }
+
+        
+        .mask-cover{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .3;
+            filter:alpha(opacity:30);
+        }
+
+        .remove-icon{
+            position: absolute;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            height: 40px;
+            right: 0px;
+            top: 0px;
+            font-size: 20px;
+            font-weight: lighter;
+            color: #999;
+            transition:all .2s;
+            -webkit-transition:all .2s;
+            -ms-transition:all .2s;
+            -moz-transition:all .2s;
+            -o-transition:all .2s;
+            
+            
+
+        }
+
+
+        .remove-icon:hover{
+            color: #DB3539;
+            font-size: 30px;
+            transform:rotate(-180deg);
+        }
+        .remove-icon:active{
+            color: #FA2929;
+            background: rgba(36,112,175,.2);
+        }
+
+        </style>
+        <title></title>
+
+
+        <script> 
+           (function() {
+             if (! 
+             /*@cc_on!@*/
+             0) return;
+             var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, p, output, progress, section, time, video".split(', ');
+             var i= e.length;
+             while (i--){
+                 document.createElement(e[i])
+             } 
+        })() 
+        </script>
+    </head>
+    <body>
+         <div class="mask-cover"></div>
+         <div class="main-box sign-in-box">
+            <h1 class="login-box-title">欢迎来到LIKE-ME</h1>
+            <i class="fa fa-remove remove-icon"></i>
+            <form action="" method="get">
+                <input type="text" name="account" placeholder="会员名/邮箱" class="sign-input account-box"/>
+                <input type="password" name="password" placeholder="密码" class="sign-input password-box"/>
+                <div class="auto-login-box">
+                    <div class="checked-click" id="auto-login-clickable">
+                    <input type="checkbox" class="auto-login-checkbox" name="autologin" id="autologin"  /><label for="autologin"><b class="faked-checkbox" id="auto-login-fake"></b>两周内自动登陆</label>
+                    </div>
+                    <a class="forget-password">忘记密码？</a>
+                </div>
+                <input type="submit" value="登&nbsp&nbsp&nbsp录" class="login-submit"/>
+
+            </form>
+            <div class="straight-login"><p>快捷登录</p></div>
+            <ul class="straight-login-content">
+                <li class="icon-signup-1"><a><i class="fa fa-qq"></i></a></li>
+                <li class="icon-signup-2"><a><i class="fa fa-weibo"></i></a></li>
+                <li class="icon-signup-3"><a><i class="fa fa-wechat"></i></a></li>
+            </ul>
+            <p class="sign-up">还没帐号?&nbsp<a id="right-now-sign-up">马上注册</a></p>
+
+        </div>
+        <div class="main-box sign-up-box">
+            <h1 class="login-box-title">欢迎加入LIKE-ME</h1>
+             <i class="fa fa-remove remove-icon"></i>
+            <form>
+            <!-- <p class="regist-describe">邮箱/手机号</p> --><input type="text" name="account" placeholder="账号" class="sign-input regist-info"> 
+            <!-- <p class="regist-describe">密码</p> --><input type="password" name="password" placeholder="密码" class="sign-input regist-info">
+            <input type="text" name="cellphone-number" placeholder="手机号" class="sign-input regist-info">
+            <div class="cellphone-verify"><input type="text" placeholder="短信验证码" class="sign-input regist-info verify-txt"><button type="button" class="verify-button login-submit" id="send-to-phone">发送验证码到手机</button></div>
+            <div class="checked-click auto-login-box contract-new-margin" id="contract-readed">
+                    <input type="checkbox" class="auto-login-checkbox" name="agreed" id="agreed"  /><label for="agreed"><b class="faked-checkbox" id="readed-agreed"></b>我已阅读并同意</label><a class="regist-contract">《用户注册协议》</a>
+            </div>
+           <!--  <p class="regist-describe">确认密码</p> --><!-- <input type="password" name="commit-password" class="sign-input regist-info"> -->
+            <input type="submit" value="注册" class="login-submit">
+
+            </form>
+             <p class="sign-up right-now-login">已有帐号?&nbsp<a id="right-now-sign-in">立即登录</a></p> 
+        </div>
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/app.min.js"></script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,118 @@
+.fancy-select {
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ccc;
+    display: inline-block;
+}
+
+.fancy-select.disabled {
+    opacity: 0.5;
+}
+
+.fancy-select select:focus + div.trigger.open {
+    box-shadow: none;
+}
+
+.fancy-select .trigger {
+    height: 26px;
+    line-height: 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0 24px 0 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    background: lighten(@body-bg,5%);
+    border: 1px solid darken(@body-bg,2%);
+    border-top-color: lighten(@body-bg,10%);
+    color: #ccc;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    transition: all 150ms ease-out;
+}
+
+.fancy-select .trigger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: lighten(@body-bg,25%);
+    top: 10px;
+    right: 8px;
+}
+
+.fancy-select .trigger.open {
+    background: #4A5368;
+    border: 1px solid #475062;
+    color: #7A8498;
+    box-shadow: none;
+}
+
+.fancy-select .trigger.open:after {
+    border-top-color: #7A8498;
+}
+
+.fancy-select ul.options {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 50;
+    max-height: 200px;
+    overflow: auto;
+    background: lighten(@body-bg,50%);
+    border-radius: 2px;
+    border: 1px solid lighten(@body-bg,50%);
+    border-top: 1px solid lighten(@body-bg,60%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    min-width: 82px;
+    transition: opacity 150ms ease-out, top 150ms ease-out, visibility 150ms ease-out;
+}
+
+.fancy-select ul.options.open {
+    visibility: visible;
+    top: 0;
+    opacity: 1;
+    /* have to use a non-visibility transition to prevent this iOS issue (bug?): */
+    /*http://stackoverflow.com/questions/10736478/css-animation-visibility-visible-works-on-chrome-and-safari-but-not-on-ios*/
+    transition: opacity 150ms ease-out, top 150ms ease-out;
+}
+
+.fancy-select ul.options.overflowing {
+    top: auto;
+    bottom: 40px;
+    transition: opacity 150ms ease-out, bottom 150ms ease-out, visibility 150ms ease-out;
+}
+
+.fancy-select ul.options.overflowing.open {
+    top: auto;
+    bottom: 50px;
+    transition: opacity 150ms ease-out, bottom 150ms ease-out;
+}
+
+.fancy-select ul.options li {
+    height: 25px;
+    line-height: 25px;
+    padding: 0 8px;
+    color: @body-bg;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 150ms ease-out;
+}
+
+.fancy-select ul.options li.selected {
+    background: lighten(@body-bg,60%);
+    color: @body-bg;
+}
+
+.fancy-select ul.options li.hover {
+    color: darken(@body-bg,10%);
+    background: lighten(@body-bg,55%);
+}
