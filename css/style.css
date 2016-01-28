@@ -49,10 +49,11 @@ img{
 /*//////////////////////////////*/
 
 .header-content{
+	position: relative;
 	width: 100%;
 	max-width: 960px;
 	margin: auto;
-	overflow: auto;
+	
 }
 
 /*nav导航头部样式*/
@@ -285,17 +286,18 @@ line-height: 60px;
 /*示例展示中的图片样式*/
 .imgdis{
 	width: 100%;
-	border-radius: 5px;
-	transition:.4s;
-
+	border-radius: 2px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	padding: 6px;
+	transition: all .3s;
+	-webkit-transition: all .3s;
 }
 /*////////////////////////////////*/
 
 /*实例展示中的图片hover样式*/
 .imgdis:hover{
-    
-	box-shadow: 0px 3px 6px #666;
-	z-index: 999;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.4);
 }
 /*///////////////////////////*/
 
@@ -345,6 +347,7 @@ line-height: 60px;
 	max-width: 260px;
 	left: 63%;
 	top: 22%;
+	overflow: auto;
 
 }
 /*/////////////*/
@@ -402,6 +405,12 @@ line-height: 60px;
 	width: 100%;
 	max-width: 960px;
 	margin: auto;
+	overflow: auto;
+}
+.content-container .image-container{
+	border-radius: 2px;
+	overflow: hidden;
+
 }
 
 
@@ -410,4 +419,23 @@ line-height: 60px;
 	.diifback a {
 		width: 50%;
 	}
+	.info1{
+	width:80%;
+	height:60px;
+	right: 10%;  
+	line-height: 60px;
+	}
+
+.info2{
+	width:90%;
+	height:60px;
+	right: 5%;  
+	line-height: 60px;
+	}
+.info3{
+	right:23%; 
+	width: 100px;
+	height:  100px;
+
+}
 }
