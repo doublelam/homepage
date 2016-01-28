@@ -9,15 +9,16 @@ var aImg=oHidden.getElementsByTagName('img');
 oClick.onmouseover=showOperate;
 oClick.ontouchstart=showOperate;
 function showOperate(){
- oHidden.style.paddingLeft="18px";
- oHidden.style.width="250px"; 
+ 
+ oHidden.style.width="280px"; 
 
-}
+
+} 
 
 function disapp(){ 
 
-  oHidden.style.paddingLeft="0px";
   oHidden.style.width="0px";
+
   for (var i =0; i<aInfo.length ; i++) {
   	
   	aInfo[i].style.display="none";

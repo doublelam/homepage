@@ -33,9 +33,11 @@ img{
 /*header样式*/
 .header{
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  
   height: 70px;
   background: #fff;
   box-shadow:0px 1px 12px rgba(0,0,0,.3); 
@@ -45,6 +47,13 @@ img{
 
 }
 /*//////////////////////////////*/
+
+.header-content{
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+	overflow: auto;
+}
 
 /*nav导航头部样式*/
 .nav{
@@ -71,7 +80,7 @@ img{
 	background: #ECEEF2;
 	height: 100%;
    
-	padding: 5px 10px;
+	padding: 10px 10px;
 	left: 0px;
 	font-size: 14px; 
 	transition:.2s;
@@ -98,7 +107,7 @@ img{
 .maindis{
   position: absolute;
   
-  top: 150px;
+  top: 120px;
   width: 400%;
   height: 450px;
   left: 0px;
@@ -108,7 +117,9 @@ img{
 
 /*林东东三个字的样式*/
 .lams{
-  padding-left: 16%;
+  display: block;
+ 	float: left;
+ 	margin-left: 10px;
   line-height: 70px;
   
   font-size: 24px;
@@ -125,27 +136,36 @@ img{
 /*头像样式*/
 .selfiimg{
    position: relative;
-	border-radius: 5px;
-	z-index: 999;
+   float: left;
+   z-index: 999;
+	border-radius: 50%;
+	overflow: hidden;
+
 
 }
 /*////////////////////////////*/
+.selfiimg img{
+	display: block;
+	width: 100%;
+}
 
 /*联系我整个div样式*/
 .cntactme{
   position:absolute;
   display: inline-block;
 
-  right: 16%;
+  right: 10%;
   top: 10px;
   height: 50px;
 }
 /*///////////////////////////////*/
 
 /*可隐藏div样式*/
-.hiddenable{
-   display: inline-block;
-   position: relative;
+.hiddenable{ 
+	padding: 0px 15px 0px 10px;
+   display: block;
+   position: absolute;
+  right: 2px;
    height: 50px;
    width: 0px;
   line-height: 50px;
@@ -153,7 +173,7 @@ img{
   box-shadow: 0px 0px 10px #eee;
    overflow: hidden;
    background: #ECEEF2; 
-   border-radius: 5px;
+   border-radius: 5px 50px 50px 5px;
    transition:.4s ease-out;
   
   }
