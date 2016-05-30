@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>Start Html Title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="renderer" content="webkit">
+		<link rel="icon" type="image/png" href="images/favicon.png">
+
+		<!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="App Name">
+		<link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+		<!--  -->
+		<!-- 删除苹果默认的工具栏和菜单栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 设置苹果工具栏颜色 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- 设置苹果工具栏标题 -->
+		<meta name="apple-mobile-web-app-title" content="App Name">
+		<!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+		<meta name="format-detection" content="telphone=no, email=no">
+		<!-- 设置苹果桌面图标 -->
+		<link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+		<!-- UC浏览器强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ浏览器强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC浏览器强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ浏览器强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC浏览器应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ浏览器应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="./css/main2.css?fdsfsdf=re">
+
+		
+	</head>
+	<body>
+		<div class="tart-page">
+			<div class="header-title">
+				<ul class="title-tips">
+					<li><img src="img/wo.png"></li>
+					<li><img src="img/yao.jpg"></li>
+					<li><img src="img/bao.jpg"></li>
+					<li><img src="img/ni.jpg"></li>
+					<li><img src="img/piao.jpg"></li>
+					<li><img src="img/liang.jpg"></li>
+				</ul>
+				<div class="right-logo">
+					<img src="img/rightlogo.jpg">
+				</div>
+			</div>
+			<div class="great-words">
+				<img src="img/greatwords.jpg">
+			</div>
+			<div class="annoymous-image"> 
+				<img src="img/annoymous.jpg">
+			</div>
+			<div class="qr-code-area">
+				<div class="qrcode-container">
+					<img src="img/qrcode.jpg">
+				</div>
+				<p class="long-touch">长按识别<br>二维码</p>
+				<div class="product-tip">
+					<p class="bigger">3D</p>
+					<p>瘦身胶原</p>
+				</div>
+			</div>
+			<div class="center-click">
+				<img src="img/centerquo.jpg">
+			</div>
+		</div>
+		<form class="form-input-file">
+			<div class="quota-area">
+				<div class="tips-1">
+				</div>
+				<div class="tips-2">
+				</div>
+				<img src="img/quota.png">
+
+			</div>
+			<label class="file-input-label">
+				<div class="add-image">
+					上传照片
+					<!-- <i class="iconfont icon-add"></i> -->
+				</div>
+				<input type="file" class="file-select" name="fileinput" accept="image/*" capture="camera">
+				<div class="img-container">
+					<img src="" alt="请稍后，正在载入中...">
+				</div>
+
+
+			</label>
+			<div class="images-display">
+				<div class="get-star-hint">
+				</div>
+				<div class="container-gap">
+					<div class="img-disp-container">
+						<img src="" alt="和你相似的明星">
+						<p class="compare-name"></p>
+						<p class="similar-degree">相似度<span class="similar-degree-num">22</span><span style="color:#128EC2">%</span></p>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="up-load-btn">
+			<button class="link-to-product">3D瘦身</button>
+			<button class="upload disable none-d">点击选择图片</button>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/facepp-sdk.min.js"></script>
+		<script type="text/javascript">
+
+
+		function setImagesShow(){
+			$('.images-display').show();
+			$('.file-input-label').hide();
+			$('.images-display .container-gap').fadeIn('slow');
+			$('.link-to-product').fadeIn('slow');
+		};
+		function setImagesaHide(){
+			$('.images-display').fadeOut('fast');
+			$('.images-display .container-gap').hide();
+		};
+		function setDomWhenNone(){
+			$('.link-to-product').hide();
+			$('.file-input-label .add-image').fadeIn('fast');
+			$('.img-container').hide();
+			$('.up-load-btn .upload').addClass('disable none-d');
+			$('.up-load-btn .upload').html('点击选择图片');
+			$('.container-gap').hide();
+			$('.images-display').hide();
+			$('.file-select').val('');
+			$('.file-input-label').css('float', 'none');
+			loadingFadeOut();
+			$('.file-input-label').fadeIn('fast');
+			$('.quota-area').fadeIn('fast');
+		};
+		function setDomWhenHasFile(imgUrl){
+			$('.img-container img')[0].src=imgUrl;
+			$('.get-star-hint').css('background-image','url("'+imgUrl+'")');
+			$('.file-input-label .add-image').hide();
+			$('.img-container').fadeIn('fast');
+			$('.up-load-btn .upload').removeClass('disable none-d');
+			$('.up-load-btn .upload').removeClass('detected');
+			$('.up-load-btn .upload').html('开始检测');
+			$('.file-input-label').css('float', 'none');
+			$('.container-gap').hide();
+			$('.images-display').hide();
+			$('.quota-area').hide();
+
+			console.log('setdom');
+		};	
+
+		function clickForAjax(){
+			$('button.upload').click(function(event) {
+				if(!$(this).hasClass('disable')&&!$(this).hasClass('detected')){
+					var imageUrl=$('.file-input-label .img-container img')[0].src;
+					console.log('imgurl',imageUrl);
+					detecting($('.img-container'));
+					detectSrching();
+					function detectSrching(){
+						detectSearch('http://g.hiphotos.baidu.com/baike/w%3D268/sign=c5ff2a8af436afc30e0c38638b18eb85/060828381f30e9247e29fb7b4f086e061c95f7ef.jpg');
+					};
+				};
+			});
+		};
+		clickForAjax();
+		function playAgain(){
+			$('button.upload').click(function(event) {
+				if($(this).hasClass('detected')){
+					setDomWhenNone();
+					$(this).removeClass('detected');
+				}
+			});
+		};
+		playAgain();
+
+		function uploader(){
+			var typeLimit=['png','jpeg','jpg'];
+			$('.file-select').on('change',function(){
+				try{
+					imgLoading($('.file-input-label'));
+					setTimeout(ajaxUpload,0);
+				}catch(e){
+					console.log(e);
+				}
+				
+				function ajaxUpload(){
+					// var formData=new FormData();
+					try{
+						var fileImg=$('.file-select')[0].files[0];
+						var fsize=fileImg.size;
+						var ftype=fileImg.type.split('/')[1];
+						console.log(ftype);
+						console.log(fsize);
+						console.log($.inArray('png',typeLimit));
+						if($.inArray(ftype,typeLimit)+1){
+							var reader=new FileReader();
+							reader.readAsDataURL(fileImg);
+							console.log(reader);
+							reader.onload=function(){
+								var imgBase64=this.result;
+								console.log(imgBase64.length);
+								ifSizeRight();
+								setDomWhenHasFile();
+								function ifSizeRight(){
+									if(fsize<838860){
+										$.ajax({
+											url: './setImage.php',
+											type: 'POST',
+											data: {'fileinput':imgBase64,'filetype':ftype},
+											dataType:'json',
+										})
+										.done(function(data) {
+											console.log(data);
+											console.log(data[0]);
+											console.log(data[1]);
+											console.log("success");
+											setDomWhenHasFile(data[1]);
+											loadingFadeOut();
+										})
+										.fail(function(e) {
+											console.log('error',e);
+										})
+										.always(function() {
+											console.log("complete");
+										});
+									}else{
+										try{
+											var img = $('<img/>')[0];
+											img.src=imgBase64;
+											console.log(img.width);
+											img.width==0 ? loadAdd() : noLoadAdd();
+											function loadAdd(){
+												img.onload=function(){
+													var canvas = $('<canvas></canvas>')[0];
+													var enviro = canvas.getContext('2d');
+													enviro.drawImage(img,0,0);
+													canvas.width=img.width*.4;
+													canvas.height=img.height*.4;
+													enviro.clearRect(0,0,canvas.width,canvas.height);
+													enviro.drawImage(img,0,0,canvas.width,canvas.height);
+													var dataUrl=canvas.toDataURL('img/jpeg');
+													// alert(dataUrl.length);
+													imgBase64=dataUrl;
+													fsize=dataUrl.length;
+													ftype='jpeg';
+													ifSizeRight();
+												}
+											};
+											function noLoadAdd(){
+												var canvas = $('<canvas></canvas>')[0];
+												var enviro = canvas.getContext('2d');
+												enviro.drawImage(img,0,0);
+												canvas.width=img.width*.2;
+												canvas.height=img.height*.2;
+												enviro.clearRect(0,0,canvas.width,canvas.height);
+												enviro.drawImage(img,0,0,canvas.width,canvas.height);
+												var dataUrl=canvas.toDataURL('img/jpeg');
+												console.log(dataUrl.length);
+												imgBase64=dataUrl;
+												fsize=dataUrl.length;
+												ftype='jpeg';
+												ifSizeRight();
+											};	
+											
+										}catch(e){
+											alert(e);
+										}
+									}
+								}						
+							}
+							
+						}else{
+							console.log('error!!只限png，jpg格式');
+							alert('格式不对，请重新上传(ง •̀_•́)ง ');
+							loadingFadeOut();
+
+						}
+					}catch(e){
+						console.log(e);
+						setDomWhenNone();
+						$('.upload').hasClass('detected');
+						
+					}
+					
+					
+				}
+			})
+		}
+
+
+
+		function detectSearch(imgUrl){
+			var api = new FacePP('0bc1871999398e66e131c59e33721b13',
+				'B9RUcw3epS60jtlSOJXlgHluK4LPma1B', {
+				apiURL: 'http://apicn.faceplusplus.com/'
+			});
+			api.request('detection/detect', {
+			    url: imgUrl
+			}, function(err, result) {
+			    if (err) {
+			        $('.test').text('载入失败');
+			        return;
+			    }
+			    else{
+			    	console.log(result);
+			    	console.log(result.face[0].face_id);
+			    	$('.test').text(JSON.stringify(result));
+
+			    	$.ajax({
+			    		url: 'http://apicn.faceplusplus.com/v2/recognition/search?',
+			    		type: 'GET',
+			    		dataType: 'json',
+			    		data: {
+			    			api_secret: 'B9RUcw3epS60jtlSOJXlgHluK4LPma1B',
+			    			api_key: '0bc1871999398e66e131c59e33721b13',
+			    			key_face_id: result.face[0].face_id,
+			    			count: 1,
+			    			faceset_name:'newstarcate'
+			    		},
+			    	})
+			    	.done(function(data) {
+			    		console.log(data)
+			    		console.log(data.candidate[0].tag);
+			    		$('.compare-name').each(function(i){
+			    			$(this).html(data.candidate[i].tag);
+			    		});
+			    		$('.similar-degree .similar-degree-num').each(function(i){
+			    			$(this).html((data.candidate[i].similarity*.99).toFixed(1));
+			    		});
+
+			    		var faceId='';
+			    		for (var i=0;i<data.candidate.length;i++){
+				    		faceId+=data.candidate[i].face_id.toString()+',';
+			    		};
+			    		var length=faceId.length;
+			    		var newFaceId=faceId.slice(0,length-1);
+			    		console.log(faceId.length);
+			    		console.log(newFaceId);
+			    		$.ajax({
+			    			url: 'http://apicn.faceplusplus.com/v2/info/get_face?',
+				    		type: 'GET',
+				    		dataType: 'json',
+				    		data: {
+				    			api_secret: 'B9RUcw3epS60jtlSOJXlgHluK4LPma1B',
+				    			api_key: '0bc1871999398e66e131c59e33721b13',
+				    			face_id: newFaceId
+				    		},
+			    		})
+			    		.done(function(da){
+			    			console.log(da.face_info.length);
+			    			$('.img-disp-container img').each(function(i){
+			    				console.log(da.face_info[i].url);
+			    				console.log(da.face_info[i].tag);
+
+				    			$(this).attr('src',da.face_info[i].url);
+
+			    			});
+			    			function showDetectResult(){
+				    			clearDetecting();
+				    			setImagesShow();
+					    		$('button.upload').html('再来一次');
+					    		$('button.upload').addClass('detected');
+					    		$('.file-input-label').css('float', 'left');
+			    			};
+			    			setTimeout(showDetectResult, 10);
+
+			    		})
+			    	})
+			    	.fail(function(eror) {
+			    		console.log(eror);
+			    	})
+			    	.always(function() {
+			    		console.log("complete");
+			    	});
+			    	
+			    }
+			    
+			});
+		};
+
+		function imgLoading(jdom){
+			var domText='<div class="loading-style" style="position:relative;margin:auto;width:24px;height:24px;margin-top:5px;margin-bottom:5px;border-radius:50%;z-index:2"></div>';
+			jdom.append(domText);
+			var maskdiv = '<div class="mask-div" style="position:fixed;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0);z-index:1;"></div>';
+			$('body').append(maskdiv);
+		};
+		function loadingFadeOut(){
+			$('.loading-style').fadeOut('slow',function(){
+				$('.loading-style').remove();
+			})
+			$('.mask-div').remove();
+		};
+		function detecting(detectdom){
+			var top=detectdom.offset().top;
+			var left=detectdom.offset().left;
+			var width=detectdom.width();
+			var height=detectdom.height();
+			console.log('top:',top,'left:',left,'width',width,'height',height);
+			var maskdomtext='<div class="mask" style="position:fixed;width:100%;height:100%;background:rgba(0,0,0,.2);top:0;left:0;z-index:1;"><div class="detecting-area"><div class="detect-panner"></div></div></div>';
+			$('body').append(maskdomtext);
+			$('.detecting-area').css({
+				position:'absolute',
+				width: width,
+				height: height, 
+				left: left,
+				top: top,
+				border: '1px solid #fff',
+				background: 'rgba(255,255,255,.4)',
+			});
+
+
+
+		};
+		
+		function clearDetecting(){
+			$('.mask').fadeOut(200, function() {
+				$('.mask').remove();
+			});
+		};
+		function firstPgeClk(){
+			$('.tart-page').on('touchend mousedown',function(){
+				$('.tart-page').fadeOut(400);
+			});
+		};
+		firstPgeClk();
+
+		function setAudio(){
+			$('body').append('<div class="audio-set rounding-animate"><img src="img/musicplay.png"></div>')
+			var audio = document.createElement('AUDIO');
+			audio.src = 'audio/backmusic.mp3';
+			audio.play();
+			audio.loop = 'loop';
+			function pauseAudio(){
+				console.log('pause');
+				$('.audio-set').removeClass('rounding-animate');
+				audio.pause();
+				$('.audio-set img')[0].src = 'img/musicpause.png';
+			};
+			function playAudio(){
+				console.log('play');
+				$('.audio-set').addClass('rounding-animate');
+				audio.play();
+				$('.audio-set img')[0].src = 'img/musicplay.png';
+			};
+			$('.audio-set').on('click',function(){
+				console.log('click');
+				$(this).hasClass('rounding-animate') ? pauseAudio() : playAudio();
+			})
+		};
+		setAudio();	
+
+
+			
+
+		uploader();	
+		</script>
+
+
+
+
+
+
+		<script type="text/javascript">
+			// 禁止微信下拉
+			$('body').on('touchmove', function (event) {event.preventDefault();});
+				var overscroll = function(el) {
+			  el.addEventListener('touchstart', function() {
+			    var top = el.scrollTop
+			      , totalScroll = el.scrollHeight
+			      , currentScroll = top + el.offsetHeight;
+			    //If we're at the top or the bottom of the containers
+			    //scroll, push up or down one pixel.
+			    //
+			    //this prevents the scroll from "passing through" to
+			    //the body.
+			    if(top === 0) {
+			      el.scrollTop = 1;
+			    } else if(currentScroll === totalScroll) {
+			      el.scrollTop = top - 1;
+			    }
+			  });
+			  el.addEventListener('touchmove', function(evt) {
+			    //if the content is actually scrollable, i.e. the content is long enough
+			    //that scrolling can occur
+			    if(el.offsetHeight < el.scrollHeight)
+			      evt._isScroller = true;
+			  });
+			}
+			$('.scroll').length!=0 ? overscroll(document.querySelector('.scroll')) : console.log('no isscroll');
+			overscroll(document.querySelector('.qr-code-area'));
+			document.body.addEventListener('touchmove', function(evt) {
+			  //In this case, the default behavior is scrolling the body, which
+			  //would result in an overflow.  Since we don't want that, we preventDefault.
+			  if(!evt._isScroller) {
+			    evt.preventDefault();
+			  }
+			});
+
+		</script>
+	</body>
+</html>

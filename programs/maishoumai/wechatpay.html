@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="App Name">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="App Name">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<style type="text/css">
+    .check-out-block{
+        bottom: 0;   
+    }
+    .check-out-block .check-out-content{
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .comments-for-sale{
+        text-align: center;
+    }
+    .comments-for-sale textarea{
+        width: 95%;
+        resize: none;
+        border-radius: 2px;
+        outline: none;
+        padding: 10px;
+        height: 10vh;
+        border: 1px solid #ddd;
+    }
+    .address-area{
+        background-image: url('images/lettbac.png');
+        background-size: 100% 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+</style>
+<body class="bac-darken">
+    <section class="back-return-area">
+       <div class="back-icon-container">
+           <a href=""><i class="iconfont icon-back"></i><span>返回</span></a>
+       </div> 
+    </section>
+    <a href="" class="address-area white-bac-border">   
+        <div class="address-content-area">
+            <div class="loacation-icon-container">
+                <i class="iconfont icon-location"></i>
+            </div>
+            <div class="address-text">
+                <div class="address-content">
+                    <h3 class="address-info-head"><span>收货人：三大殿</span><span class="tel-number">12345678911</span></h3>
+                </div>
+                <p>浙江省温州市乐清县兴安路123号</p>
+            </div>
+            <div class="direct-icon-container">
+                <i class="iconfont icon-right"></i>
+            </div>
+        </div>
+    </a>
+    <a href="" class="address-area white-bac-border">   
+        <div class="address-content-area">
+            <div class="loacation-icon-container">
+                <i class="iconfont icon-location"></i>
+            </div>
+            <div class="address-text">
+                <div class="">
+                    <h3 class="address-info-head">从微信选择地址</h3>
+                </div>
+                
+            </div>
+            <div class="direct-icon-container">
+                <i class="iconfont icon-right"></i>
+            </div>
+        </div>
+    </a>
+    <section class="products-express-information">
+        <ul class="express-info-container">
+            <li class="express-product-information white-bac-border">
+                <div class="product-cart-information white-bac-border">
+                    <div class="product-display-operate">
+                        <div class="image-container"><img src="images/del/product.png">
+                        </div> 
+                        <div class="product-info-block">
+                            <p class="product-name">可人日记清爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳</p> 
+                            <p class="product-size">单位：箱</p>
+                            <div class="bought-info-select mount-select">
+                               <a class="as-button btn-minus"><i class="iconfont icon-move"></i></a><input value="1" class="as-input" type="number"><a class="as-button btn-plus"><i class="iconfont icon-add"></i></a> 
+                            </div>
+                       </div> 
+                    </div> 
+                    <div class="product-price-group">
+                        <p class="price-red">&#65509;50.5</p>
+                    </div>
+                </div>
+                <div class="comments-for-sale">
+                    <textarea placeholder="备注："></textarea>
+                </div>
+                <div class="phone-taken">
+                    <a class="as-button selected"><i class="iconfont icon-phone"></i>联系店家</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="check-out-block bac-white">  
+        <div class="check-out-content">
+            <div class="price-summery-content">
+                <p><span class="sum-count">合计:</span><span class="counted-price price-red">&yen;233</span></p>
+                <p class="press-declear">不含运费</p>
+            </div>
+            <a class="as-button selected">微信支付</a> 
+        </div>
+
+        
+    </section>
+    <div class="gap-height"></div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/globlefunction.min.js"></script>
+<script type="text/javascript">
+    imageMiddlePosition();
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="App Name">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="App Name">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="bac-darken">
+    <section class="back-return-area">
+       <div class="back-icon-container">
+           <a href=""><i class="iconfont icon-back"></i><span>返回</span></a>
+       </div> 
+    </section>
+    <section class="select-paid-type address-select-content">
+        <h3 class="select-paid-type-hint">选择您的收货地址<a href="" class="add-address-alink"><i class="iconfont icon-add"></i><span>添加收货地址</span></a></h3>
+        <label for="alipay" class="pay-label address-select-label">
+            <div class="pay-icon-container address-text">
+                <h3>收货人：就会嗲<span class="tel-number">12345678911</span></h3>
+                <p>收货地址：浙江申上海市湖州先知讲录4565号十八楼</p>
+            </div>
+            
+            <div class="radios-select"><input type="radio" name="pay-select" id="alipay"><div class="fake-icons-container"><i class="iconfont icon-round"></i><i class="iconfont icon-roundcheckfill"></i></div></div>
+        </label>
+        <label for="wechatpay" class="pay-label address-select-label">
+            <div class="pay-icon-container address-text">
+                <h3>收货人：就会嗲<span class="tel-number">12345678911</span></h3>
+                <p>收货地址：浙江申上海市湖州先知讲录4565号十八楼</p>
+            </div>
+            <div class="radios-select"><input type="radio" name="pay-select" id="wechatpay"><div class="fake-icons-container"><i class="iconfont icon-round"></i><i class="iconfont icon-roundcheckfill"></i></div></div>
+        </label>
+    </section>
+    <section class="after-pay-type-paid">
+        <a class="as-button selected">确定</a>
+    </section>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</html>

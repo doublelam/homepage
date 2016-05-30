@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="App Name">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="App Name">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="bac-darken">
+    <section class="back-return-area">
+       <div class="back-icon-container">
+           <a href=""><i class="iconfont icon-back"></i><span>返回</span></a>
+       </div> 
+    </section>
+    <section class="select-paid-type address-added">
+        <form>
+            <label class="address-label"><span class="input-describe">收件人</span><input type="text" placeholder="请输入姓名"></label>
+            <label class="address-label"><span class="input-describe">手机号码</span><input type="tel" placeholder="请输入你的手机号码"></label>
+            <div class="address-add-set-address">
+                <div class="bought-info-select devide-line size-select">
+                    <h4>请选择地区：</h4>
+                    <div class="addr">
+                        <div class="select-box">
+                            <div class="select-btn">
+                                <select name="ad1" id="ad1">
+                                    <option value="0">省/市</option>
+                                <select>
+                            </div>
+                            <div class="select-btn">
+                                <select name="ad2" id="ad2">
+                                    <option value="0">市/区</option>
+                                <select>
+                            </div>
+                            <div class="select-btn">
+                                <select name="ad3" id="ad3">
+                                    <option value="0">区/县</option>
+                                <select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <label class="address-label"><span class="input-describe">详细地址</span><input type="text" placeholder="请输入您的地址"></label>
+            <div class="set-default-container">
+                <label class="pay-label if-default-address">
+                    <div class="pay-icon-container set-for-default-address">
+                        设为默认地址
+                    </div>
+                    
+                    <div class="radios-select"><input type="checkbox" name="pay-select" id="alipay"><div class="fake-icons-container"><i class="iconfont icon-round"></i><i class="iconfont icon-roundcheckfill"></i></div></div>
+                </label>
+            </div>
+            
+        </form>
+
+    </section>
+    <section class="after-pay-type-paid">
+        <a class="as-button selected">确认添加</a>
+    </section>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/globlefunction.min.js"></script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="App Name">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="App Name">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="bac-darken">
+    <section class="order-center-status-head">
+        <ul class="order-status-container">
+            <li class="col-mb-3 text-center">
+                <a class="selected">全部</a>
+            </li>
+            <li class="col-mb-3 text-center">
+                <a>待付款</a>
+            </li>
+            <li class="col-mb-3 text-center">
+                <a>待发货</a>
+            </li>
+            <li class="col-mb-3 text-center">
+                <a>待收货</a>
+            </li>
+        </ul>
+    </section>
+    <div class="order-bac-login-pannel">
+        <section class="login-pannel white-bac-border">
+            <h3 class="sign-title-describe">输入手机号码</h3>
+            <label class="login-veriaty"><span class="login-input-babel-span">手机号码</span><input type="tel" placeholder="请输入手机号码"></label>
+            <div class="login-text-hint">
+                <p class="login-hint">交易通知信息会发到此手机号码上面</p>
+            </div>
+            
+
+            <a class="as-button selected login-submit">确认</a>
+        </section>
+        <section class="login-pannel white-bac-border">
+            <h3 class="login-pannel-desc">登陆</h3>
+            <label class="login-veriaty"><span class="login-input-babel-span">手机号码</span><input type="tel" placeholder="请输入手机号码"></label>
+            <label class="login-veriaty"><span class="login-input-babel-span password-label">输入密码</span></span><input type="password" placeholder="请输入密码"></label>
+            <div class="login-text-hint">
+                <p class="login-hint">交易通知信息会发到此手机号码上面</p>
+                <p class="wrong-password">您的密码不正确，请重新输入密码 <a class="get-back-code">找回密码</a></p>
+            </div>
+            
+
+            <a class="as-button selected login-submit">确认</a>
+        </section>
+        <section class="signup-pannel white-bac-border">
+            <h3 class="login-pannel-desc">注册<a class="login-click sign-link">已有帐号，我要登录</a></h3>
+            <label class="login-veriaty"><span class="login-input-babel-span">手机号码</span><input type="tel" placeholder="请输入手机号码"></label>
+             <label class="login-veriaty"><span class="login-input-babel-span password-label">验证码</span><input type="password" placeholder="请输入验证码">
+             <a class="as-button selected send-veriaty-btn" id="send-to-phone">点击发送验证码</a>
+             </label>
+            <label class="login-veriaty"><span class="login-input-babel-span password-label">输入密码</span></span><input type="password" placeholder="请输入密码"></label>
+           
+            <div class="login-text-hint">
+                <p class="login-hint">交易通知信息会发到此手机号码上面</p>
+            </div>
+            
+
+            <a class="as-button selected login-submit">确认</a>
+        </section>
+    </div>
+    <div class="stack-mask"></div>
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/globlefunction.min.js"></script>
+<script type="text/javascript">
+    signUpFromSignIn();
+    sendToPhone();
+</script>
+
+
+</script>
+</html>
+ 

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Start Html Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="App Name">
+    <link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏标题 -->
+    <meta name="apple-mobile-web-app-title" content="App Name">
+    <!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 设置苹果桌面图标 -->
+    <link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+    <!-- UC浏览器强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ浏览器强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC浏览器强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ浏览器强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC浏览器应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ浏览器应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="bac-darken">
+    <nav class="nav"> 
+        <ul>
+            <li class="col-mb-3"><a href="index1.html" class="text-center"><i class="iconfont icon-shop"></i><p>首页</p></a></li>
+            <li class="col-mb-3"><a href="category.html" class="text-center"><i class="iconfont icon-apps"></i><p>分类</p></a></li> 
+            <li class="col-mb-3"><a href="shopping-cart.html" class="text-center selected"><i class="iconfont icon-cart"></i><p>购物车</p></a></li>
+            <li class="col-mb-3"><a href="order-center-all.html" class="text-center"><i class="iconfont icon-form"></i><p>订单中心</p></a></li>
+        </ul>
+    </nav>
+    <header class="catr-header white-bac-border">
+        <h1 class="head-title">购物车</h1>
+    </header>
+    <section>
+        <div class="title-container"><h3>您选择的商品</h3><h6 class="item-mount">共10件</h6></div>
+        <div class="product-cart-information white-bac-border">
+            <label class="check-box-label" for="prod1"><input type="checkbox" class="check-input" id="prod1">
+                <div class="fake-images-container">
+                    <i class="fake-unchecked iconfont icon-round"></i><i class="fake-checked iconfont icon-roundcheckfill"></i>
+                </div>
+            </label>  
+            <div class="product-display-operate">
+                <div class="image-container"><img src="images/del/product.png">
+                </div> 
+                <div class="product-info-block">
+                    <p class="product-name">可人日记清爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳爽隔离喷雾乳</p> 
+                    <p class="product-size">单位：箱</p>
+                    <div class="bought-info-select mount-select">
+                       <a class="as-button btn-minus"><i class="iconfont icon-move"></i></a><input value="1" class="as-input" type="number"><a class="as-button btn-plus"><i class="iconfont icon-add"></i></a> 
+                    </div>
+               </div> 
+            </div> 
+            <div class="product-price-group">
+                <p class="price-red">&#65509;50.5</p>
+                <i class="iconfont icon-delete"></i>
+            </div>
+        </div>
+        <div class="product-cart-information white-bac-border">
+            <label class="check-box-label" for="prod2"><input type="checkbox" class="check-input" id="prod2">
+                <div class="fake-images-container">
+                    <i class="fake-unchecked iconfont icon-round"></i><i class="fake-checked iconfont icon-roundcheckfill"></i>
+                </div>
+            </label>  
+            <div class="product-display-operate">
+                <div class="image-container"><img src="images/del/wider.png">
+                </div> 
+                <div class="product-info-block">
+                    <p class="product-name">可人日记清爽隔离喷雾乳</p> 
+                    <p class="product-size">单位：箱</p>
+                    <div class="bought-info-select mount-select">
+                       <a class="as-button btn-minus"><i class="iconfont icon-move"></i></a><input value="1" class="as-input" type="number"><a class="as-button btn-plus"><i class="iconfont icon-add"></i></a>
+                    </div>
+               </div>
+            </div> 
+            <div class="product-price-group">
+                <p class="price-red">&#65509;100.88</p>
+                <i class="iconfont icon-delete"></i>
+            </div>
+        </div>
+        <div class="product-cart-information white-bac-border">
+            <label class="check-box-label" for="prod3"><input type="checkbox" class="check-input" id="prod3"> 
+                <div class="fake-images-container">
+                    <i class="fake-unchecked iconfont icon-round"></i><i class="fake-checked iconfont icon-roundcheckfill"></i>
+                </div>
+            </label>  
+            <div class="product-display-operate">
+                <div class="image-container"><img src="images/del/wider.png">
+                </div> 
+                <div class="product-info-block">
+                    <p class="product-name">可人日记清爽隔离喷雾乳</p> 
+                    <p class="product-size">单位：箱</p>
+                    <div class="bought-info-select mount-select">
+                       <a class="as-button btn-minus"><i class="iconfont icon-move"></i></a><input value="1" class="as-input" type="number"><a class="as-button btn-plus"><i class="iconfont icon-add"></i></a> 
+                    </div>
+               </div>
+            </div> 
+            <div class="product-price-group">
+                <p class="price-red">&#65509;443.12</p> 
+                <i class="iconfont icon-delete"></i>
+            </div>
+        </div>
+        <div class="product-cart-information white-bac-border">
+            <label class="check-box-label" for="prod4"><input type="checkbox" class="check-input" id="prod4">
+                <div class="fake-images-container">
+                    <i class="fake-unchecked iconfont icon-round"></i><i class="fake-checked iconfont icon-roundcheckfill"></i>
+                </div>
+            </label>  
+            <div class="product-display-operate">
+                <div class="image-container"><img src="images/del/wider.png">
+                </div> 
+                <div class="product-info-block">
+                    <p class="product-name">可人日记清爽隔离喷雾乳</p> 
+                    <p class="product-size">单位：箱</p>
+                    <div class="bought-info-select mount-select">
+                       <a class="as-button btn-minus"><i class="iconfont icon-move"></i></a><input value="1" class="as-input" type="number"><a class="as-button btn-plus"><i class="iconfont icon-add"></i></a>
+                    </div>
+               </div>
+            </div> 
+            <div class="product-price-group">
+                <p class="price-red">&#65509;333</p>
+                <i class="iconfont icon-delete"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="trade-type white-bac-border">
+        <label class="trade-type-label">
+            <h3>请选择担保类型</h3>
+            <select>
+                <option value ="distrust-trade">担保交易</option>
+                <option value ="trust-trade">非担保交易</option>
+            </select>
+        </label>
+    </div>
+
+    <section class="check-out-block bac-white">  
+        <label class="check-box-label" for="check-out-box"><input type="checkbox" class="check-input" id="check-out-box"> 
+            <div class="fake-images-container">
+                <i class="fake-unchecked iconfont icon-round"></i><i class="fake-checked iconfont icon-roundcheckfill"></i>
+            </div>
+            <span class="all-selected">全选</span>
+        </label> 
+        <div class="check-out-content">
+            <div class="price-summery-content">
+                <p><span class="sum-count">合计:</span><span class="counted-price price-red"></span></p>
+                <p class="press-declear">不含运费</p>
+            </div>
+            <a class="as-button selected">结算</a>
+        </div>
+
+        
+    </section>
+    
+    <div class="gap-height"></div>
+    <div class="gap-height"></div> 
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/globlefunction.min.js"></script>
+<script type="text/javascript">
+
+    imageMiddlePosition();
+    plusMinusBtn('pricecount');  
+    selectAllOperate(); 
+    summeryPriceCount(); 
+    inputChangePrice(); 
+    cartDeleteConfirmBubble();
+    function cartDeleteConfirmBubble(){
+        $('.product-price-group .icon-delete').click(function(){
+            var warnText='确定删除这笔订单？';
+            var thisIndex=$(this);
+            lamFc.confirm(warnText,function(){
+                var prtDom=thisIndex.parents('.product-cart-information');
+                prtDom.slideUp(300,function(){prtDom.remove()});
+            });
+        });
+    };  
+// 购物车点击delete删除确认框 使用默认浏览器弹出确认框 
+getItemsMountSum($('.item-mount'),$('.mount-select .as-input'));
+
+</script>
+
+
+
+</html> 
+ 
