@@ -35,14 +35,14 @@
 		<meta name="browsermode" content="application">
 		<!-- QQ浏览器应用模式 -->
 		<meta name="x5-page-mode" content="app">
-		<link rel="stylesheet" href="../public/stylesheets/app.min.css">
+		<link rel="stylesheet" href="../public/stylesheets/app.min.css?rev=6cd4ce39439ae6d64ca2ef260b2c34a6">
 	</head>
     <body style="overflow: visible">
         <nav class="share-nav">
             <div class="brand-icon">
                 <img src="../public/images/content/redicon.svg" alt="">
             </div>
-            <button class="immediate-download">立即下载</button>
+            <button class="immediate-download"><a href="#">立即下载</a></button>
         </nav>
         <section class="personal-audio">
             <div class="personal-info">
@@ -55,33 +55,45 @@
                         <span class="avator-time">2天前</span>
                     </div>
                 </div>
-				<button class="follow-btn"><i class="fa fa-plus"></i>关注</button>
+				<button class="follow-btn"><a href=""><i class="iconfont icon-guanzhu"></i>关注</a></button>
             </div>
             <div class="audio-personal-describe">
-                <i class="fa fa-quote-left"></i>
+                <i class="iconfont icon-quota-left"></i>
                 <span class="describe-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span>
-                <i class="fa fa-quote-right"></i>
+                <i class="iconfont icon-quota-right"></i>
             </div>
 			<div class="play-interface">
 				<div class="like-area">
-					<i class="fa fa-heart"></i>
+					<i class="iconfont icon-aixin"></i>
 					<p class="like-number">12</p>
 				</div>
-				<div class="play-area">
+				<div id="play-area" class="play-area">
 					<div class="play-contain">
-						<i class="fa fa-pause"></i>
+						<i class="iconfont icon-bofang"></i>
 					</div>
 					<p class="played-number">12</p>
 				</div>
 				<div class="comment-area">
-					<i class="fa fa-share-square"></i>
+					<i class="iconfont icon-comment"></i>
 					<p class="like-number">评论</p>
 				</div>
 			</div>
+			<div class="controls">
+				<div class="process-bar">
+					<div class="bac-process-bar"></div>
+					<div class="front-process-bar"></div>
+					<input type="range" class="range-fake" max="100" step="0.1">
+				</div>
+			</div>
+			<div class="time-showed">
+				<div id="current-time">00.00</div>
+				<div id="fill-time">00.00</div>
+			</div>
+			<audio hidden id="audio-dom" src="http://fs.open.kugou.com/5e1bb8d1a55bf6726cfd8f1de19c584c/5770bff1/G008/M03/06/17/SA0DAFT6T96ICmKQAA33bVX58AcAAAS3gEEOJUADfeF348.m4a" controls></audio>
         </section>
 		<section class="comments-section">
 			<div class="liked-group">
-				<i class="fa fa-heart"></i>
+				<i class="iconfont icon-aixin"></i>
 				<ul class="liked-persons">
 					<li class="person-container">
 						<img src="../public/images/del/qrcode.png" alt="">
@@ -118,7 +130,7 @@
 							<span class="avator-time">2天前</span>
 						</div>
 					</div>
-					<div class="comment-operate"><i class="fa fa-heart">&nbsp;5</i><span class="comment-reply">回复</span></div>
+					<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
 				</div>
 				<div class="comment-content">
 					<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
@@ -150,12 +162,17 @@
 							<span class="avator-time">2天前</span>
 						</div>
 					</div>
-					<div class="comment-operate"><i class="fa fa-heart">&nbsp;5</i><span class="comment-reply">回复</span></div>
+					<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
 				</div>
 				<div class="comment-content">
 					<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
 				</div>
 			</div>
 		</section>
+
+		<script src="../public/javascripts/sharedscript.min.js"></script>
+		<script>
+			sharedPage.onInit();
+		</script>
     </body>
 </html>
