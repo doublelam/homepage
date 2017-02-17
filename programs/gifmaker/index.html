@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <meta name="full-screen" content="yes">
+        <link rel="stylesheet" href="./dest/css/app.css">
+    </head>
+    <body>
+        <nav class="nvaigation" id="navigation">
+            <ul class="nav-operate">
+                <li id="prev">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </li>
+                <li id="next">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li id="style">
+                    <i class="fa fa-bullseye" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div val="1"><i class="fa fa-circle"></i></div>
+                        <div val="2"><i class="fa fa-circle"></i></div>
+                        <div val="3"><i class="fa fa-circle"></i></div>
+                        <div val="4"><i class="fa fa-circle"></i></div>
+                        <div val="5"><i class="fa fa-circle"></i></div>
+                    </div>
+                </li>
+                
+                <li id="color">
+                    <i class="fa fa-eyedropper" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div val="#B71C1C" class="color-bac">&nbsp;</div>
+                        <div val="#C62828" class="color-bac">&nbsp;</div>
+                        <div val="#880E4F" class="color-bac">&nbsp;</div>
+                        <div val="#AD1457" class="color-bac">&nbsp;</div>
+                        <div val="#1A237E" class="color-bac">&nbsp;</div>
+                        <div val="#283593" class="color-bac">&nbsp;</div>
+                        <div val="#006064" class="color-bac">&nbsp;</div>
+                        <div val="#00838F" class="color-bac">&nbsp;</div>
+                        <div val="#F57F17" class="color-bac">&nbsp;</div>
+                        <div val="#F9A825" class="color-bac">&nbsp;</div>
+                        <div val="#BF360C" class="color-bac">&nbsp;</div>
+                        <div val="#212121" class="color-bac">&nbsp;</div>
+                        <div val="#424242" class="color-bac">&nbsp;</div>
+                        <div val="#FFFFFF" class="color-bac">&nbsp;</div>
+                        <div val="#000000" class="color-bac">&nbsp;</div>
+                    </div>
+                </li>
+                <li id="more">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div id="previewBtn"><i class="fa fa-eye"></i></div>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <div class="back-images-container" id="back-images-container">
+            <img id="previous-image" src="" alt="">
+            <img id="next-image" src="" alt="">
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        <div class="preview-section" id="preview-section">
+            <div class="gif-container">
+                <img id="gif-image" src="" alt="">
+            </div>
+        </div>
+        <script src="./dest/js/dist/gif.js"></script>
+       
+        <script src="./dest/js/app.js"></script>
+    </body>
+</html>
