@@ -298,6 +298,7 @@ var PainterStyles = (function () {
         var _this = this;
         domeles_1.lineWidthDom.onclick = function (e) {
             var lineWidth = e.target;
+            lineWidth = lineWidth.parentElement;
             if (lineWidth.getAttribute('val')) {
                 _this.painterWidth = Number(lineWidth.getAttribute('val'));
                 console.log(_this.painterWidth);
@@ -388,7 +389,7 @@ var SetDomStyle = (function () {
         var listDoms = domeles_2.lineWidthDom.children[1].children;
         for (var i = 0; i < listDoms.length; i++) {
             var colorDom_2 = listDoms[i].children[0];
-            colorDom_2.style.fontSize = Number(listDoms[i].getAttribute('val')) * 5 + 'px';
+            colorDom_2.style.fontSize = Number(listDoms[i].getAttribute('val')) * 6 + 'px';
         }
     };
     SetDomStyle.setAll = function () {
