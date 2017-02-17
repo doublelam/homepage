@@ -6,6 +6,7 @@ exports.prevBtn = document.getElementById('prev');
 exports.nextBtn = document.getElementById('next');
 exports.lineWidthDom = document.getElementById('style');
 exports.colorDom = document.getElementById('color');
+exports.hintShowDom = document.getElementById('show-style');
 exports.naviDom = document.getElementById('navigation');
 exports.imagesContainer = document.getElementById('back-images-container');
 exports.previousImage = document.getElementById('previous-image');
@@ -375,6 +376,9 @@ exports.ResizeWindow = ResizeWindow;
 "use strict";
 var domeles_1 = require("../domelements/domeles");
 var domeles_2 = require("../domelements/domeles");
+var painterstyles_1 = require("./painterstyles");
+var watch_1 = require("./watch");
+var domeles_3 = require("../domelements/domeles");
 var SetDomStyle = (function () {
     function SetDomStyle() {
     }
@@ -389,18 +393,33 @@ var SetDomStyle = (function () {
         var listDoms = domeles_2.lineWidthDom.children[1].children;
         for (var i = 0; i < listDoms.length; i++) {
             var colorDom_2 = listDoms[i].children[0];
-            colorDom_2.style.fontSize = Number(listDoms[i].getAttribute('val')) * 6 + 'px';
+            colorDom_2.style.fontSize = Number(listDoms[i].getAttribute('val')) * 3 + 'px';
         }
+    };
+    SetDomStyle.setHintStyle = function () {
+        SetDomStyle.staticSetHintStyle();
+        watch_1.$watch(painterstyles_1.painter, 'painterColor', function () {
+            SetDomStyle.setHintStyle();
+        });
+        watch_1.$watch(painterstyles_1.painter, 'painterWidth', function () {
+            SetDomStyle.setHintStyle();
+        });
+    };
+    SetDomStyle.staticSetHintStyle = function () {
+        domeles_3.hintShowDom.style.width = painterstyles_1.painter.painterWidth + 'px';
+        domeles_3.hintShowDom.style.height = painterstyles_1.painter.painterWidth + 'px';
+        domeles_3.hintShowDom.style.backgroundColor = painterstyles_1.painter.painterColor;
     };
     SetDomStyle.setAll = function () {
         SetDomStyle.setColorDom();
         SetDomStyle.setWidthDom();
+        SetDomStyle.setHintStyle();
     };
     return SetDomStyle;
 }());
 exports.SetDomStyle = SetDomStyle;
 
-},{"../domelements/domeles":1}],14:[function(require,module,exports){
+},{"../domelements/domeles":1,"./painterstyles":10,"./watch":14}],14:[function(require,module,exports){
 "use strict";
 var Watch = (function () {
     function Watch() {

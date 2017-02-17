@@ -2404,6 +2404,14 @@ html {
         .nvaigation .nav-operate li .menus .color-bac {
           width: 20px;
           min-height: 20px; }
+  .nvaigation .hint-style-info {
+    position: fixed;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    right: 10px; }
 
 .preview-section {
   position: fixed;
